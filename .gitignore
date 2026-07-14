@@ -1,0 +1,14 @@
+# OS files
+.DS_Store
+Thumbs.db
+thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# VS Code config
+.vscode/
+
+# Local env files
+.env
+.env.local
+.env.*.local
