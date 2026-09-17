@@ -1,625 +1,1449 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="dark" dir="ltr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio of Abdalla Mohamud - Creative Full-Stack Web Developer and Graphic Designer. Showcasing projects, skills in React, Node.js, TailwindCSS, and visual graphics.">
-    <meta name="author" content="Abdalla Mohamud">
-    <meta name="keywords" content="Abdalla Mohamud, Full Stack Developer, Graphic Designer, React Developer, UI/UX Designer, Portfolio">
-    <title>Abdalla Mohamud | Portfolio</title>
-    
-    <!-- FontAwesome Icons CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Custom Style Sheet -->
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abdallah Mohamud Abdi — Full-Stack Developer &amp; Software Engineer</title>
+  <meta name="description" content="Personal portfolio of Abdallah Mohamud Abdi — 4th-year Computer Science student at Hormuud University, Software Developer, Mobile Application Developer, and Creative Multimedia Specialist." />
+  <meta name="keywords" content="Abdallah Mohamud Abdi, Full-Stack Developer, Mobile App Developer, Software Engineer, React, Node.js, Web Development, Mogadishu, Hormuud University, UI/UX" />
+  <meta name="author" content="Abdallah Mohamud Abdi" />
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Abdallah Mohamud Abdi — Portfolio" />
+  <meta property="og:description" content="Explore full-stack web applications, mobile architectures, and creative digital solutions engineered by Abdallah Mohamud Abdi." />
+  <meta property="og:image" content="assets/images/abdallah-hero.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+
+  <!-- Google Fonts: Playfair Display, Plus Jakarta Sans & Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,600;1,700;1,800;1,900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome Icons 6.5.1 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css?v=2.4" />
 </head>
 <body>
 
-    <!-- Ambient background light orbs -->
-    <div class="orb orb-1"></div>
-    <div class="orb orb-2"></div>
-    <div class="orb orb-3"></div>
+  <!-- ========== STICKY NAVBAR ========== -->
+  <header class="navbar-wrapper" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo" aria-label="Abdallah Mohamud Abdi Home">
+        <span class="logo-mark">A<span class="logo-accent">M</span></span>
+        <span class="logo-text">ABDALLAH<span class="accent-dot">.</span></span>
+      </a>
 
-    <!-- ==========================================================================
-       Header & Navigation Bar
-       ========================================================================== -->
-    <header>
-        <div class="container navbar">
-            <a href="#home" class="logo">
-                A. Mohamud<span class="logo-dot"></span>
+      <nav class="nav-menu" id="navMenu" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="#home" class="nav-link active" data-i18n="nav.home">Home</a></li>
+          <li><a href="#about" class="nav-link" data-i18n="nav.about">About</a></li>
+          <li><a href="#projects" class="nav-link" data-i18n="nav.projects">Projects</a></li>
+          <li><a href="#services" class="nav-link" data-i18n="nav.services">Services</a></li>
+          <li><a href="#skills" class="nav-link" data-i18n="nav.skills">Skills</a></li>
+          <li><a href="#certificates" class="nav-link" data-i18n="nav.certificates">Certificates</a></li>
+          <li><a href="#cv" class="nav-link" data-i18n="nav.cv">CV</a></li>
+          <li><a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Language Switcher Dropdown (Near Display Theme Toggle) -->
+        <div class="lang-dropdown-wrapper" id="langSwitcher">
+          <button class="lang-toggle-btn" id="langToggleBtn" type="button" aria-haspopup="listbox" aria-expanded="false" aria-label="Select Language">
+            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 20'><rect width='30' height='20' fill='%23012169'/><path d='M0,0 L30,20 M30,0 L0,20' stroke='%23fff' stroke-width='4'/><path d='M0,0 L30,20 M30,0 L0,20' stroke='%23C8102E' stroke-width='2'/><path d='M15,0 v20 M0,10 h30' stroke='%23fff' stroke-width='6'/><path d='M15,0 v20 M0,10 h30' stroke='%23C8102E' stroke-width='3.5'/></svg>" alt="Language Flag" class="flag-icon" id="currentFlag" />
+            <span class="lang-code" id="currentLangLabel">EN</span>
+            <i class="fas fa-chevron-down lang-chevron"></i>
+          </button>
+          <ul class="lang-dropdown-menu" id="langMenu" role="listbox">
+            <li class="lang-menu-item active" data-lang="en">
+              <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 20'><rect width='30' height='20' fill='%23012169'/><path d='M0,0 L30,20 M30,0 L0,20' stroke='%23fff' stroke-width='4'/><path d='M0,0 L30,20 M30,0 L0,20' stroke='%23C8102E' stroke-width='2'/><path d='M15,0 v20 M0,10 h30' stroke='%23fff' stroke-width='6'/><path d='M15,0 v20 M0,10 h30' stroke='%23C8102E' stroke-width='3.5'/></svg>" alt="English Flag" class="flag-icon" />
+              <span>English</span>
+            </li>
+            <li class="lang-menu-item" data-lang="so">
+              <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 20'><rect width='30' height='20' fill='%234189DD'/><polygon points='15,4 16.5,8.5 21,8.5 17.5,11.5 19,16 15,13 11,16 12.5,11.5 9,8.5 13.5,8.5' fill='%23FFFFFF'/></svg>" alt="Somalia Flag" class="flag-icon" />
+              <span>Soomaali</span>
+            </li>
+            <li class="lang-menu-item" data-lang="ar">
+              <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 20'><rect width='30' height='20' fill='%23006C35'/><path d='M8,12 h14 M10,10 l-2,2 l2,2' stroke='%23FFFFFF' stroke-width='1.2' stroke-linecap='round'/><circle cx='15' cy='7' r='2' fill='%23FFFFFF'/></svg>" alt="Arabic Flag" class="flag-icon" />
+              <span>العربية</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Theme Switcher (Display Light / Dark) -->
+        <button class="theme-toggle-btn" id="themeToggle" type="button" aria-label="Toggle Dark and Light Mode" title="Toggle theme">
+          <i class="fas fa-moon moon-icon" aria-hidden="true"></i>
+          <i class="fas fa-sun sun-icon" aria-hidden="true"></i>
+        </button>
+
+        <!-- WhatsApp Header CTA -->
+        <a href="https://wa.me/252613496697" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp-nav" title="Chat on WhatsApp" aria-label="Chat with Abdallah on WhatsApp">
+          <i class="fab fa-whatsapp"></i>
+          <span class="whatsapp-btn-text">WhatsApp</span>
+        </a>
+
+        <!-- Let's Talk CTA Button -->
+        <a href="#contact" class="btn btn-primary nav-cta" data-i18n="nav.letsTalk">Let's Talk</a>
+
+        <!-- Mobile Hamburger Button -->
+        <button class="hamburger-btn" id="hamburgerBtn" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navMenu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ========== HERO SECTION ========== -->
+    <section class="hero-section" id="home">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <!-- Status Pill with Emerald Glowing Dot -->
+          <div class="status-pill-modern">
+            <span class="pulse-emerald"></span>
+            <span class="status-text" data-i18n="hero.status">FULL STACK DEVELOPER &amp; INNOVATOR</span>
+          </div>
+
+          <!-- Serif Italic Title matching user's reference screenshot -->
+          <h1 class="hero-title-serif">
+            <span class="hero-greeting" data-i18n="hero.greeting">Hay! I'm</span>
+            <span class="hero-name-bold">Abdallah</span>
+            <span class="hero-surname-bold">Mohamud Abdi.</span>
+          </h1>
+
+          <!-- Dynamic Role Typing Subtitle (Vibrant Cyan) -->
+          <div class="hero-typing-role">
+            <span class="typing-text" id="typingText"></span>
+            <span class="typing-cursor">|</span>
+          </div>
+
+          <p class="hero-description" data-i18n="hero.description">
+            I am a passionate Full Stack Developer and UI/UX Designer dedicated to building high-performance web applications, scalable digital architectures, and visually compelling interfaces.
+          </p>
+
+          <!-- Action Row: GET IN TOUCH Pill Button + Social Circle Icons -->
+          <div class="hero-action-row">
+            <a href="#contact" class="btn btn-hero-glow">
+              <span data-i18n="hero.btnTouch">GET IN TOUCH</span>
+              <i class="fas fa-arrow-right"></i>
             </a>
-            
-            <ul class="nav-menu" id="nav-menu">
-                <li><a href="#home" class="nav-link active" data-translate="nav_home">Home</a></li>
-                <li><a href="#about" class="nav-link" data-translate="nav_about">About</a></li>
-                <li><a href="#skills" class="nav-link" data-translate="nav_skills">Skills</a></li>
-                <li><a href="#projects" class="nav-link" data-translate="nav_projects">Projects</a></li>
-                <li><a href="#contact" class="nav-link" data-translate="nav_contact">Contact</a></li>
-            </ul>
-            
-            <div class="nav-actions">
-                <!-- Theme Toggle Button -->
-                <button class="theme-toggle" id="theme-toggle-btn" aria-label="Toggle theme">
-                    <i class="fas fa-moon"></i>
-                    <i class="fas fa-sun"></i>
-                </button>
-                
-                <!-- Language Dropdown -->
-                <div class="lang-selector">
-                    <button class="lang-btn" id="lang-btn">
-                        <i class="fas fa-globe"></i>
-                        <span>English</span>
-                    </button>
-                    <div class="lang-dropdown" id="lang-dropdown">
-                        <button class="lang-opt active" data-lang="en">English</button>
-                        <button class="lang-opt" data-lang="so">Soomaali</button>
-                        <button class="lang-opt" data-lang="ar">العربية</button>
-                    </div>
-                </div>
-                
-                <!-- Mobile Navigation Toggle -->
-                <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle menu">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </div>
-        </div>
-    </header>
 
-    <!-- ==========================================================================
-       Hero Section
-       ========================================================================== -->
-    <section id="home" class="hero">
-        <div class="container hero-wrapper">
-            <div class="hero-content">
-                <span class="hero-greeting" data-translate="hero_greeting">Welcome to my space</span>
-                <h1 class="hero-title">
-                    <span data-translate="hero_name_prefix">Hi, I am </span><br>
-                    <span>Abdalla Mohamud</span>
-                </h1>
-                <div class="hero-subtitle">
-                    <span id="typing-text"></span>
-                </div>
-                <p class="hero-desc" data-translate="hero_desc">
-                    A creative full-stack developer and graphic designer. I bridge the gap between robust backend structures and visually captivating frontend experiences.
-                </p>
-                
-                <!-- Hero highlights row -->
-                <div class="hero-badges-row">
-                    <div class="hero-badge">
-                        <div class="badge-icon">
-                            <i class="fas fa-code"></i>
-                        </div>
-                        <div class="badge-info">
-                            <span class="badge-title" data-translate="floating_exp_title">Full-Stack Dev</span>
-                            <span class="badge-sub" data-translate="floating_exp_sub">Web applications</span>
-                        </div>
-                    </div>
-                    
-                    <div class="hero-badge">
-                        <div class="badge-icon">
-                            <i class="fas fa-palette"></i>
-                        </div>
-                        <div class="badge-info">
-                            <span class="badge-title" data-translate="floating_proj_title">Graphic Designer</span>
-                            <span class="badge-sub" data-translate="floating_proj_sub">Branding & layouts</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="hero-btns">
-                    <a href="#contact" class="btn btn-primary" data-translate="btn_hire">Hire Me</a>
-                    <a href="#projects" class="btn btn-secondary" data-translate="btn_work">View Work</a>
-                </div>
+            <div class="hero-social-circles">
+              <a href="https://wa.me/252613496697" target="_blank" rel="noopener noreferrer" class="social-circle-btn whatsapp" title="WhatsApp" aria-label="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+              <a href="https://www.facebook.com/share/1HokAN7KZz/" target="_blank" rel="noopener noreferrer" class="social-circle-btn facebook" title="Facebook" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/abdulla-maxmud-3b3781393?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android" target="_blank" rel="noopener noreferrer" class="social-circle-btn linkedin" title="LinkedIn" aria-label="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="https://github.com/abdullamaxmud" target="_blank" rel="noopener noreferrer" class="social-circle-btn github" title="GitHub" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="https://www.instagram.com/zulthanabdalla?stkn=MXNpN211dWZ2OWV6MQ==" target="_blank" rel="noopener noreferrer" class="social-circle-btn instagram" title="Instagram" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="https://x.com/AbdullaMaxmud" target="_blank" rel="noopener noreferrer" class="social-circle-btn twitter" title="X (Twitter)" aria-label="X (Twitter)">
+                <i class="fab fa-x-twitter"></i>
+              </a>
             </div>
-            
-            <div class="hero-image-area">
-                <div class="profile-container">
-                    <div class="profile-border-glow"></div>
-                    <div class="profile-card">
-                        <img src="profile.jpg" alt="Abdalla Mohamud Portrait" class="profile-img">
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+
+        <!-- Hero Right Column: Concentric Orbit Rings, Floating 3D Spheres & Studio Portrait -->
+        <div class="hero-visual-orbit">
+          <div class="orbit-backdrop" aria-hidden="true">
+            <!-- Concentric Orbital / Soundwave Rings -->
+            <div class="orbit-rings">
+              <div class="orbit-ring ring-1"></div>
+              <div class="orbit-ring ring-2"></div>
+              <div class="orbit-ring ring-3"></div>
+              <div class="orbit-ring ring-4"></div>
+              <div class="orbit-ring ring-5"></div>
+            </div>
+
+            <!-- Floating 3D Metallic Dark Spheres with Highlights -->
+            <div class="floating-orb orb-1"></div>
+            <div class="floating-orb orb-2"></div>
+            <div class="floating-orb orb-3"></div>
+            <div class="floating-orb orb-4"></div>
+          </div>
+
+          <!-- Studio Portrait with soft bottom blend -->
+          <div class="hero-portrait-stage">
+            <img src="assets/images/abdallah-hero.jpg" alt="Abdallah Mohamud Abdi" class="hero-portrait-img" />
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- ==========================================================================
-       About Section
-       ========================================================================== -->
-    <section id="about" class="reveal">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-subtitle" data-translate="about_subtitle">My Story</span>
-                <h2 class="section-title" data-translate="about_title">About Me</h2>
-            </div>
-            
-            <div class="about-grid">
-                <div class="about-info-text-area">
-                    <h3 class="about-intro-text" data-translate="about_intro">
-                        I am a multi-disciplinary professional specializing in both technical and creative directions.
-                    </h3>
-                    <p class="about-p" data-translate="about_p1">
-                        With a strong foundation in full-stack web development, I love constructing scalable, modern web systems. I am passionate about clean architectures and optimal databases, writing clean code using React, Node.js, and modern styling systems.
-                    </p>
-                    <p class="about-p" data-translate="about_p2">
-                        Simultaneously, my graphic design expertise enables me to construct unique visual identities, branding layouts, and vector illustrations. I believe functional code should always be wrapped in visually stunning aesthetics.
-                    </p>
-                    
-                    <!-- Languages -->
-                    <h4 class="lang-headline">
-                        <i class="fas fa-language"></i>
-                        <span data-translate="lang_headline">Languages I Speak</span>
-                    </h4>
-                    <div class="languages-container">
-                        <div class="lang-item">
-                            <div class="lang-info">
-                                <span class="lang-name" data-translate="lang_somali">Somali</span>
-                                <span class="lang-desc" data-translate="lang_somali_level">Native Speaker</span>
-                            </div>
-                            <div class="lang-progress-bar">
-                                <div class="lang-progress" data-width="100%"></div>
-                            </div>
-                        </div>
-                        
-                        <div class="lang-item">
-                            <div class="lang-info">
-                                <span class="lang-name" data-translate="lang_arabic">Arabic</span>
-                                <span class="lang-desc" data-translate="lang_arabic_level">Fluent Speaker</span>
-                            </div>
-                            <div class="lang-progress-bar">
-                                <div class="lang-progress" data-width="90%"></div>
-                            </div>
-                        </div>
-                        
-                        <div class="lang-item">
-                            <div class="lang-info">
-                                <span class="lang-name" data-translate="lang_english">English</span>
-                                <span class="lang-desc" data-translate="lang_english_level">Professional Proficiency</span>
-                            </div>
-                            <div class="lang-progress-bar">
-                                <div class="lang-progress" data-width="85%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="about-cards-grid">
-                    <div class="about-card">
-                        <div class="about-card-icon"><i class="fas fa-laptop-code"></i></div>
-                        <h4 class="about-card-title" data-translate="card_experience_title">Modern Tech</h4>
-                        <p class="about-card-desc" data-translate="card_experience_desc">Utilizing modern web stacks to build robust apps.</p>
-                    </div>
-                    
-                    <div class="about-card">
-                        <div class="about-card-icon"><i class="fas fa-bezier-curve"></i></div>
-                        <h4 class="about-card-title" data-translate="card_projects_title">Graphic Arts</h4>
-                        <p class="about-card-desc" data-translate="card_projects_desc">Polished designs, typography, and vectors.</p>
-                    </div>
-                    
-                    <div class="about-card">
-                        <div class="about-card-icon"><i class="fas fa-headset"></i></div>
-                        <h4 class="about-card-title" data-translate="card_support_title">High Support</h4>
-                        <p class="about-card-desc" data-translate="card_support_desc">Active communication and delivery speed.</p>
-                    </div>
-                    
-                    <div class="about-card">
-                        <div class="about-card-icon"><i class="fas fa-mobile-alt"></i></div>
-                        <h4 class="about-card-title" data-translate="card_design_title">Responsive UI</h4>
-                        <p class="about-card-desc" data-translate="card_design_desc">Interfaces that display perfectly on any screen.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ==========================================================================
-       Skills Section
-       ========================================================================== -->
-    <section id="skills" class="reveal">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-subtitle" data-translate="skills_subtitle">My Expertise</span>
-                <h2 class="section-title" data-translate="skills_title">Skills & Technologies</h2>
-            </div>
-            
-            <div class="skills-tabs">
-                <button class="tab-btn active" data-tab="development-skills" data-translate="tab_development">Development</button>
-                <button class="tab-btn" data-tab="design-skills" data-translate="tab_design">Design</button>
-            </div>
-            
-            <!-- Development Skills Pane -->
-            <div class="skills-pane active" id="development-skills">
-                <div class="skill-card">
-                    <div class="skill-logo" style="color: #e34c26;"><i class="fab fa-html5"></i></div>
-                    <div class="skill-meta">
-                        <span class="skill-name">HTML5</span>
-                        <span class="skill-level" data-translate="skill_level_expert">Expert</span>
-                    </div>
-                </div>
-                
-                <div class="skill-card">
-                    <div class="skill-logo" style="color: #264de4;"><i class="fab fa-css3-alt"></i></div>
-                    <div class="skill-meta">
-                        <span class="skill-name">CSS3</span>
-                        <span class="skill-level" data-translate="skill_level_expert">Expert</span>
-                    </div>
-                </div>
-                
-                <div class="skill-card">
-                    <div class="skill-logo" style="color: #f7df1e;"><i class="fab fa-js-square"></i></div>
-                    <div class="skill-meta">
-                        <span class="skill-name">JavaScript</span>
-                        <span class="skill-level" data-translate="skill_level_expert">Expert</span>
-                    </div>
-                </div>
-                
-                <div class="skill-card">
-                    <div class="skill-logo" style="color: #61dbfb;"><i class="fab fa-react"></i></div>
-                    <div class="skill-meta">
-                        <span class="skill-name">React</span>
-                        <span class="skill-level" data-translate="skill_level_expert">Expert</span>
-                    </div>
-                </div>
-                
-                <div class="skill-card">
-                    <div class="skill-logo" style="color: #3c873a;"><i class="fab fa-node-js"></i></div>
-                    <div class="skill-meta">
-                        <span class="skill-name">Node.js</span>
-                        <span class="skill-level" data-translate="skill_level_advanced">Advanced</span>
-                    </div>
-                </div>
-                
-                <div class="skill-card">
-                    <div class="skill-logo" style="color: #38bdf8;"><i class="fas fa-wind"></i></div>
-                    <div class="skill-meta">
-                        <span class="skill-name">TailwindCSS</span>
-                        <span class="skill-level" data-translate="skill_level_expert">Expert</span>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Design Skills Pane -->
-            <div class="skills-pane" id="design-skills">
-                <div class="skill-card">
-                    <div class="skill-logo" style="color: #a855f7;"><i class="fas fa-crop-simple"></i></div>
-                    <div class="skill-meta">
-                        <span class="skill-name">UI/UX Design</span>
-                        <span class="skill-level" data-translate="skill_level_expert">Expert</span>
-                    </div>
-                </div>
-                
-                <div class="skill-card">
-                    <div class="skill-logo" style="color: #3b82f6;"><i class="fas fa-bezier-curve"></i></div>
-                    <div class="skill-meta">
-                        <span class="skill-name">Vector Branding</span>
-                        <span class="skill-level" data-translate="skill_level_expert">Expert</span>
-                    </div>
-                </div>
-                
-                <div class="skill-card">
-                    <div class="skill-logo" style="color: #10b981;"><i class="fas fa-font"></i></div>
-                    <div class="skill-meta">
-                        <span class="skill-name">Typography</span>
-                        <span class="skill-level" data-translate="skill_level_advanced">Advanced</span>
-                    </div>
-                </div>
-                
-                <div class="skill-card">
-                    <div class="skill-logo" style="color: #f59e0b;"><i class="fas fa-columns"></i></div>
-                    <div class="skill-meta">
-                        <span class="skill-name">Editorial Layouts</span>
-                        <span class="skill-level" data-translate="skill_level_advanced">Advanced</span>
-                    </div>
-                </div>
-                
-                <div class="skill-card">
-                    <div class="skill-logo" style="color: #ec4899;"><i class="fas fa-palette"></i></div>
-                    <div class="skill-meta">
-                        <span class="skill-name">Color Theory</span>
-                        <span class="skill-level" data-translate="skill_level_expert">Expert</span>
-                    </div>
-                </div>
-                
-                <div class="skill-card">
-                    <div class="skill-logo" style="color: #06b6d4;"><i class="fas fa-pen-nib"></i></div>
-                    <div class="skill-meta">
-                        <span class="skill-name">Digital Illustration</span>
-                        <span class="skill-level" data-translate="skill_level_expert">Expert</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ==========================================================================
-       Projects Section
-       ========================================================================== -->
-    <section id="projects" class="reveal">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-subtitle" data-translate="projects_subtitle">Recent Work</span>
-                <h2 class="section-title" data-translate="projects_title">Featured Projects</h2>
-            </div>
-            
-            <div class="projects-filter">
-                <button class="filter-btn active" data-filter="all" data-translate="filter_all">All Work</button>
-                <button class="filter-btn" data-filter="web" data-translate="filter_web">Web Development</button>
-                <button class="filter-btn" data-filter="design" data-translate="filter_design">Graphic Design</button>
-            </div>
-            
-            <div class="projects-grid">
-                <!-- Project 1 (Web Development) -->
-                <div class="project-card" data-category="web">
-                    <div class="project-img-wrapper">
-                        <div class="project-design-visual">
-                            <i class="fas fa-shopping-bag"></i>
-                        </div>
-                        <div class="project-overlay">
-                            <a href="#" class="project-overlay-link" aria-label="Project details"><i class="fas fa-link"></i></a>
-                            <a href="https://github.com/abdullamaxmud" target="_blank" rel="noopener" class="project-overlay-link" aria-label="GitHub repository"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <span class="project-tag" data-translate="proj_tag_web">Web App</span>
-                        <h3 class="project-title" data-translate="proj1_title">Modern E-Commerce Portal</h3>
-                        <p class="project-desc" data-translate="proj1_desc">A fully responsive online shopping application built with React, featuring animated product grids and dark mode.</p>
-                        <div class="project-techs">
-                            <span class="project-tech">React</span>
-                            <span class="project-tech">CSS3</span>
-                            <span class="project-tech">HTML5</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Project 2 (Graphic Design) -->
-                <div class="project-card" data-category="design">
-                    <div class="project-img-wrapper">
-                        <div class="project-design-visual" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);">
-                            <i class="fas fa-feather-pointed" style="color: #a855f7;"></i>
-                        </div>
-                        <div class="project-overlay">
-                            <a href="#" class="project-overlay-link" aria-label="Project details"><i class="fas fa-search"></i></a>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <span class="project-tag" data-translate="proj_tag_design">Graphic / Branding</span>
-                        <h3 class="project-title" data-translate="proj2_title">Vector Logo Branding</h3>
-                        <p class="project-desc" data-translate="proj2_desc">A premium corporate visual identity suite featuring vector patterns, color palettes, and print mockups.</p>
-                        <div class="project-techs">
-                            <span class="project-tech">Illustrator</span>
-                            <span class="project-tech">Vector</span>
-                            <span class="project-tech">Colors</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Project 3 (Web Development) -->
-                <div class="project-card" data-category="web">
-                    <div class="project-img-wrapper">
-                        <div class="project-design-visual" style="background: linear-gradient(135deg, #111827 0%, #312e81 100%);">
-                            <i class="fas fa-list-check" style="color: #60a5fa;"></i>
-                        </div>
-                        <div class="project-overlay">
-                            <a href="#" class="project-overlay-link" aria-label="Project details"><i class="fas fa-link"></i></a>
-                            <a href="https://github.com/abdullamaxmud" target="_blank" rel="noopener" class="project-overlay-link" aria-label="GitHub repository"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <span class="project-tag" data-translate="proj_tag_web">Web App</span>
-                        <h3 class="project-title" data-translate="proj3_title">Task Scheduler dashboard</h3>
-                        <p class="project-desc" data-translate="proj3_desc">A clean productivity platform with drag-and-drop mechanics, interactive charts, and Node.js server.</p>
-                        <div class="project-techs">
-                            <span class="project-tech">React</span>
-                            <span class="project-tech">Node.js</span>
-                            <span class="project-tech">JavaScript</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Project 4 (Graphic Design) -->
-                <div class="project-card" data-category="design">
-                    <div class="project-img-wrapper">
-                        <div class="project-design-visual" style="background: linear-gradient(135deg, #4c0519 0%, #1c1917 100%);">
-                            <i class="fas fa-heading" style="color: #ec4899;"></i>
-                        </div>
-                        <div class="project-overlay">
-                            <a href="#" class="project-overlay-link" aria-label="Project details"><i class="fas fa-search"></i></a>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <span class="project-tag" data-translate="proj_tag_design">Graphic / Branding</span>
-                        <h3 class="project-title" data-translate="proj4_title">Sleek Editorial Layout</h3>
-                        <p class="project-desc" data-translate="proj4_desc">A premium graphic editorial layout containing customized grids, vector illustrations, and typographic hierarchies.</p>
-                        <div class="project-techs">
-                            <span class="project-tech">Typography</span>
-                            <span class="project-tech">Layout</span>
-                            <span class="project-tech">Vector</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Project 5 (Web Development) -->
-                <div class="project-card" data-category="web">
-                    <div class="project-img-wrapper">
-                        <div class="project-design-visual" style="background: linear-gradient(135deg, #022c22 0%, #064e3b 100%);">
-                            <i class="fas fa-cloud-sun-rain" style="color: #34d399;"></i>
-                        </div>
-                        <div class="project-overlay">
-                            <a href="#" class="project-overlay-link" aria-label="Project details"><i class="fas fa-link"></i></a>
-                            <a href="https://github.com/abdullamaxmud" target="_blank" rel="noopener" class="project-overlay-link" aria-label="GitHub repository"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <span class="project-tag" data-translate="proj_tag_web">Web App</span>
-                        <h3 class="project-title" data-translate="proj5_title">Interactive Weather Hub</h3>
-                        <p class="project-desc" data-translate="proj5_desc">A dynamic weather client utilizing third-party REST APIs, featuring custom weather graphics and animations.</p>
-                        <div class="project-techs">
-                            <span class="project-tech">JavaScript</span>
-                            <span class="project-tech">CSS3</span>
-                            <span class="project-tech">API</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Project 6 (Graphic Design) -->
-                <div class="project-card" data-category="design">
-                    <div class="project-img-wrapper">
-                        <div class="project-design-visual" style="background: linear-gradient(135deg, #0f172a 0%, #3b0764 100%);">
-                            <i class="fas fa-id-card" style="color: #38bdf8;"></i>
-                        </div>
-                        <div class="project-overlay">
-                            <a href="#" class="project-overlay-link" aria-label="Project details"><i class="fas fa-search"></i></a>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <span class="project-tag" data-translate="proj_tag_design">Graphic / Branding</span>
-                        <h3 class="project-title" data-translate="proj6_title">Minimalist Identity Design</h3>
-                        <p class="project-desc" data-translate="proj6_desc">Minimalist corporate business cards and stationery designs using geometric vectors and custom typography.</p>
-                        <div class="project-techs">
-                            <span class="project-tech">Branding</span>
-                            <span class="project-tech">Minimalist</span>
-                            <span class="project-tech">Print</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ==========================================================================
-       Contact & Socials Section
-       ========================================================================== -->
-    <section id="contact" class="reveal">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-subtitle" data-translate="contact_subtitle">Get In Touch</span>
-                <h2 class="section-title" data-translate="contact_title">Let's Connect</h2>
-            </div>
-            
-            <div class="contact-wrapper">
-                <div class="contact-info-area">
-                    <h3 class="contact-card-headline" data-translate="contact_headline">Have a project in mind or just want to chat?</h3>
-                    <p class="contact-card-sub" data-translate="contact_subtext">Feel free to reach out through my direct links or use the message form. I'm always open to discussing new opportunities.</p>
-                    
-                    <div class="socials-grid">
-                        <!-- WhatsApp -->
-                        <a href="https://wa.me/252613496697" target="_blank" rel="noopener" class="social-card wa">
-                            <div class="social-icon"><i class="fab fa-whatsapp"></i></div>
-                            <div class="social-info">
-                                <span class="social-name">WhatsApp</span>
-                                <span class="social-user" data-translate="social_wa_user">WhatsApp Chat</span>
-                            </div>
-                        </a>
-                        
-                        <!-- Facebook -->
-                        <a href="https://www.facebook.com/share/1E1sGoS7PX/" target="_blank" rel="noopener" class="social-card fb">
-                            <div class="social-icon"><i class="fab fa-facebook-f"></i></div>
-                            <div class="social-info">
-                                <span class="social-name">Facebook</span>
-                                <span class="social-user" data-translate="social_fb_user">Facebook Profile</span>
-                            </div>
-                        </a>
-                        
-                        <!-- Instagram -->
-                        <a href="https://www.instagram.com/zulthanabdalla?igsh=MXNpN211dWZ2OWV6MQ==" target="_blank" rel="noopener" class="social-card ig">
-                            <div class="social-icon"><i class="fab fa-instagram"></i></div>
-                            <div class="social-info">
-                                <span class="social-name">Instagram</span>
-                                <span class="social-user" data-translate="social_ig_user">@zulthanabdalla</span>
-                            </div>
-                        </a>
-                        
-                        <!-- Snapchat -->
-                        <a href="https://www.snapchat.com/add/abdalla_moha97?share_id=XPkVBpkRyAE&locale=en-GB" target="_blank" rel="noopener" class="social-card sc">
-                            <div class="social-icon"><i class="fab fa-snapchat"></i></div>
-                            <div class="social-info">
-                                <span class="social-name">Snapchat</span>
-                                <span class="social-user" data-translate="social_sc_user">Snapchat Add</span>
-                            </div>
-                        </a>
-                        
-                        <!-- GitHub -->
-                        <a href="https://github.com/abdullamaxmud" target="_blank" rel="noopener" class="social-card gh">
-                            <div class="social-icon"><i class="fab fa-github"></i></div>
-                            <div class="social-info">
-                                <span class="social-name">GitHub</span>
-                                <span class="social-user" data-translate="social_gh_user">GitHub Profile</span>
-                            </div>
-                        </a>
-                        
-                        <!-- Phone -->
-                        <a href="tel:+252613496697" class="social-card ph">
-                            <div class="social-icon"><i class="fas fa-phone-alt"></i></div>
-                            <div class="social-info">
-                                <span class="social-name">Phone</span>
-                                <span class="social-user" data-translate="social_ph_user">+252 61 3496697</span>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Contact Form Card -->
-                <div class="contact-form-card">
-                    <form id="contact-form">
-                        <div class="form-group">
-                            <input type="text" id="form-name" class="form-input" placeholder=" " data-translate-placeholder="form_placeholder_name" required>
-                            <label for="form-name" class="form-label" data-translate="form_label_name">Name</label>
-                        </div>
-                        
-                        <div class="form-group">
-                            <input type="email" id="form-email" class="form-input" placeholder=" " data-translate-placeholder="form_placeholder_email" required>
-                            <label for="form-email" class="form-label" data-translate="form_label_email">Email</label>
-                        </div>
-                        
-                        <div class="form-group">
-                            <input type="text" id="form-subject" class="form-input" placeholder=" " data-translate-placeholder="form_placeholder_subject" required>
-                            <label for="form-subject" class="form-label" data-translate="form_label_subject">Subject</label>
-                        </div>
-                        
-                        <div class="form-group">
-                            <textarea id="form-message" class="form-input" placeholder=" " data-translate-placeholder="form_placeholder_message" required></textarea>
-                            <label for="form-message" class="form-label" data-translate="form_label_message">Message</label>
-                        </div>
-                        
-                        <div class="form-btn-wrapper">
-                            <button type="submit" class="btn btn-primary" data-translate="btn_send">Send Message</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ==========================================================================
-       Footer Section
-       ========================================================================== -->
-    <footer>
-        <div class="container footer-content">
-            <span class="footer-logo">A. Mohamud</span>
-            <div class="footer-copy">
-                <span>&copy; 2026. Made with</span>
-                <i class="fas fa-heart"></i>
-                <span>by Abdalla Mohamud</span>
-            </div>
-        </div>
-    </footer>
-
-    <!-- ==========================================================================
-       Submission Confirmation Dialog Modal
-       ========================================================================== -->
-    <div class="modal-overlay" id="modal-overlay">
-        <div class="modal-content">
-            <div class="modal-icon">
-                <i class="fas fa-check"></i>
-            </div>
-            <h3 class="modal-title" data-translate="modal_title">Message Sent!</h3>
-            <p class="modal-text" data-translate="modal_text">Thank you for reaching out, Abdalla will respond to you as soon as possible.</p>
-            <button class="btn btn-primary" id="modal-close-btn" data-translate="modal_btn_close">Close</button>
-        </div>
+    <!-- ========== TECH MARQUEE (MATCHING SCREENSHOT) ========== -->
+    <div class="marquee-strip" aria-hidden="true">
+      <div class="marquee-content">
+        <span class="marquee-item"><i class="fas fa-layer-group"></i> MULTIMEDIA</span>
+        <span class="marquee-item"><i class="fab fa-html5"></i> HTML &amp; CSS</span>
+        <span class="marquee-item"><i class="fab fa-js"></i> JAVASCRIPT</span>
+        <span class="marquee-item"><i class="fab fa-php"></i> PHP &amp; MYSQL</span>
+        <span class="marquee-item"><i class="fab fa-react"></i> REACT.JS</span>
+        <span class="marquee-item"><i class="fab fa-python"></i> PYTHON</span>
+        <span class="marquee-item"><i class="fas fa-mobile-screen"></i> FLUTTER</span>
+        <span class="marquee-item"><i class="fas fa-code"></i> C / C++ / C#</span>
+        <span class="marquee-item"><i class="fas fa-microchip"></i> IOT &amp; ARDUINO</span>
+        <span class="marquee-item"><i class="fas fa-photo-film"></i> FULL MULTIMEDIA</span>
+        <!-- Duplicate for continuous infinite scroll -->
+        <span class="marquee-item"><i class="fas fa-layer-group"></i> MULTIMEDIA</span>
+        <span class="marquee-item"><i class="fab fa-html5"></i> HTML &amp; CSS</span>
+        <span class="marquee-item"><i class="fab fa-js"></i> JAVASCRIPT</span>
+        <span class="marquee-item"><i class="fab fa-php"></i> PHP &amp; MYSQL</span>
+        <span class="marquee-item"><i class="fab fa-react"></i> REACT.JS</span>
+        <span class="marquee-item"><i class="fab fa-python"></i> PYTHON</span>
+        <span class="marquee-item"><i class="fas fa-mobile-screen"></i> FLUTTER</span>
+        <span class="marquee-item"><i class="fas fa-code"></i> C / C++ / C#</span>
+        <span class="marquee-item"><i class="fas fa-microchip"></i> IOT &amp; ARDUINO</span>
+        <span class="marquee-item"><i class="fas fa-photo-film"></i> FULL MULTIMEDIA</span>
+      </div>
     </div>
 
-    <!-- Custom Script JS -->
-    <script src="script.js"></script>
+    <!-- ========== ABOUT SECTION ========== -->
+    <section class="section-wrapper" id="about">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-eyebrow" data-i18n="about.eyebrow">ABOUT ME</span>
+          <h2 class="section-heading" data-i18n="about.heading">Architecting Modern Web &amp; Connected Systems</h2>
+          <p class="section-subheading" data-i18n="about.subheading">A multidisciplinary blend of software development, mobile application engineering, and creative digital design.</p>
+        </div>
+
+        <div class="about-layout-grid">
+          <div class="about-media-column">
+            <div class="about-image-card">
+              <img src="assets/images/abdallah-laptop.jpg" alt="Abdallah Mohamud Abdi with Laptop" class="about-img" />
+              <div class="about-image-glow"></div>
+              <div class="experience-ribbon">
+                <span class="ribbon-number">4+</span>
+                <span class="ribbon-label" data-i18n="about.yearsExp">Years of Dev Experience</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-text-column">
+            <h3 class="about-name-headline">
+              Abdallah Mohamud Abdi
+              <span class="accent-title" data-i18n="about.role">— Tech Innovator &amp; Developer</span>
+            </h3>
+
+            <p class="about-lead" data-i18n="about.bio">
+              I am <strong>Abdallah Mohamud Abdi</strong>, born on 8 August 2005 in Jeddah, Saudi Arabia. I am a passionate 4th-year Computer Science student at Hormuud University, Software Developer, and Technology Enthusiast specialized in Full-Stack Web Development, Mobile Applications, and Creative Multimedia solutions.
+            </p>
+
+            <p class="about-body" data-i18n="about.body">
+              My engineering philosophy pairs solid architectural foundations with elegant user experiences. Whether developing high-concurrency web platforms, building cross-platform mobile apps with modern responsive styling, or designing sleek multimedia brand systems, I focus on delivering scalable, reliable, and high-impact digital solutions.
+            </p>
+
+            <div class="about-key-highlights">
+              <div class="highlight-item">
+                <div class="highlight-icon"><i class="fas fa-university"></i></div>
+                <div class="highlight-info">
+                  <span class="highlight-title" data-i18n="about.highlightUniTitle">Hormuud University</span>
+                  <span class="highlight-desc" data-i18n="about.highlightUniDesc">4th-Year Computer Science Student</span>
+                </div>
+              </div>
+
+              <div class="highlight-item">
+                <div class="highlight-icon"><i class="fas fa-code"></i></div>
+                <div class="highlight-info">
+                  <span class="highlight-title" data-i18n="about.highlightWebTitle">Full-Stack Development</span>
+                  <span class="highlight-desc">React, Node.js, Express, REST APIs, SQL/NoSQL</span>
+                </div>
+              </div>
+
+              <div class="highlight-item">
+                <div class="highlight-icon"><i class="fas fa-mobile-screen"></i></div>
+                <div class="highlight-info">
+                  <span class="highlight-title" data-i18n="about.highlightMobileTitle">Mobile Applications</span>
+                  <span class="highlight-desc">Cross-Platform iOS &amp; Android Apps</span>
+                </div>
+              </div>
+
+              <div class="highlight-item">
+                <div class="highlight-icon"><i class="fas fa-map-pin"></i></div>
+                <div class="highlight-info">
+                  <span class="highlight-title" data-i18n="about.highlightLocTitle">Location &amp; Origins</span>
+                  <span class="highlight-desc">Born in Jeddah, KSA &bull; Based in Mogadishu, Somalia</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="about-cta-row">
+              <a href="#contact" class="btn btn-primary">
+                <span data-i18n="about.btnStart">Start a Project</span>
+                <i class="fas fa-envelope"></i>
+              </a>
+              <a href="https://wa.me/252613496697" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp-inline">
+                <i class="fab fa-whatsapp"></i>
+                <span data-i18n="about.btnWhatsapp">Direct WhatsApp</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Metric Counters -->
+        <div class="stats-counter-strip">
+          <div class="stat-counter-item">
+            <span class="stat-digit">35+</span>
+            <span class="stat-name" data-i18n="about.statProjects">Projects Delivered</span>
+            <span class="stat-detail" data-i18n="about.statWebMobile">Web, Mobile &amp; Cloud</span>
+          </div>
+
+          <div class="stat-counter-divider"></div>
+
+          <div class="stat-counter-item">
+            <span class="stat-digit">4+</span>
+            <span class="stat-name" data-i18n="about.statExperience">Years Experience</span>
+            <span class="stat-detail">Hands-on Engineering</span>
+          </div>
+
+          <div class="stat-counter-divider"></div>
+
+          <div class="stat-counter-item">
+            <span class="stat-digit">15+</span>
+            <span class="stat-name" data-i18n="about.statTechnologies">Technologies Mastered</span>
+            <span class="stat-detail">Modern Stacks &amp; Frameworks</span>
+          </div>
+
+          <div class="stat-counter-divider"></div>
+
+          <div class="stat-counter-item">
+            <span class="stat-digit">100%</span>
+            <span class="stat-name" data-i18n="about.statDedication">Client Dedication</span>
+            <span class="stat-detail">Timely &amp; Clean Delivery</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== PROJECTS SECTION ========== -->
+    <section class="section-wrapper bg-subtle" id="projects">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="projects-pill-eyebrow" data-i18n="projects.eyebrow">MY WORK</span>
+          <h2 class="section-heading projects-heading-custom" data-i18n="projects.heading">RECENT PROJECTS</h2>
+          <p class="section-subheading" data-i18n="projects.subheading">Explore a curated selection of web applications, UI/UX systems, and branding designs crafted with precision.</p>
+        </div>
+
+        <!-- Touch-Friendly Filter Tabs (3 Tabs matching user screenshot) -->
+        <div class="project-filter-tabs" role="tablist">
+          <button class="filter-tab-btn active" data-filter="web" type="button" role="tab" aria-selected="true">
+            <i class="fas fa-laptop-code"></i>
+            <span data-i18n="projects.tabWeb">Systems &amp; Web Apps</span>
+            <span class="filter-count">3</span>
+          </button>
+          <button class="filter-tab-btn" data-filter="posters" type="button" role="tab" aria-selected="false">
+            <i class="fas fa-palette"></i>
+            <span data-i18n="projects.tabPosters">Graphic Posters</span>
+            <span class="filter-count">4</span>
+          </button>
+          <button class="filter-tab-btn" data-filter="media" type="button" role="tab" aria-selected="false">
+            <i class="fas fa-video"></i>
+            <span data-i18n="projects.tabMedia">Videos &amp; Media</span>
+            <span class="filter-count">2</span>
+          </button>
+        </div>
+
+        <!-- Projects Carousel Shell with Navigation Arrows (Pixel-perfect to user reference) -->
+        <div class="projects-carousel-shell">
+          <button type="button" class="projects-nav-arrow prev" id="projectsPrevBtn" aria-label="Previous Projects">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+
+          <div class="projects-carousel-track" id="projectsTrack">
+
+            <!-- ===== TAB 1: SYSTEMS & WEB APPS (3 Authentic Projects) ===== -->
+
+            <!-- Web 1: 4 SEASON Restaurant -->
+            <article class="project-card project-card-minimal" data-category="web">
+              <div class="project-visual-box has-img">
+                <img src="assets/images/project-foms-restaurant.png" alt="4 SEASON Restaurant" class="project-thumb-img" />
+              </div>
+              <div class="project-card-footer">
+                <div class="project-card-text">
+                  <h3 class="project-card-title" data-i18n="projects.p1Title">4 SEASON Restaurant</h3>
+                  <span class="project-card-subtitle" data-i18n="projects.p1Sub">Local POS • Full Stack</span>
+                </div>
+                <a href="https://github.com/abdullamaxmud/Resturent" target="_blank" rel="noopener noreferrer" class="project-circle-btn" aria-label="View 4 SEASON Restaurant on GitHub">
+                  <i class="fas fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
+            </article>
+
+            <!-- Web 2: Biyaha Soomaaliya (Water Supply Schedule System) -->
+            <article class="project-card project-card-minimal" data-category="web">
+              <div class="project-visual-box has-img">
+                <img src="assets/images/project-biyaha-water.png" alt="Biyaha Soomaaliya Water System" class="project-thumb-img" />
+              </div>
+              <div class="project-card-footer">
+                <div class="project-card-text">
+                  <h3 class="project-card-title" data-i18n="projects.p2Title">Biyaha Soomaaliya</h3>
+                  <span class="project-card-subtitle" data-i18n="projects.p2Sub">Water Schedule • Public Utility</span>
+                </div>
+                <a href="https://github.com/abdullamaxmud/water-somalia" target="_blank" rel="noopener noreferrer" class="project-circle-btn" aria-label="View Biyaha Soomaaliya on GitHub">
+                  <i class="fas fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
+            </article>
+
+            <!-- Web 3: DHIIG KAAL Platform -->
+            <article class="project-card project-card-minimal" data-category="web">
+              <div class="project-visual-box has-img">
+                <img src="assets/images/project-dhiig-kaal.png" alt="DHIIG KAAL Blood Donation System" class="project-thumb-img" />
+              </div>
+              <div class="project-card-footer">
+                <div class="project-card-text">
+                  <h3 class="project-card-title" data-i18n="projects.p3Title">DHIIG KAAL Platform</h3>
+                  <span class="project-card-subtitle" data-i18n="projects.p3Sub">Healthcare • Live Donation Portal</span>
+                </div>
+                <a href="https://dhiigkaal.iftiinhub.com/" target="_blank" rel="noopener noreferrer" class="project-circle-btn" aria-label="Open DHIIG KAAL Live Platform">
+                  <i class="fas fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
+            </article>
+
+
+            <!-- ===== TAB 2: GRAPHIC POSTERS (4 Projects) ===== -->
+
+            <!-- Poster 1: Somali Tech Summit 2024 -->
+            <article class="project-card project-card-minimal" data-category="posters">
+              <div class="project-visual-box">
+                <div class="mockup-poster poster-bg-gradient-1">
+                  <div class="poster-top-badge">TECH CONFERENCE</div>
+                  <div>
+                    <div class="poster-headline">SOMALIA TECH SUMMIT 2024</div>
+                    <div class="poster-sub">Innovating The Digital Frontier • Mogadishu</div>
+                  </div>
+                  <div class="poster-meta">
+                    <span><i class="fas fa-calendar-check"></i> Keynote 2024</span>
+                    <span><i class="fas fa-vector-square"></i> 300 DPI Print</span>
+                  </div>
+                </div>
+              </div>
+              <div class="project-card-footer">
+                <div class="project-card-text">
+                  <h3 class="project-card-title" data-i18n="projects.poster1Title">Somali Tech Summit</h3>
+                  <span class="project-card-subtitle" data-i18n="projects.poster1Sub">Keynote Design • Event Poster</span>
+                </div>
+                <a href="#contact" class="project-circle-btn" aria-label="View Poster Showcase">
+                  <i class="fas fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
+            </article>
+
+            <!-- Poster 2: Corporate Brand Identity & Campaign -->
+            <article class="project-card project-card-minimal" data-category="posters">
+              <div class="project-visual-box">
+                <div class="mockup-poster poster-bg-gradient-2">
+                  <div class="poster-top-badge">CORPORATE SUITE</div>
+                  <div>
+                    <div class="poster-headline">NEXUS ENTERPRISE BRANDING</div>
+                    <div class="poster-sub">Corporate Marketing &amp; Identity Posters</div>
+                  </div>
+                  <div class="poster-meta">
+                    <span><i class="fas fa-swatchbook"></i> Brand Book</span>
+                    <span><i class="fas fa-print"></i> Billboard Series</span>
+                  </div>
+                </div>
+              </div>
+              <div class="project-card-footer">
+                <div class="project-card-text">
+                  <h3 class="project-card-title" data-i18n="projects.poster2Title">Nexus Enterprise Suite</h3>
+                  <span class="project-card-subtitle" data-i18n="projects.poster2Sub">Brand Identity • Billboard Series</span>
+                </div>
+                <a href="#contact" class="project-circle-btn" aria-label="View Poster Showcase">
+                  <i class="fas fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
+            </article>
+
+            <!-- Poster 3: FinTech Mobile App Launch Poster -->
+            <article class="project-card project-card-minimal" data-category="posters">
+              <div class="project-visual-box">
+                <div class="mockup-poster poster-bg-gradient-3">
+                  <div class="poster-top-badge">PRODUCT LAUNCH</div>
+                  <div>
+                    <div class="poster-headline">KAAFIPAY MOBILE FINTECH</div>
+                    <div class="poster-sub">Modern Digital Wallet &amp; Remittance</div>
+                  </div>
+                  <div class="poster-meta">
+                    <span><i class="fas fa-mobile-screen"></i> Mobile App Promo</span>
+                    <span><i class="fas fa-shield-halved"></i> FinTech Grade</span>
+                  </div>
+                </div>
+              </div>
+              <div class="project-card-footer">
+                <div class="project-card-text">
+                  <h3 class="project-card-title" data-i18n="projects.poster3Title">KaafiPay FinTech Series</h3>
+                  <span class="project-card-subtitle" data-i18n="projects.poster3Sub">Product Launch • FinTech Promo</span>
+                </div>
+                <a href="#contact" class="project-circle-btn" aria-label="View Poster Showcase">
+                  <i class="fas fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
+            </article>
+
+            <!-- Poster 4: Creative Typographic Exhibition Poster -->
+            <article class="project-card project-card-minimal" data-category="posters">
+              <div class="project-visual-box">
+                <div class="mockup-poster poster-bg-gradient-4">
+                  <div class="poster-top-badge">ART &amp; CULTURE</div>
+                  <div>
+                    <div class="poster-headline">HORNS OF AFRICA ART &amp; TYPE</div>
+                    <div class="poster-sub">Cultural Heritage &amp; Minimalist Layout</div>
+                  </div>
+                  <div class="poster-meta">
+                    <span><i class="fas fa-paint-brush"></i> Exhibition Showcase</span>
+                    <span><i class="fas fa-award"></i> Editorial Quality</span>
+                  </div>
+                </div>
+              </div>
+              <div class="project-card-footer">
+                <div class="project-card-text">
+                  <h3 class="project-card-title" data-i18n="projects.poster4Title">Horns of Africa Art</h3>
+                  <span class="project-card-subtitle" data-i18n="projects.poster4Sub">Cultural Heritage • Typographic Art</span>
+                </div>
+                <a href="#contact" class="project-circle-btn" aria-label="View Poster Showcase">
+                  <i class="fas fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
+            </article>
+
+
+            <!-- ===== TAB 3: VIDEOS & MEDIA (2 Projects) ===== -->
+
+            <!-- Video 1: Abdalla Show (Official Personal Video) -->
+            <article class="project-card project-card-minimal video-project-card" data-category="media">
+              <div class="project-visual-box video-visual-box">
+                <video class="project-video-player" src="assets/videos/abdalla-show.mp4" preload="metadata" playsinline controls>
+                  <source src="assets/videos/abdalla-show.mp4" type="video/mp4">
+                  Your browser does not support HTML5 video.
+                </video>
+              </div>
+              <div class="project-card-footer">
+                <div class="project-card-text">
+                  <h3 class="project-card-title" data-i18n="projects.media1Title">Abdalla Show Production</h3>
+                  <span class="project-card-subtitle" data-i18n="projects.media1Sub">Video Production • Official Reel</span>
+                </div>
+                <button type="button" class="project-circle-btn btn-trigger-video" data-video-src="assets/videos/abdalla-show.mp4" data-video-title="Abdalla Show Production" aria-label="Watch Abdalla Show Video">
+                  <i class="fas fa-play"></i>
+                </button>
+              </div>
+            </article>
+
+            <!-- Video 2: Corporate Brand Storytelling & Digital Video -->
+            <article class="project-card project-card-minimal video-project-card" data-category="media">
+              <div class="project-visual-box video-visual-box">
+                <video class="project-video-player" src="assets/videos/creative-production.mp4" preload="metadata" playsinline controls>
+                  <source src="assets/videos/creative-production.mp4" type="video/mp4">
+                  Your browser does not support HTML5 video.
+                </video>
+              </div>
+              <div class="project-card-footer">
+                <div class="project-card-text">
+                  <h3 class="project-card-title" data-i18n="projects.media2Title">Corporate Storytelling</h3>
+                  <span class="project-card-subtitle" data-i18n="projects.media2Sub">Cinematic Promo • Digital Media</span>
+                </div>
+                <button type="button" class="project-circle-btn btn-trigger-video" data-video-src="assets/videos/creative-production.mp4" data-video-title="Corporate Storytelling" aria-label="Watch Corporate Storytelling Video">
+                  <i class="fas fa-play"></i>
+                </button>
+              </div>
+            </article>
+
+          </div>
+
+          <button type="button" class="projects-nav-arrow next" id="projectsNextBtn" aria-label="Next Projects">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SERVICES SECTION ========== -->
+    <section class="section-wrapper" id="services">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-eyebrow" data-i18n="services.eyebrow">WHAT I DO</span>
+          <h2 class="section-heading" data-i18n="services.heading">Professional Engineering &amp; Creative Services</h2>
+          <p class="section-subheading" data-i18n="services.subheading">High-caliber technical solutions tailored to accelerate businesses, startups, and academic institutions.</p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Service 1 -->
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
+            <h3 class="service-title" data-i18n="services.s1Title">Full-Stack Web Development</h3>
+            <p class="service-text" data-i18n="services.s1Desc">
+              Custom responsive web applications engineered with React, Node.js, Express, and modern styling architectures. Fast load speeds, SEO optimization, and secure databases.
+            </p>
+            <ul class="service-list">
+              <li><i class="fas fa-check"></i> <span data-i18n="services.s1Li1">Single Page Applications (SPA)</span></li>
+              <li><i class="fas fa-check"></i> <span data-i18n="services.s1Li2">RESTful API Architecture</span></li>
+              <li><i class="fas fa-check"></i> <span data-i18n="services.s1Li3">Modern Database Integration</span></li>
+            </ul>
+            <a href="#contact" class="service-action-link">
+              <span data-i18n="services.s1Action">Hire for Web Dev</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- Service 2: Cloud & API Architecture -->
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-cloud-arrow-up"></i></div>
+            <h3 class="service-title" data-i18n="services.s2Title">Cloud &amp; API Architecture</h3>
+            <p class="service-text" data-i18n="services.s2Desc">
+              Scalable backend systems, microservices, RESTful API design, database optimization, and high-concurrency cloud deployments for resilient web operations.
+            </p>
+            <ul class="service-list">
+              <li><i class="fas fa-check"></i> <span data-i18n="services.s2Li1">REST &amp; GraphQL APIs</span></li>
+              <li><i class="fas fa-check"></i> <span data-i18n="services.s2Li2">Cloud Databases (SQL &amp; NoSQL)</span></li>
+              <li><i class="fas fa-check"></i> <span data-i18n="services.s2Li3">Authentication &amp; Security</span></li>
+            </ul>
+            <a href="#contact" class="service-action-link">
+              <span data-i18n="services.s2Action">Build Backend System</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-mobile-screen-button"></i></div>
+            <h3 class="service-title" data-i18n="services.s3Title">Mobile App Development</h3>
+            <p class="service-text" data-i18n="services.s3Desc">
+              Clean cross-platform mobile interfaces built for iOS and Android with intuitive gestures, fast rendering, offline storage, and responsive layouts.
+            </p>
+            <ul class="service-list">
+              <li><i class="fas fa-check"></i> <span data-i18n="services.s3Li1">Responsive Mobile UI</span></li>
+              <li><i class="fas fa-check"></i> <span data-i18n="services.s3Li2">Cross-Platform Capabilities</span></li>
+              <li><i class="fas fa-check"></i> <span data-i18n="services.s3Li3">API &amp; Cloud Integration</span></li>
+            </ul>
+            <a href="#contact" class="service-action-link">
+              <span data-i18n="services.s3Action">Develop Mobile App</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- Service 4 -->
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-bezier-curve"></i></div>
+            <h3 class="service-title" data-i18n="services.s4Title">UI/UX &amp; Product Design</h3>
+            <p class="service-text" data-i18n="services.s4Desc">
+              User-centered interfaces crafted with surgical attention to typography, spatial balance, micro-interactions, accessibility, and high-fidelity interactive wireframes.
+            </p>
+            <ul class="service-list">
+              <li><i class="fas fa-check"></i> <span data-i18n="services.s4Li1">Interactive Wireframing</span></li>
+              <li><i class="fas fa-check"></i> <span data-i18n="services.s4Li2">Design Systems &amp; Tokens</span></li>
+              <li><i class="fas fa-check"></i> <span data-i18n="services.s4Li3">User Flow Optimization</span></li>
+            </ul>
+            <a href="#contact" class="service-action-link">
+              <span data-i18n="services.s4Action">Design User Experience</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- Service 5 -->
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-photo-film"></i></div>
+            <h3 class="service-title" data-i18n="services.s5Title">Creative Multimedia &amp; Branding</h3>
+            <p class="service-text" data-i18n="services.s5Desc">
+              High-impact visual identity packages, corporate logos, promotional marketing graphics, video post-production, and digital content designed to elevate brands.
+            </p>
+            <ul class="service-list">
+              <li><i class="fas fa-check"></i> <span data-i18n="services.s5Li1">Corporate Brand Identity</span></li>
+              <li><i class="fas fa-check"></i> <span data-i18n="services.s5Li2">High-Resolution Posters</span></li>
+              <li><i class="fas fa-check"></i> <span data-i18n="services.s5Li3">Video Editing &amp; Graphics</span></li>
+            </ul>
+            <a href="#contact" class="service-action-link">
+              <span data-i18n="services.s5Action">Request Creative Media</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- Service 6 -->
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-network-wired"></i></div>
+            <h3 class="service-title" data-i18n="services.s6Title">IT Consultation &amp; Support</h3>
+            <p class="service-text" data-i18n="services.s6Desc">
+              Technical guidance on systems architecture, server setup, database modeling, academic project mentoring, and software performance optimization.
+            </p>
+            <ul class="service-list">
+              <li><i class="fas fa-check"></i> <span data-i18n="services.s6Li1">Architecture Consultation</span></li>
+              <li><i class="fas fa-check"></i> <span data-i18n="services.s6Li2">Database Structuring</span></li>
+              <li><i class="fas fa-check"></i> <span data-i18n="services.s6Li3">Tech Project Advisory</span></li>
+            </ul>
+            <a href="#contact" class="service-action-link">
+              <span data-i18n="services.s6Action">Book Consultation</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SKILLS SECTION ========== -->
+    <section class="section-wrapper bg-subtle" id="skills">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-eyebrow" data-i18n="skills.eyebrow">TECHNICAL CAPABILITIES</span>
+          <h2 class="section-heading" data-i18n="skills.heading">Skills, Frameworks &amp; Tooling</h2>
+          <p class="section-subheading" data-i18n="skills.subheading">A comprehensive overview of programming languages, frameworks, and creative tools I utilize on a daily basis.</p>
+        </div>
+
+        <div class="skills-categories-grid">
+          <!-- Category 1: Frontend -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <i class="fas fa-code category-icon"></i>
+              <h3 class="category-title" data-i18n="skills.catFrontend">Frontend Engineering</h3>
+            </div>
+            <div class="skills-tags-wrap">
+              <div class="skill-badge"><i class="fab fa-react"></i> React.js</div>
+              <div class="skill-badge"><i class="fab fa-js"></i> JavaScript (ES6+)</div>
+              <div class="skill-badge"><i class="fab fa-html5"></i> HTML5 Semantic</div>
+              <div class="skill-badge"><i class="fab fa-css3-alt"></i> CSS3 &amp; Flexbox/Grid</div>
+              <div class="skill-badge"><i class="fas fa-wind"></i> Tailwind CSS</div>
+              <div class="skill-badge"><i class="fab fa-bootstrap"></i> Bootstrap 5</div>
+              <div class="skill-badge"><i class="fas fa-mobile"></i> Responsive Design</div>
+              <div class="skill-badge"><i class="fas fa-universal-access"></i> Web Accessibility</div>
+            </div>
+          </div>
+
+          <!-- Category 2: Backend & Database -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <i class="fas fa-server category-icon"></i>
+              <h3 class="category-title" data-i18n="skills.catBackend">Backend &amp; Cloud</h3>
+            </div>
+            <div class="skills-tags-wrap">
+              <div class="skill-badge"><i class="fab fa-node-js"></i> Node.js</div>
+              <div class="skill-badge"><i class="fas fa-network-wired"></i> Express.js</div>
+              <div class="skill-badge"><i class="fab fa-python"></i> Python</div>
+              <div class="skill-badge"><i class="fab fa-php"></i> PHP &amp; Modern OOP</div>
+              <div class="skill-badge"><i class="fas fa-database"></i> MySQL / MariaDB</div>
+              <div class="skill-badge"><i class="fas fa-leaf"></i> MongoDB</div>
+              <div class="skill-badge"><i class="fas fa-key"></i> JWT Authentication</div>
+              <div class="skill-badge"><i class="fas fa-cloud"></i> RESTful Architecture</div>
+            </div>
+          </div>
+
+          <!-- Category 3: Mobile & Cross-Platform -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <i class="fas fa-mobile-screen category-icon"></i>
+              <h3 class="category-title" data-i18n="skills.catMobile">Mobile Development</h3>
+            </div>
+            <div class="skills-tags-wrap">
+              <div class="skill-badge"><i class="fab fa-react"></i> React Native</div>
+              <div class="skill-badge"><i class="fas fa-layer-group"></i> Flutter / Dart</div>
+              <div class="skill-badge"><i class="fab fa-apple"></i> iOS Development</div>
+              <div class="skill-badge"><i class="fab fa-android"></i> Android Apps</div>
+              <div class="skill-badge"><i class="fas fa-fire"></i> Firebase Services</div>
+              <div class="skill-badge"><i class="fas fa-bolt"></i> State Management</div>
+              <div class="skill-badge"><i class="fas fa-database"></i> SQLite &amp; Offline</div>
+              <div class="skill-badge"><i class="fas fa-bell"></i> Push Notifications</div>
+            </div>
+          </div>
+
+          <!-- Category 4: Multimedia & Design -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <i class="fas fa-palette category-icon"></i>
+              <h3 class="category-title" data-i18n="skills.catMedia">Multimedia &amp; Tools</h3>
+            </div>
+            <div class="skills-tags-wrap">
+              <div class="skill-badge"><i class="fab fa-figma"></i> Figma UI/UX</div>
+              <div class="skill-badge"><i class="fas fa-image"></i> Adobe Photoshop</div>
+              <div class="skill-badge"><i class="fas fa-pen-nib"></i> Adobe Illustrator</div>
+              <div class="skill-badge"><i class="fas fa-video"></i> Adobe Premiere Pro</div>
+              <div class="skill-badge"><i class="fab fa-git-alt"></i> Git &amp; GitHub</div>
+              <div class="skill-badge"><i class="fas fa-terminal"></i> Bash &amp; PowerShell</div>
+              <div class="skill-badge"><i class="fas fa-boxes-stacked"></i> Agile &amp; Scrum</div>
+              <div class="skill-badge"><i class="fas fa-font"></i> Typography &amp; Layouts</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CERTIFICATES SECTION ========== -->
+    <section class="section-wrapper cert-showcase-section" id="certificates">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="cert-pill-badge">
+            <span class="cert-pill-text" data-i18n="certificates.eyebrow">OFFICIAL CERTIFICATIONS &amp; HONORS</span>
+          </div>
+          <h2 class="cert-main-title">
+            Verified <span class="text-accent-gradient">Certificates</span> &amp; Credentials
+          </h2>
+          <p class="cert-main-desc" data-i18n="certificates.subheading">
+            Official academic and professional credentials earned by Abdallah Mohamud Abdi across Artificial Intelligence, Prompt Engineering, and Technology Innovation.
+          </p>
+        </div>
+
+        <div class="certs-two-col-grid" id="certsGrid">
+          <!-- Certificate 1: Mastering Prompt Engineering (Visible) -->
+          <article class="cert-item-card">
+            <div class="cert-card-preview" onclick="openCertModal('assets/certificates/cert-mastering-prompt-engineering.png', 'Mastering Prompt Engineering', 'assets/certificates/cert-mastering-prompt-engineering.pdf')">
+              <div class="cert-card-paper">
+                <img src="assets/certificates/cert-mastering-prompt-engineering.png" alt="Mastering Prompt Engineering Certificate" class="cert-card-img" loading="lazy" />
+                <div class="cert-hover-hint">
+                  <i class="fas fa-expand"></i> <span>Preview</span>
+                </div>
+              </div>
+            </div>
+            <div class="cert-card-info">
+              <div class="cert-top-meta">
+                <span class="cert-received-tag">
+                  <i class="far fa-calendar-check"></i> Year Received: 2026
+                </span>
+                <span class="cert-code-tag">NTW-2026-53EF05DC</span>
+              </div>
+              <h3 class="cert-name-title" data-i18n="certificates.c2Title">Mastering Prompt Engineering</h3>
+              <p class="cert-track-name" data-i18n="certificates.c2Program">Artificial Intelligence for Academic Transformation</p>
+              <div class="cert-issuer-row">
+                <i class="fas fa-landmark"></i>
+                <span>National Training Week &bull; August 29, 2026</span>
+              </div>
+              <button type="button" class="btn-cert-action" onclick="openCertModal('assets/certificates/cert-mastering-prompt-engineering.png', 'Mastering Prompt Engineering', 'assets/certificates/cert-mastering-prompt-engineering.pdf')">
+                <i class="far fa-eye"></i> <span data-i18n="certificates.btnViewCert">View Certificate</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Certificate 2: AI Tools for Everyday Life (Visible) -->
+          <article class="cert-item-card">
+            <div class="cert-card-preview" onclick="openCertModal('assets/certificates/cert-ai-tools-for-everyday-life.png', 'AI Tools for Everyday Life', 'assets/certificates/cert-ai-tools-for-everyday-life.pdf')">
+              <div class="cert-card-paper">
+                <img src="assets/certificates/cert-ai-tools-for-everyday-life.png" alt="AI Tools for Everyday Life Certificate" class="cert-card-img" loading="lazy" />
+                <div class="cert-hover-hint">
+                  <i class="fas fa-expand"></i> <span>Preview</span>
+                </div>
+              </div>
+            </div>
+            <div class="cert-card-info">
+              <div class="cert-top-meta">
+                <span class="cert-received-tag">
+                  <i class="far fa-calendar-check"></i> Year Received: 2026
+                </span>
+                <span class="cert-code-tag">NTW-2026-7ECBC0AC</span>
+              </div>
+              <h3 class="cert-name-title" data-i18n="certificates.c1Title">AI Tools for Everyday Life</h3>
+              <p class="cert-track-name" data-i18n="certificates.c1Program">Artificial Intelligence for Academic Transformation</p>
+              <div class="cert-issuer-row">
+                <i class="fas fa-landmark"></i>
+                <span>National Training Week &bull; August 29, 2026</span>
+              </div>
+              <button type="button" class="btn-cert-action" onclick="openCertModal('assets/certificates/cert-ai-tools-for-everyday-life.png', 'AI Tools for Everyday Life', 'assets/certificates/cert-ai-tools-for-everyday-life.pdf')">
+                <i class="far fa-eye"></i> <span data-i18n="certificates.btnViewCert">View Certificate</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Certificate 3: AI for Entrepreneurship and Freelancing (Hidden by default) -->
+          <article class="cert-item-card cert-extra-hidden">
+            <div class="cert-card-preview" onclick="openCertModal('assets/certificates/cert-ai-for-entrepreneurship-and-freelancing.png', 'AI for Entrepreneurship and Freelancing', 'assets/certificates/cert-ai-for-entrepreneurship-and-freelancing.pdf')">
+              <div class="cert-card-paper">
+                <img src="assets/certificates/cert-ai-for-entrepreneurship-and-freelancing.png" alt="AI for Entrepreneurship and Freelancing Certificate" class="cert-card-img" loading="lazy" />
+                <div class="cert-hover-hint">
+                  <i class="fas fa-expand"></i> <span>Preview</span>
+                </div>
+              </div>
+            </div>
+            <div class="cert-card-info">
+              <div class="cert-top-meta">
+                <span class="cert-received-tag">
+                  <i class="far fa-calendar-check"></i> Year Received: 2026
+                </span>
+                <span class="cert-code-tag">NTW-2026-F78C8E4D</span>
+              </div>
+              <h3 class="cert-name-title" data-i18n="certificates.c3Title">AI for Entrepreneurship and Freelancing</h3>
+              <p class="cert-track-name" data-i18n="certificates.c3Program">Artificial Intelligence for Academic Transformation</p>
+              <div class="cert-issuer-row">
+                <i class="fas fa-landmark"></i>
+                <span>National Training Week &bull; September 1, 2026</span>
+              </div>
+              <button type="button" class="btn-cert-action" onclick="openCertModal('assets/certificates/cert-ai-for-entrepreneurship-and-freelancing.png', 'AI for Entrepreneurship and Freelancing', 'assets/certificates/cert-ai-for-entrepreneurship-and-freelancing.pdf')">
+                <i class="far fa-eye"></i> <span data-i18n="certificates.btnViewCert">View Certificate</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Certificate 4: AI-Driven Digital Marketing (Hidden by default) -->
+          <article class="cert-item-card cert-extra-hidden">
+            <div class="cert-card-preview" onclick="openCertModal('assets/certificates/cert-ai-driven-digital-marketing.png', 'AI-Driven Digital Marketing', 'assets/certificates/cert-ai-driven-digital-marketing.pdf')">
+              <div class="cert-card-paper">
+                <img src="assets/certificates/cert-ai-driven-digital-marketing.png" alt="AI-Driven Digital Marketing Certificate" class="cert-card-img" loading="lazy" />
+                <div class="cert-hover-hint">
+                  <i class="fas fa-expand"></i> <span>Preview</span>
+                </div>
+              </div>
+            </div>
+            <div class="cert-card-info">
+              <div class="cert-top-meta">
+                <span class="cert-received-tag">
+                  <i class="far fa-calendar-check"></i> Year Received: 2026
+                </span>
+                <span class="cert-code-tag">NTW-2026-E59969E3</span>
+              </div>
+              <h3 class="cert-name-title" data-i18n="certificates.c4Title">AI-Driven Digital Marketing</h3>
+              <p class="cert-track-name" data-i18n="certificates.c4Program">Artificial Intelligence for Academic Transformation</p>
+              <div class="cert-issuer-row">
+                <i class="fas fa-landmark"></i>
+                <span>National Training Week &bull; September 1, 2026</span>
+              </div>
+              <button type="button" class="btn-cert-action" onclick="openCertModal('assets/certificates/cert-ai-driven-digital-marketing.png', 'AI-Driven Digital Marketing', 'assets/certificates/cert-ai-driven-digital-marketing.pdf')">
+                <i class="far fa-eye"></i> <span data-i18n="certificates.btnViewCert">View Certificate</span>
+              </button>
+            </div>
+          </article>
+        </div>
+
+        <!-- View All Certificates Toggle Button -->
+        <div class="cert-toggle-wrapper">
+          <button type="button" class="btn-toggle-certs" id="btnToggleCerts" aria-expanded="false">
+            <span id="btnToggleCertsText" data-i18n="certificates.btnViewAll">View All Certificates (4)</span>
+            <i class="fas fa-chevron-down" id="btnToggleCertsIcon"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CV / RESUME SECTION ========== -->
+    <section class="section-wrapper cv-section" id="cv">
+      <div class="container cv-container">
+        <div class="cv-layout-grid">
+          <!-- Left Column: Information & Actions -->
+          <div class="cv-content-col">
+            <div class="cv-pill-tag">
+              <i class="fas fa-file-lines cv-pill-icon"></i>
+              <span class="cv-pill-text" data-i18n="cv.eyebrow">CURRICULUM VITAE</span>
+            </div>
+
+            <h2 class="cv-hero-title" data-i18n="cv.heading">My Official Resume</h2>
+
+            <p class="cv-hero-desc" data-i18n="cv.subheading">
+              Review my complete technical background, university coursework at Hormuud University, professional milestones, and certifications.
+            </p>
+
+            <ul class="cv-checklist">
+              <li class="cv-checklist-item">
+                <span class="cv-check-badge"><i class="fas fa-check"></i></span>
+                <span class="cv-check-label" data-i18n="cv.f1">Full Stack Web Architecture (Frontend &amp; Backend)</span>
+              </li>
+              <li class="cv-checklist-item">
+                <span class="cv-check-badge"><i class="fas fa-check"></i></span>
+                <span class="cv-check-label" data-i18n="cv.f2">UI/UX Prototyping, Wireframing &amp; Brand Guidelines</span>
+              </li>
+              <li class="cv-checklist-item">
+                <span class="cv-check-badge"><i class="fas fa-check"></i></span>
+                <span class="cv-check-label" data-i18n="cv.f3">Database Design, API Integration &amp; Security</span>
+              </li>
+              <li class="cv-checklist-item">
+                <span class="cv-check-badge"><i class="fas fa-check"></i></span>
+                <span class="cv-check-label" data-i18n="cv.f4">IT Support, Networking &amp; Embedded Systems</span>
+              </li>
+            </ul>
+
+            <div class="cv-action-buttons">
+              <a href="assets/cv/Abdallah-Mohamud-Abdi-CV.pdf" download="Abdallah-Mohamud-Abdi-CV.pdf" class="btn btn-cv-download">
+                <i class="fas fa-download"></i>
+                <span data-i18n="cv.btnDownload">Download CV (PDF)</span>
+              </a>
+              <a href="#contact" class="btn btn-cv-secondary">
+                <i class="fas fa-user-check"></i>
+                <span data-i18n="cv.btnBio">Request Full Bio</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column: Document Mockup Preview -->
+          <div class="cv-preview-col">
+            <div class="cv-card-shell">
+              <div class="cv-paper-document" id="cvPaperDoc">
+                <!-- Document Left Sidebar (Dark) -->
+                <aside class="cv-doc-sidebar">
+                  <div class="cv-doc-avatar-wrap">
+                    <img src="assets/images/abdallah-cv-photo.jpg" alt="Abdallah Mohamud Abdi" class="cv-doc-avatar" />
+                  </div>
+
+                  <!-- Contact Details -->
+                  <div class="cv-doc-side-group">
+                    <div class="cv-doc-contact-row">
+                      <i class="fas fa-phone"></i>
+                      <span>+252 613 496 697</span>
+                    </div>
+                    <div class="cv-doc-contact-row">
+                      <i class="fas fa-envelope"></i>
+                      <span>abdallahmamud39@gmail.com</span>
+                    </div>
+                    <div class="cv-doc-contact-row">
+                      <i class="fas fa-location-dot"></i>
+                      <span>Mogadishu, Somalia</span>
+                    </div>
+                    <div class="cv-doc-contact-row">
+                      <i class="fas fa-globe"></i>
+                      <span>abdallah.dev</span>
+                    </div>
+                  </div>
+
+                  <!-- Key Skills -->
+                  <div class="cv-doc-side-group">
+                    <h5 class="cv-doc-side-title"><i class="fas fa-star cv-icon-gold"></i> KEY SKILLS</h5>
+                    <div class="cv-doc-skill-row">
+                      <span>Full Stack Dev</span>
+                      <span class="cv-stars-gold">★★★★★</span>
+                    </div>
+                    <div class="cv-doc-skill-row">
+                      <span>React.js</span>
+                      <span class="cv-stars-gold">★★★★★</span>
+                    </div>
+                    <div class="cv-doc-skill-row">
+                      <span>Node.js</span>
+                      <span class="cv-stars-gold">★★★★☆</span>
+                    </div>
+                    <div class="cv-doc-skill-row">
+                      <span>MongoDB</span>
+                      <span class="cv-stars-gold">★★★★☆</span>
+                    </div>
+                    <div class="cv-doc-skill-row">
+                      <span>Web Design</span>
+                      <span class="cv-stars-gold">★★★★★</span>
+                    </div>
+                    <div class="cv-doc-skill-row">
+                      <span>Video Editing</span>
+                      <span class="cv-stars-gold">★★★★★</span>
+                    </div>
+                    <div class="cv-doc-skill-row">
+                      <span>Graphic Design</span>
+                      <span class="cv-stars-gold">★★★★☆</span>
+                    </div>
+                  </div>
+
+                  <!-- Education -->
+                  <div class="cv-doc-side-group">
+                    <h5 class="cv-doc-side-title"><i class="fas fa-graduation-cap cv-icon-gold"></i> EDUCATION</h5>
+                    <div class="cv-doc-edu-item">
+                      <span class="cv-doc-edu-period">2018 - 2023</span>
+                      <strong class="cv-doc-edu-inst">Hormuud University</strong>
+                      <span class="cv-doc-edu-field">Bachelor of Computer Science</span>
+                    </div>
+                    <div class="cv-doc-edu-item">
+                      <span class="cv-doc-edu-period">2014 - 2018</span>
+                      <strong class="cv-doc-edu-inst">School Sahal</strong>
+                      <span class="cv-doc-edu-field">Primary &amp; Secondary Education</span>
+                    </div>
+                  </div>
+
+                  <!-- Languages -->
+                  <div class="cv-doc-side-group">
+                    <h5 class="cv-doc-side-title"><i class="fas fa-language cv-icon-gold"></i> LANGUAGES</h5>
+                    <div class="cv-doc-lang-item">
+                      <div class="cv-doc-lang-head">
+                        <span>Somali</span>
+                        <span>100%</span>
+                      </div>
+                      <div class="cv-doc-lang-track"><div class="cv-doc-lang-fill" style="width: 100%;"></div></div>
+                    </div>
+                    <div class="cv-doc-lang-item">
+                      <div class="cv-doc-lang-head">
+                        <span>English</span>
+                        <span>70%</span>
+                      </div>
+                      <div class="cv-doc-lang-track"><div class="cv-doc-lang-fill" style="width: 70%;"></div></div>
+                    </div>
+                  </div>
+                </aside>
+
+                <!-- Document Main Body (Light) -->
+                <div class="cv-doc-main">
+                  <!-- Yellow/Gold Top Banner -->
+                  <div class="cv-doc-banner">
+                    <h3 class="cv-doc-banner-name">ABDALLAH MOHAMUD ABDI</h3>
+                    <p class="cv-doc-banner-role">FULL STACK DEVELOPER &amp; MULTIMEDIA SPECIALIST</p>
+                  </div>
+
+                  <!-- Profile Summary -->
+                  <div class="cv-doc-section">
+                    <h5 class="cv-doc-sec-title"><i class="fas fa-user cv-sec-icon"></i> PROFILE SUMMARY</h5>
+                    <p class="cv-doc-sec-text">
+                      A passionate Full Stack Developer and Multimedia Specialist focused on building efficient, scalable, and user-friendly web applications. Combining technical skills with creativity to deliver innovative digital solutions in both frontend and backend development, content creation, and visual design.
+                    </p>
+                  </div>
+
+                  <!-- Work Experience -->
+                  <div class="cv-doc-section">
+                    <h5 class="cv-doc-sec-title"><i class="fas fa-briefcase cv-sec-icon"></i> WORK EXPERIENCE</h5>
+                    
+                    <div class="cv-doc-exp-item">
+                      <div class="cv-doc-exp-head">
+                        <span class="cv-doc-exp-dates">2024 - 2026</span>
+                        <span class="cv-doc-exp-tag">FREELANCE</span>
+                      </div>
+                      <strong class="cv-doc-exp-role">Full Stack Developer</strong>
+                      <p class="cv-doc-exp-desc">Built full stack web applications including restaurant management systems, online marketplaces, and admin dashboards using MERN stack and PHP/MySQL.</p>
+                    </div>
+
+                    <div class="cv-doc-exp-item">
+                      <div class="cv-doc-exp-head">
+                        <span class="cv-doc-exp-dates">2023 - 2026</span>
+                        <span class="cv-doc-exp-tag">FREELANCE</span>
+                      </div>
+                      <strong class="cv-doc-exp-role">Content Creator &amp; Editor</strong>
+                      <p class="cv-doc-exp-desc">Creating multimedia content including video editing, graphic design, and social media content for various clients.</p>
+                    </div>
+
+                    <div class="cv-doc-exp-item">
+                      <div class="cv-doc-exp-head">
+                        <span class="cv-doc-exp-dates">2024</span>
+                        <span class="cv-doc-exp-tag">PROGRAM</span>
+                      </div>
+                      <strong class="cv-doc-exp-role">National Trainer Week – Hormuud University</strong>
+                      <p class="cv-doc-exp-desc">Participated in building the major program for the National Trainer Week organized by Hormuud University.</p>
+                    </div>
+                  </div>
+
+                  <!-- Featured Projects -->
+                  <div class="cv-doc-section">
+                    <h5 class="cv-doc-sec-title"><i class="fas fa-layer-group cv-sec-icon"></i> FEATURED PROJECTS</h5>
+                    <div class="cv-doc-projects-grid">
+                      <div class="cv-doc-proj-card">
+                        <strong class="cv-doc-proj-title">4 SEASON</strong>
+                        <p class="cv-doc-proj-sub">Restaurant Management System with admin dashboard, cashier flow, and menu controls.</p>
+                      </div>
+                      <div class="cv-doc-proj-card">
+                        <strong class="cv-doc-proj-title">Suuq Furan</strong>
+                        <p class="cv-doc-proj-sub">Online Marketplace platform supporting distinct Admin, Shop vendor, and Customer roles.</p>
+                      </div>
+                      <div class="cv-doc-proj-card">
+                        <strong class="cv-doc-proj-title">Buug Tabiye</strong>
+                        <p class="cv-doc-proj-sub">A live books and reading platform designed for seamless library access and content distribution.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Tools & Technologies -->
+                  <div class="cv-doc-section">
+                    <h5 class="cv-doc-sec-title"><i class="fas fa-code cv-sec-icon"></i> TOOLS &amp; TECHNOLOGIES</h5>
+                    <div class="cv-doc-tags-wrap">
+                      <span class="cv-doc-tech-badge">React</span>
+                      <span class="cv-doc-tech-badge">Node.js</span>
+                      <span class="cv-doc-tech-badge">MongoDB</span>
+                      <span class="cv-doc-tech-badge">Express.js</span>
+                      <span class="cv-doc-tech-badge">PHP</span>
+                      <span class="cv-doc-tech-badge">MySQL</span>
+                      <span class="cv-doc-tech-badge">HTML</span>
+                      <span class="cv-doc-tech-badge">CSS</span>
+                      <span class="cv-doc-tech-badge">JavaScript</span>
+                      <span class="cv-doc-tech-badge">Git</span>
+                      <span class="cv-doc-tech-badge">GitHub</span>
+                      <span class="cv-doc-tech-badge">VS Code</span>
+                      <span class="cv-doc-tech-badge">XAMPP</span>
+                      <span class="cv-doc-tech-badge">Figma</span>
+                      <span class="cv-doc-tech-badge">Illustrator</span>
+                      <span class="cv-doc-tech-badge">Premiere Pro</span>
+                    </div>
+                  </div>
+
+                  <!-- Footer / Social Media -->
+                  <div class="cv-doc-footer-row">
+                    <div class="cv-doc-social-group">
+                      <span class="cv-doc-meta-label">FIND ME ON</span>
+                      <div class="cv-doc-social-chips">
+                        <span><i class="fab fa-github"></i> github.com/abdullamaxmud</span>
+                        <span><i class="fab fa-linkedin"></i> abdallah-mohamud</span>
+                      </div>
+                    </div>
+                    <div class="cv-doc-wa-group">
+                      <span class="cv-doc-meta-label">WhatsApp</span>
+                      <span class="cv-doc-wa-phone">+252 613 496 697</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Bottom Verified Badge Button -->
+              <div class="cv-shell-footer">
+                <a href="assets/cv/Abdallah-Mohamud-Abdi-CV.pdf" target="_blank" rel="noopener noreferrer" class="btn-verified-cv-pill" title="View Official PDF">
+                  <i class="fas fa-file-shield"></i>
+                  <span data-i18n="cv.verifiedBadge">Verified CV Document</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CONTACT SECTION ========== -->
+    <section class="section-wrapper" id="contact">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-eyebrow" data-i18n="contact.eyebrow">GET IN TOUCH</span>
+          <h2 class="section-heading" data-i18n="contact.heading">Let's Discuss Your Next Project</h2>
+          <p class="section-subheading" data-i18n="contact.subheading">Have an opportunity, contract inquiry, or project proposal? Reach out directly via the form or connect instantly on WhatsApp.</p>
+        </div>
+
+        <div class="contact-layout-grid">
+          <!-- Left: Contact Details -->
+          <div class="contact-info-panel">
+            <h3 class="contact-panel-title" data-i18n="contact.directTitle">Direct Contact Information</h3>
+            <p class="contact-panel-desc" data-i18n="contact.directDesc">
+              I am always excited to discuss new software engineering projects, mobile applications, or creative multimedia solutions.
+            </p>
+
+            <div class="contact-cards-stack">
+              <!-- Email -->
+              <a href="mailto:abdullamaxmud39@gmail.com" class="contact-method-card">
+                <div class="contact-method-icon"><i class="fas fa-envelope"></i></div>
+                <div class="contact-method-text">
+                  <span class="method-label" data-i18n="contact.emailLabel">Email Address</span>
+                  <span class="method-val">abdullamaxmud39@gmail.com</span>
+                </div>
+                <i class="fas fa-arrow-up-right-from-square external-indicator"></i>
+              </a>
+
+              <!-- Phone -->
+              <a href="tel:+252613496697" class="contact-method-card">
+                <div class="contact-method-icon"><i class="fas fa-phone"></i></div>
+                <div class="contact-method-text">
+                  <span class="method-label" data-i18n="contact.phoneLabel">Direct Phone Line</span>
+                  <span class="method-val">+252 61 349 6697</span>
+                </div>
+                <i class="fas fa-phone-volume external-indicator"></i>
+              </a>
+
+              <!-- WhatsApp -->
+              <a href="https://wa.me/qr/VCZIEC6CVJQTE1" target="_blank" rel="noopener noreferrer" class="contact-method-card highlight-wa">
+                <div class="contact-method-icon wa-bg"><i class="fab fa-whatsapp"></i></div>
+                <div class="contact-method-text">
+                  <span class="method-label" data-i18n="contact.whatsappLabel">WhatsApp Direct QR &amp; Chat</span>
+                  <span class="method-val">+252 61 349 6697 (<span data-i18n="contact.instantChat">Instant Chat</span>)</span>
+                </div>
+                <i class="fas fa-comment-dots external-indicator"></i>
+              </a>
+
+              <!-- Location -->
+              <a href="https://maps.app.goo.gl/HL5KbTgNkXVAYsGH6" target="_blank" rel="noopener noreferrer" class="contact-method-card">
+                <div class="contact-method-icon"><i class="fas fa-location-dot"></i></div>
+                <div class="contact-method-text">
+                  <span class="method-label" data-i18n="contact.locationLabel">Location &amp; University</span>
+                  <span class="method-val" data-i18n="contact.locationVal">Mogadishu, Somalia (Hormuud University)</span>
+                </div>
+                <i class="fas fa-map-location-dot external-indicator"></i>
+              </a>
+            </div>
+
+            <!-- Social Links in Contact -->
+            <div class="contact-socials-area">
+              <span class="socials-subhead" data-i18n="contact.socialsLabel">Official Social Channels:</span>
+              <div class="social-icons-row">
+                <a href="https://github.com/abdullamaxmud" target="_blank" rel="noopener noreferrer" class="contact-social-btn" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/abdulla-maxmud-3b3781393?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android" target="_blank" rel="noopener noreferrer" class="contact-social-btn" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://x.com/AbdullaMaxmud" target="_blank" rel="noopener noreferrer" class="contact-social-btn" title="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://www.instagram.com/zulthanabdalla?stkn=MXNpN211dWZ2OWV6MQ==" target="_blank" rel="noopener noreferrer" class="contact-social-btn" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/share/1HokAN7KZz/" target="_blank" rel="noopener noreferrer" class="contact-social-btn" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Form -->
+          <div class="contact-form-panel">
+            <form id="portfolioContactForm" class="contact-form" novalidate>
+              <h3 class="form-header-title" data-i18n="contact.formTitle">Send a Direct Message</h3>
+
+              <div class="form-grid-2">
+                <div class="form-group">
+                  <label for="contactName" class="form-label"><span data-i18n="contact.nameLabel">Your Name</span> <span class="req">*</span></label>
+                  <input type="text" id="contactName" name="name" class="form-input" placeholder="e.g. Abdallah Mohamud Abdi" data-i18n-placeholder="contact.namePlaceholder" required />
+                </div>
+
+                <div class="form-group">
+                  <label for="contactEmail" class="form-label"><span data-i18n="contact.emailFieldLabel">Your Email</span> <span class="req">*</span></label>
+                  <input type="email" id="contactEmail" name="email" class="form-input" placeholder="e.g. abdullamaxmud39@gmail.com" data-i18n-placeholder="contact.emailPlaceholder" required />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="contactSubject" class="form-label"><span data-i18n="contact.subjectLabel">Subject</span> <span class="req">*</span></label>
+                <input type="text" id="contactSubject" name="subject" class="form-input" placeholder="Full stack developer mobile app developer &amp; content creator" data-i18n-placeholder="contact.subjectPlaceholder" required />
+              </div>
+
+              <div class="form-group">
+                <label for="contactMessage" class="form-label"><span data-i18n="contact.messageLabel">Message Details</span> <span class="req">*</span></label>
+                <textarea id="contactMessage" name="message" class="form-textarea" rows="4" placeholder="I am a passionate Full Stack Developer and UI/UX Designer dedicated to building high-performance web applications, scalable digital architectures, and visually compelling interfaces." data-i18n-placeholder="contact.messagePlaceholder" required></textarea>
+              </div>
+
+              <div class="form-buttons-group">
+                <button type="submit" class="btn btn-primary btn-submit-email">
+                  <i class="fas fa-paper-plane"></i>
+                  <span data-i18n="contact.btnSend">Send Message</span>
+                </button>
+
+                <button type="button" class="btn btn-whatsapp-submit" id="btnWhatsappDirect">
+                  <i class="fab fa-whatsapp"></i>
+                  <span data-i18n="contact.btnWhatsapp">Chat on WhatsApp</span>
+                </button>
+              </div>
+
+              <p class="form-disclaimer">
+                <i class="fas fa-shield-halved"></i> <span data-i18n="contact.disclaimer">Your message goes directly to Abdallah Mohamud Abdi. You will receive a reply within 24 hours.</span>
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-brand-col">
+          <a href="#home" class="nav-logo">
+            <span class="logo-mark">A<span class="logo-accent">M</span></span>
+            <span class="logo-text">ABDALLAH<span class="accent-dot">.</span></span>
+          </a>
+          <p class="footer-brand-tagline" data-i18n="footer.tagline">
+            Building modern web applications, scalable cloud architectures, and visually compelling digital interfaces.
+          </p>
+          <div class="footer-status-tag">
+            <span class="status-pulse-sm"></span>
+            <span data-i18n="footer.status">4th Year Computer Science &bull; Hormuud University</span>
+          </div>
+        </div>
+
+        <div class="footer-links-col">
+          <h4 class="footer-heading" data-i18n="footer.navHeading">Navigation</h4>
+          <ul class="footer-list">
+            <li><a href="#home" data-i18n="nav.home">Home</a></li>
+            <li><a href="#about" data-i18n="nav.about">About Me</a></li>
+            <li><a href="#projects" data-i18n="nav.projects">Projects Showcase</a></li>
+            <li><a href="#services" data-i18n="nav.services">Services Offered</a></li>
+            <li><a href="#skills" data-i18n="nav.skills">Skills &amp; Stacks</a></li>
+            <li><a href="#certificates" data-i18n="nav.certificates">Certificates</a></li>
+            <li><a href="#cv" data-i18n="nav.cv">Curriculum Vitae (CV)</a></li>
+            <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col">
+          <h4 class="footer-heading" data-i18n="footer.servicesHeading">Services</h4>
+          <ul class="footer-list">
+            <li><a href="#services" data-i18n="services.s1Title">Full-Stack Web Dev</a></li>
+            <li><a href="#services" data-i18n="services.s2Title">Cloud &amp; API Architecture</a></li>
+            <li><a href="#services" data-i18n="services.s3Title">Mobile Applications</a></li>
+            <li><a href="#services" data-i18n="services.s4Title">UI/UX Interface Design</a></li>
+            <li><a href="#services" data-i18n="services.s5Title">Creative Multimedia</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact-col">
+          <h4 class="footer-heading" data-i18n="footer.reachHeading">Direct Reach</h4>
+          <p class="footer-contact-item"><i class="fas fa-envelope"></i> abdullamaxmud39@gmail.com</p>
+          <p class="footer-contact-item"><i class="fas fa-phone"></i> +252 61 349 6697</p>
+          <p class="footer-contact-item"><i class="fas fa-map-pin"></i> <span data-i18n="footer.location">Mogadishu, Somalia</span></p>
+          <div class="footer-social-strip">
+            <a href="https://github.com/abdullamaxmud" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/abdulla-maxmud-3b3781393?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://wa.me/qr/VCZIEC6CVJQTE1" target="_blank" rel="noopener noreferrer" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://x.com/AbdullaMaxmud" target="_blank" rel="noopener noreferrer" title="X"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://www.instagram.com/zulthanabdalla?stkn=MXNpN211dWZ2OWV6MQ==" target="_blank" rel="noopener noreferrer" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/share/1HokAN7KZz/" target="_blank" rel="noopener noreferrer" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <p class="copyright-text">
+          &copy; <span id="currentYear">2026</span> <strong>Abdallah Mohamud Abdi</strong>. <span data-i18n="footer.rights">All rights reserved.</span>
+        </p>
+        <div class="footer-secondary-links">
+          <span data-i18n="footer.uniPortfolio">Hormuud University Portfolio</span>
+          <span class="bullet-sep">&bull;</span>
+          <a href="#home"><span data-i18n="footer.backTop">Back to top</span> <i class="fas fa-arrow-up"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== FLOATING QUICK ACTION BUTTONS ========== -->
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/252613496697" target="_blank" rel="noopener noreferrer" class="floating-btn floating-whatsapp" id="floatingWhatsapp" title="Chat on WhatsApp" aria-label="Open WhatsApp Chat with Abdallah">
+    <i class="fab fa-whatsapp"></i>
+    <span class="floating-tooltip" data-i18n="floating.whatsappTooltip">Chat on WhatsApp</span>
+  </a>
+
+  <!-- Back To Top Button -->
+  <button type="button" class="floating-btn floating-back-top" id="backToTop" aria-label="Scroll back to top" title="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- ========== CONFIRMATION MODAL ========== -->
+  <div class="modal-backdrop" id="confirmationModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-card">
+      <div class="modal-icon-circle"><i class="fas fa-check"></i></div>
+      <h3 class="modal-title" id="modalTitle" data-i18n="modal.title">Message Prepared!</h3>
+      <p class="modal-description" id="modalDescription" data-i18n="modal.desc">
+        Thank you for reaching out, Abdallah Mohamud Abdi will respond to you within 24 hours.
+      </p>
+      <div class="modal-action-row">
+        <button type="button" class="btn btn-primary" id="modalCloseBtn" data-i18n="modal.close">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== CERTIFICATE LIGHTBOX MODAL ========== -->
+  <div class="cert-modal-backdrop" id="certLightboxModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="cert-modal-dialog">
+      <div class="cert-modal-header">
+        <h3 class="cert-modal-title" id="certModalTitle">Certificate Preview</h3>
+        <div class="cert-modal-controls">
+          <a href="#" class="btn btn-primary btn-sm" id="certModalDownload" download>
+            <i class="fas fa-file-pdf"></i> <span data-i18n="certificates.btnDownload">Download PDF</span>
+          </a>
+          <button type="button" class="cert-modal-close-btn" id="certModalClose" aria-label="Close certificate viewer">
+            <i class="fas fa-xmark"></i>
+          </button>
+        </div>
+      </div>
+      <div class="cert-modal-body">
+        <img src="" alt="Certificate Preview" class="cert-modal-img" id="certModalImg" />
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== VIDEO LIGHTBOX MODAL ========== -->
+  <div class="cert-modal-backdrop" id="videoLightboxModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="cert-modal-dialog video-modal-dialog">
+      <div class="cert-modal-header">
+        <h3 class="cert-modal-title" id="videoModalTitle">Video Showcase</h3>
+        <div class="cert-modal-controls">
+          <button type="button" class="cert-modal-close-btn" id="videoModalClose" aria-label="Close video player">
+            <i class="fas fa-xmark"></i>
+          </button>
+        </div>
+      </div>
+      <div class="cert-modal-body video-modal-body">
+        <video id="lightboxVideoPlayer" controls playsinline></video>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="script.js?v=3.0"></script>
 </body>
 </html>
