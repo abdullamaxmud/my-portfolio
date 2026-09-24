@@ -982,9 +982,7 @@ ul, ol {
   max-height: 530px;
   object-fit: cover;
   object-position: center top;
-  mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
-  filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.35));
   transition: transform 0.5s ease;
 }
 
@@ -1100,6 +1098,12 @@ ul, ol {
 
 [data-theme="light"] .floating-orb {
   background: radial-gradient(circle at 35% 30%, #94a3b8 0%, #64748b 45%, #334155 80%, #0f172a 100%);
+}
+
+[data-theme="light"] .hero-portrait-img {
+  mask-image: none;
+  -webkit-mask-image: none;
+  filter: drop-shadow(0 15px 30px rgba(15, 23, 42, 0.08));
 }
 
 /* ==========================================================================
