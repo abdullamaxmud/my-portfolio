@@ -21,6 +21,51 @@ document.addEventListener('DOMContentLoaded', () => {
   // ========== COMPREHENSIVE TRANSLATIONS DICTIONARY ==========
   const TRANSLATIONS = {
     en: {
+      // Modern 2026 Enhancements
+      "nav.timeline": "Timeline",
+      "nav.testimonials": "Reviews",
+      "hero.availableStatus": "Available for Projects",
+      "hero.btnCopyEmail": "Copy Email",
+      "hero.emailCopied": "Email copied to clipboard!",
+      "projects.btnLive": "Live Demo",
+      "projects.btnCode": "Code",
+      "github.bioText": "Actively developing and maintaining open-source systems, web architectures, and client projects with clean commit discipline and modern JavaScript/Node stacks.",
+      "github.metricRepos": "Public Repos",
+      "github.metricDiscipline": "Git Discipline",
+      "github.metricFocus": "Core Focus",
+      "github.btnExplore": "Explore GitHub Profile",
+      "timeline.eyebrow": "CAREER & EDUCATION",
+      "timeline.heading": "My Journey & Milestones",
+      "timeline.subheading": "A chronological timeline of academic achievements, professional milestones, and real-world system deployments.",
+      "timeline.t1Tag": "Academic Milestone",
+      "timeline.t1Title": "Hormuud University — B.Sc. in Computer Science",
+      "timeline.t1Sub": "4th-Year Senior Student • Faculty of Computer Science & IT",
+      "timeline.t1Body": "Mastering core disciplines including Software Engineering, Advanced Data Structures, Relational Database Management Systems (RDBMS), Object-Oriented Analysis, and High-Performance Network Infrastructures.",
+      "timeline.t2Tag": "Professional Practice",
+      "timeline.t2Title": "Freelance Full-Stack & Mobile Application Developer",
+      "timeline.t2Sub": "Self-Employed • Commercial Clients & Local Enterprises",
+      "timeline.t2Body": "Architecting custom web applications, point-of-sale systems, and cross-platform mobile experiences with high performance, intuitive UI/UX workflows, and resilient RESTful API backends.",
+      "timeline.t3Tag": "Certified Accreditations",
+      "timeline.t3Title": "Artificial Intelligence & Prompt Engineering Certifications",
+      "timeline.t3Sub": "Professional Credentials Across AI & Innovation",
+      "timeline.t3Body": "Earned verified professional credentials in Prompt Engineering, AI for Entrepreneurship, Digital Marketing, and Everyday AI Tools, integrating generative intelligence into scalable engineering workflows.",
+      "timeline.t4Tag": "Production Deployment",
+      "timeline.t4Title": "Community Platforms & Enterprise POS Launch",
+      "timeline.t4Sub": "Biyaha Soomaaliya • DHIIG KAAL • 4 Season Restaurant",
+      "timeline.t4Body": "Successfully built and launched mission-critical software: life-saving blood donor matching platform, municipal water supply distribution scheduler, and offline-first fast restaurant point-of-sale system.",
+      "testimonials.eyebrow": "CLIENT & PEER ENDORSEMENTS",
+      "testimonials.heading": "What Collaborators & Clients Say",
+      "testimonials.subheading": "Direct testimonials from project coordinators, business managers, and tech mentors regarding engineering delivery, reliability, and code quality.",
+      "testimonials.t1Quote": "Abdallah engineered the DHIIG KAAL blood donation platform with exceptional discipline and speed. His architecture made real-time donor matching effortless, scalable, and intuitive for everyday users.",
+      "testimonials.t1Name": "Eng. Mohamed A. Nur",
+      "testimonials.t1Role": "Lead Coordinator • Iftiin Health Initiative",
+      "testimonials.t2Quote": "The POS system Abdallah developed for 4 Season Restaurant completely modernized our daily workflow. It is fast, offline-resilient, and intuitive. He is one of the most dedicated developers we have hired.",
+      "testimonials.t2Name": "Abdirahman Hassan",
+      "testimonials.t2Role": "Operations Manager • 4 Season Restaurant",
+      "testimonials.t3Quote": "Abdallah pairs disciplined computer science fundamentals with rare creative problem-solving. From web architectures to mobile engineering, his dedication to clean code and high performance is top-tier.",
+      "testimonials.t3Name": "Eng. Ahmed K. Farah",
+      "testimonials.t3Role": "Senior Software Architect & Academic Mentor",
+
       // Navbar
       "nav.home": "Home",
       "nav.about": "About",
@@ -237,16 +282,61 @@ document.addEventListener('DOMContentLoaded', () => {
     },
 
     so: {
+      // Modern 2026 Enhancements
+      "nav.timeline": "Marxalado",
+      "nav.testimonials": "Faallooyin",
+      "hero.availableStatus": "Shaqo Diyaar u Ah",
+      "hero.btnCopyEmail": "Nuulkee Email-ka",
+      "hero.emailCopied": "Email-ka waa la koobiyay!",
+      "projects.btnLive": "Toos u Eeg",
+      "projects.btnCode": "Koodhka",
+      "github.bioText": "Si joogto ah u dhisaya nidaamyo furan, qaabab casri ah oo webka ah, iyo mashaariic macaamiil iyadoo la adeegsanayo anshax koodh sare oo GitHub ah.",
+      "github.metricRepos": "Keydad Furan",
+      "github.metricDiscipline": "Anshax Git",
+      "github.metricFocus": "Takhasus Weyn",
+      "github.btnExplore": "Booqo Profile-ka GitHub",
+      "timeline.eyebrow": "SHAQADA & WAXBARASHADA",
+      "timeline.heading": "Socdaalkayga & Guulaha",
+      "timeline.subheading": "Taariikh guud oo ku saabsan heerarka waxbarasho, khibradaha shaqo, iyo nidaamyada dhabta ah ee la dhisay.",
+      "timeline.t1Tag": "Heer Waxbarasho",
+      "timeline.t1Title": "Jaamacadda Hormuud — B.Sc. in Computer Science",
+      "timeline.t1Sub": "Arday Sanadka 4-aad • Kulliyadda Computer Science & IT",
+      "timeline.t1Body": "Barashada maaddooyinka aasaasiga ah sida Software Engineering, Data Structures sare, Database Systems (RDBMS), iyo shabakadaha kombiyuutarka ee xawaaraha sare leh.",
+      "timeline.t2Tag": "Khibrad Shaqo",
+      "timeline.t2Title": "Developer Madax-bannaan (Full-Stack & Mobile)",
+      "timeline.t2Sub": "Iskii u Shaqeyste • Macaamiil Ganacsi & Shirkado",
+      "timeline.t2Body": "Dhisidda web application-no gaar ah, nidaamyada POS-ka dukaamada/maqaayadaha, iyo apps mobile ah oo xawaare sare leh lana jaanqaadaya UI/UX casri ah.",
+      "timeline.t3Tag": "Shahaadooyin Xirfadeed",
+      "timeline.t3Title": "Shahaadooyinka AI & Prompt Engineering",
+      "timeline.t3Sub": "Shahaadooyin Xaqiijisan oo Dhinaca AI & Hal-abuurka ah",
+      "timeline.t3Body": "Helitaanka shahaadooyin xirfadeed oo dhinacyada Prompt Engineering, AI-da Ganacsiga, Suuqgeynta Dijitaalka ah, iyo Automation-ka casriga ah.",
+      "timeline.t4Tag": "Nidaamyo Shaqaynaya",
+      "timeline.t4Title": "Barnaamijyo Bulsho & Nidaamyo POS Ganacsi",
+      "timeline.t4Sub": "Biyaha Soomaaliya • DHIIG KAAL • 4 Season Restaurant",
+      "timeline.t4Body": "Dhisidda iyo daah-furka nidaamyo muhiim ah: madal badbaadisa nolosha oo dhiig-bixiyeyaasha isku xirta, nidaamka jadwalka biyaha degmada, iyo POS degdeg ah oo maqaayadaha loogu talagalay.",
+      "testimonials.eyebrow": "MARAG-KACYADA MACAAMIISHA",
+      "testimonials.heading": "Waxa ay Macaamiishu Ka Yiraahdeen",
+      "testimonials.subheading": "Faallooyin toos ah oo ka yimid madaxda mashaariicda, maamulayaasha ganacsiga, iyo hagayaasha farsamada oo ku saabsan tayada shaqadayda.",
+      "testimonials.t1Quote": "Abdallah wuxuu nidaamka DHIIG KAAL ku dhisay xawaare iyo anshax sare. Hab-dhismeedka uu u sameeyay wuxuu ka dhigay isku xirka dadka dhiigga u baahan iyo bixiyeyaasha mid aad u fudud oo la isku halleyn karo.",
+      "testimonials.t1Name": "Eng. Maxamed C. Nuur",
+      "testimonials.t1Role": "Isku-duwaha Guud • Iftiin Health Initiative",
+      "testimonials.t2Quote": "Nidaamka POS-ka ee Abdallah noo sameeyay wuxuu gebi ahaanba beddelay shaqadeenna maalinlaha ah. Waa mid aad u degdeg badan, internet la'aanta shaqeeya, oo fudud. Waa mid ka mid ah dhalinyarada ugu shaqada fiican ee aan la shaqeynay.",
+      "testimonials.t2Name": "Cabdiraxmaan Xasan",
+      "testimonials.t2Role": "Maamulaha Hawlgalka • 4 Season Restaurant",
+      "testimonials.t3Quote": "Abdallah wuxuu isku daraa aqoon adag oo dhinaca Computer Science-ka ah iyo xal u helidda mushkilaadka adag. Laga bilaabo nidaamyada webka ilaa apps-ka mobile-ka, tayada koodhkiisa iyo dardartiisu waa heerka ugu sarreeya.",
+      "testimonials.t3Name": "Eng. Axmed K. Faarax",
+      "testimonials.t3Role": "Khabiir Sare oo Software & Hage Jaamacadeed",
+
       // Navbar
       "nav.home": "Bogga Hore",
       "nav.about": "Igu Saabsan",
-      "nav.projects": "Mashaariicda",
-      "nav.services": "Adeegyada",
-      "nav.skills": "Xirfadaha",
-      "nav.certificates": "Shahaadooyinka",
-      "nav.cv": "CV-ga",
-      "nav.contact": "La Xiriir",
-      "nav.letsTalk": "Aan Wadahadalno",
+      "nav.projects": "Mashaariic",
+      "nav.services": "Adeegyo",
+      "nav.skills": "Xirfado",
+      "nav.certificates": "Shahaadooyin",
+      "nav.cv": "CV",
+      "nav.contact": "Xiriir",
+      "nav.letsTalk": "Wadahadal",
 
       // Hero
       "hero.status": "FULL STACK DEVELOPER & INNOVATOR",
@@ -453,6 +543,51 @@ document.addEventListener('DOMContentLoaded', () => {
     },
 
     ar: {
+      // Modern 2026 Enhancements
+      "nav.timeline": "المسيرة المهنية",
+      "nav.testimonials": "آراء العملاء",
+      "hero.availableStatus": "متاح للمشاريع الجديدة",
+      "hero.btnCopyEmail": "نسخ الإيميل",
+      "hero.emailCopied": "تم نسخ البريد الإلكتروني بنجاح!",
+      "projects.btnLive": "معاينة حية",
+      "projects.btnCode": "الكود",
+      "github.bioText": "تطوير وصيانة مشاريع مفتوحة المصدر وبنى تحتية سحابية ومشاريع عملاء بجودة عالية وتقنيات حديثة.",
+      "github.metricRepos": "مستودعات عامة",
+      "github.metricDiscipline": "التزام Git",
+      "github.metricFocus": "التركيز الأساسي",
+      "github.btnExplore": "استكشف حساب GitHub",
+      "timeline.eyebrow": "المسيرة والتعليم",
+      "timeline.heading": "رحلتي وأبرز المحطات",
+      "timeline.subheading": "تسلسل زمني للإنجازات الأكاديمية والمهنية والمشاريع البرمجية التي تم إطلاقها.",
+      "timeline.t1Tag": "محطة أكاديمية",
+      "timeline.t1Title": "جامعة هرمود — بكالوريوس علوم الحاسوب",
+      "timeline.t1Sub": "طالب بالسنة الرابعة • كلية علوم الحاسوب وتكنولوجيا المعلومات",
+      "timeline.t1Body": "دراسة هندسة البرمجيات، هياكل البيانات المتقدمة، نظم قواعد البيانات العلائقية، وهياكل الشبكات عالية الأداء.",
+      "timeline.t2Tag": "ممارسة مهنية",
+      "timeline.t2Title": "مطور مستقل لتطبيقات الويب والموبايل",
+      "timeline.t2Sub": "عمل حر • مشاريع تجارية وشركات",
+      "timeline.t2Body": "بناء تطبيقات ويب مخصصة، نظم نقاط البيع (POS)، وتطبيقات هواتف ذكية بتجربة مستخدم متميزة وواجهات برمجية آمنة.",
+      "timeline.t3Tag": "شهادات معتمدة",
+      "timeline.t3Title": "شهادات الذكاء الاصطناعي وهندسة الأوامر",
+      "timeline.t3Sub": "اعتمادات مهنية في الذكاء الاصطناعي والابتكار",
+      "timeline.t3Body": "الحصول على شهادات معتمدة في هندسة الأوامر، الذكاء الاصطناعي لريادة الأعمال، والتسويق الرقمي الحديث.",
+      "timeline.t4Tag": "أنظمة منشورة",
+      "timeline.t4Title": "منصات مجتمعية وأنظمة نقاط بيع",
+      "timeline.t4Sub": "مياه الصومال • ضيق كال للتبرع بالدم • مطعم فور سيزون",
+      "timeline.t4Body": "تطوير وإطلاق منصات هامة: منصة للتبرع بالدم، نظام جدولة توزيع المياه، ونظام نقاط بيع سريع ومقاوم لانقطاع الإنترنت.",
+      "testimonials.eyebrow": "آراء العملاء والزملاء",
+      "testimonials.heading": "ماذا يقول شركاء النجاح والعملاء",
+      "testimonials.subheading": "آراء مباشرة من منسقي المشاريع ومديري الأعمال والموجهين حول جودة التنفيذ والالتزام البرمجي.",
+      "testimonials.t1Quote": "قام عبد الله بتطوير منصة ضيق كال للتبرع بالدم بسرعة واحترافية عالية. بنيته البرمجية جعلت التوفيق بين المتبرعين والمحتاجين أمراً سلساً وموثوقاً للغاية.",
+      "testimonials.t1Name": "م. محمد عبد الله نور",
+      "testimonials.t1Role": "المنسق العام • مبادرة إفتين الصحية",
+      "testimonials.t2Quote": "نظام نقاط البيع الذي طوره عبد الله لمطعم فور سيزون أحدث نقلة نوعية في إدارة الطلبات اليومية. يتميز بالسرعة والعمل دون إنترنت وسهولة الاستخدام.",
+      "testimonials.t2Name": "عبد الرحمن حسن",
+      "testimonials.t2Role": "مدير العمليات • مطعم فور سيزون",
+      "testimonials.t3Quote": "يجمع عبد الله بين الأساس الأكاديمي القوي في علوم الحاسوب والقدرة الإبداعية على حل المشكلات التقنية بجودة كود استثنائية.",
+      "testimonials.t3Name": "م. أحمد خليل فرح",
+      "testimonials.t3Role": "مهندس برمجيات أول وموجه أكاديمي",
+
       // Navbar
       "nav.home": "الرئيسية",
       "nav.about": "من أنا",
@@ -1345,5 +1480,88 @@ ${message || "Looking forward to collaborating with you!"}`;
   if (currentYearSpan) {
     currentYearSpan.textContent = new Date().getFullYear() || "2026";
   }
+
+
+  // ========== 2026 MODERN PORTFOLIO INTERACTIVE ENHANCEMENTS ==========
+
+  // 1. Top Reading Scroll Progress Bar
+  const scrollProgressBar = document.getElementById('scrollProgressBar');
+  function updateScrollProgress() {
+    if (!scrollProgressBar) return;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollY = window.scrollY;
+    const progress = docHeight > 0 ? (scrollY / docHeight) * 100 : 0;
+    scrollProgressBar.style.width = `${Math.min(100, Math.max(0, progress))}%`;
+  }
+  window.addEventListener('scroll', updateScrollProgress, { passive: true });
+  updateScrollProgress();
+
+  // 2. Live Mogadishu Clock (GMT+3)
+  const clockEl = document.getElementById('liveMogadishuClock');
+  function updateMogadishuClock() {
+    if (!clockEl) return;
+    try {
+      const now = new Date();
+      const formatter = new Intl.DateTimeFormat('en-US', {
+        timeZone: 'Africa/Mogadishu',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hour12: true
+      });
+      clockEl.textContent = formatter.format(now);
+    } catch (e) {
+      const now = new Date();
+      const utc = now.getTime() + (now.getTimezoneOffset() * 60000);
+      const mogaDate = new Date(utc + (3600000 * 3));
+      clockEl.textContent = mogaDate.toLocaleTimeString();
+    }
+  }
+  setInterval(updateMogadishuClock, 1000);
+  updateMogadishuClock();
+
+  // 3. 1-Click Copy Email & Floating Toast Notification
+  const toastEl = document.getElementById('toastNotification');
+  let toastTimer = null;
+  function showToast(message, iconClass = 'fa-circle-check') {
+    if (!toastEl) return;
+    toastEl.innerHTML = `<i class="fas ${iconClass}"></i> <span>${message}</span>`;
+    toastEl.classList.add('active');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => {
+      toastEl.classList.remove('active');
+    }, 3200);
+  }
+
+  const btnCopyHeroEmail = document.getElementById('btnCopyHeroEmail');
+  if (btnCopyHeroEmail) {
+    btnCopyHeroEmail.addEventListener('click', () => {
+      const email = 'abdallahmamud39@gmail.com';
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(email).then(() => {
+          const msg = (TRANSLATIONS[currentLang] && TRANSLATIONS[currentLang]['hero.emailCopied']) || 'Email copied to clipboard!';
+          showToast(msg, 'fa-circle-check');
+        }).catch(() => {
+          showToast(email, 'fa-envelope');
+        });
+      } else {
+        showToast(email, 'fa-envelope');
+      }
+    });
+  }
+
+  // 4. Spotlight Card Hover Cursor Glow (Linear & Vercel Style)
+  const spotlightCards = document.querySelectorAll(
+    '.project-card, .service-card, .skill-category-card, .cert-item-card, .timeline-card, .testimonial-card, .github-showcase-bento'
+  );
+  spotlightCards.forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      card.style.setProperty('--mouse-x', `${x}px`);
+      card.style.setProperty('--mouse-y', `${y}px`);
+    }, { passive: true });
+  });
 
 });

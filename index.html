@@ -33,6 +33,9 @@
 </head>
 <body>
 
+  <!-- Top Scroll Reading Progress Bar -->
+  <div class="scroll-progress-bar" id="scrollProgressBar" aria-hidden="true"></div>
+
   <!-- ========== STICKY NAVBAR ========== -->
   <header class="navbar-wrapper" id="navbar">
     <div class="nav-container">
@@ -48,7 +51,9 @@
           <li><a href="#projects" class="nav-link" data-i18n="nav.projects">Projects</a></li>
           <li><a href="#services" class="nav-link" data-i18n="nav.services">Services</a></li>
           <li><a href="#skills" class="nav-link" data-i18n="nav.skills">Skills</a></li>
+          <li class="nav-item-extra"><a href="#timeline" class="nav-link" data-i18n="nav.timeline">Timeline</a></li>
           <li><a href="#certificates" class="nav-link" data-i18n="nav.certificates">Certificates</a></li>
+          <li class="nav-item-extra"><a href="#testimonials" class="nav-link" data-i18n="nav.testimonials">Reviews</a></li>
           <li><a href="#cv" class="nav-link" data-i18n="nav.cv">CV</a></li>
           <li><a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a></li>
         </ul>
@@ -108,10 +113,20 @@
     <section class="hero-section" id="home">
       <div class="container hero-grid">
         <div class="hero-content">
-          <!-- Status Pill with Emerald Glowing Dot -->
-          <div class="status-pill-modern">
-            <span class="pulse-emerald"></span>
-            <span class="status-text" data-i18n="hero.status">FULL STACK DEVELOPER &amp; INNOVATOR</span>
+          <!-- Status Pill Row with Emerald Glowing Dot & Live Mogadishu Clock -->
+          <div class="hero-status-row">
+            <div class="status-pill-modern">
+              <span class="pulse-emerald"></span>
+              <span class="status-text" data-i18n="hero.status">FULL STACK DEVELOPER &amp; INNOVATOR</span>
+            </div>
+            <div class="live-availability-pill" title="Live status & timezone">
+              <span class="live-dot-pulse"></span>
+              <span class="live-status-label" data-i18n="hero.availableStatus">Available for Projects</span>
+              <span class="live-divider">•</span>
+              <span class="live-loc-chip"><i class="fas fa-location-dot"></i> Mogadishu</span>
+              <span class="live-divider">•</span>
+              <span class="live-time-chip" id="liveMogadishuClock" aria-label="Current Mogadishu time">--:--:--</span>
+            </div>
           </div>
 
           <!-- Serif Italic Title matching user's reference screenshot -->
@@ -131,12 +146,17 @@
             I am a passionate Full Stack Developer and UI/UX Designer dedicated to building high-performance web applications, scalable digital architectures, and visually compelling interfaces.
           </p>
 
-          <!-- Action Row: GET IN TOUCH Pill Button + Social Circle Icons -->
+          <!-- Action Row: GET IN TOUCH + COPY EMAIL + Social Circle Icons -->
           <div class="hero-action-row">
             <a href="#contact" class="btn btn-hero-glow">
               <span data-i18n="hero.btnTouch">GET IN TOUCH</span>
               <i class="fas fa-arrow-right"></i>
             </a>
+
+            <button type="button" class="btn btn-hero-secondary btn-copy-email" id="btnCopyHeroEmail" title="Copy Email to Clipboard" aria-label="Copy Email">
+              <i class="far fa-copy"></i>
+              <span data-i18n="hero.btnCopyEmail">Copy Email</span>
+            </button>
 
             <div class="hero-social-circles">
               <a href="https://wa.me/252613496697" target="_blank" rel="noopener noreferrer" class="social-circle-btn whatsapp" title="WhatsApp" aria-label="WhatsApp">
@@ -182,7 +202,7 @@
 
           <!-- Studio Portrait with transparent background -->
           <div class="hero-portrait-stage">
-            <img src="assets/images/abdallah-hero.png?v=3" alt="Abdallah Mohamud Abdi" class="hero-portrait-img" />
+            <img src="assets/images/abdallah-hero.png?v=4" alt="Abdallah Mohamud Abdi" class="hero-portrait-img" />
           </div>
         </div>
       </div>
@@ -373,48 +393,78 @@
             <!-- Web 1: 4 SEASON Restaurant -->
             <article class="project-card project-card-minimal" data-category="web">
               <div class="project-visual-box has-img">
+                <span class="project-corner-badge"><i class="fas fa-utensils"></i> POS System</span>
                 <img src="assets/images/project-foms-restaurant.png" alt="4 SEASON Restaurant" class="project-thumb-img" />
               </div>
               <div class="project-card-footer">
                 <div class="project-card-text">
                   <h3 class="project-card-title" data-i18n="projects.p1Title">4 SEASON Restaurant</h3>
                   <span class="project-card-subtitle" data-i18n="projects.p1Sub">Local POS • Full Stack</span>
+                  <div class="project-tech-tags">
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">Node.js</span>
+                    <span class="tech-tag">MongoDB</span>
+                    <span class="tech-tag">POS</span>
+                  </div>
                 </div>
-                <a href="https://github.com/abdullamaxmud/Resturent" target="_blank" rel="noopener noreferrer" class="project-circle-btn" aria-label="View 4 SEASON Restaurant on GitHub">
-                  <i class="fas fa-arrow-up-right-from-square"></i>
-                </a>
+                <div class="project-card-actions">
+                  <a href="https://github.com/abdullamaxmud/Resturent" target="_blank" rel="noopener noreferrer" class="project-btn-pill code" title="View Source on GitHub" aria-label="View 4 SEASON Restaurant on GitHub">
+                    <i class="fab fa-github"></i> <span data-i18n="projects.btnCode">Code</span>
+                  </a>
+                </div>
               </div>
             </article>
 
             <!-- Web 2: Biyaha Soomaaliya (Water Supply Schedule System) -->
             <article class="project-card project-card-minimal" data-category="web">
               <div class="project-visual-box has-img">
+                <span class="project-corner-badge"><i class="fas fa-droplet"></i> Public Utility</span>
                 <img src="assets/images/project-biyaha-water.png" alt="Biyaha Soomaaliya Water System" class="project-thumb-img" />
               </div>
               <div class="project-card-footer">
                 <div class="project-card-text">
                   <h3 class="project-card-title" data-i18n="projects.p2Title">Biyaha Soomaaliya</h3>
                   <span class="project-card-subtitle" data-i18n="projects.p2Sub">Water Schedule • Public Utility</span>
+                  <div class="project-tech-tags">
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">REST API</span>
+                    <span class="tech-tag">CSS3</span>
+                    <span class="tech-tag">Schedule</span>
+                  </div>
                 </div>
-                <a href="https://github.com/abdullamaxmud/water-somalia" target="_blank" rel="noopener noreferrer" class="project-circle-btn" aria-label="View Biyaha Soomaaliya on GitHub">
-                  <i class="fas fa-arrow-up-right-from-square"></i>
-                </a>
+                <div class="project-card-actions">
+                  <a href="https://github.com/abdullamaxmud/water-somalia" target="_blank" rel="noopener noreferrer" class="project-btn-pill code" title="View Source on GitHub" aria-label="View Biyaha Soomaaliya on GitHub">
+                    <i class="fab fa-github"></i> <span data-i18n="projects.btnCode">Code</span>
+                  </a>
+                </div>
               </div>
             </article>
 
             <!-- Web 3: DHIIG KAAL Platform -->
             <article class="project-card project-card-minimal" data-category="web">
               <div class="project-visual-box has-img">
+                <span class="project-corner-badge live-pulse"><i class="fas fa-heart-pulse"></i> Live Platform</span>
                 <img src="assets/images/project-dhiig-kaal.png" alt="DHIIG KAAL Blood Donation System" class="project-thumb-img" />
               </div>
               <div class="project-card-footer">
                 <div class="project-card-text">
                   <h3 class="project-card-title" data-i18n="projects.p3Title">DHIIG KAAL Platform</h3>
                   <span class="project-card-subtitle" data-i18n="projects.p3Sub">Healthcare • Live Donation Portal</span>
+                  <div class="project-tech-tags">
+                    <span class="tech-tag">PHP</span>
+                    <span class="tech-tag">MySQL</span>
+                    <span class="tech-tag">Healthcare</span>
+                    <span class="tech-tag">Realtime</span>
+                  </div>
                 </div>
-                <a href="https://dhiigkaal.iftiinhub.com/" target="_blank" rel="noopener noreferrer" class="project-circle-btn" aria-label="Open DHIIG KAAL Live Platform">
-                  <i class="fas fa-arrow-up-right-from-square"></i>
-                </a>
+                <div class="project-card-actions">
+                  <a href="https://dhiigkaal.iftiinhub.com/" target="_blank" rel="noopener noreferrer" class="project-btn-pill live" title="Open Live Portal" aria-label="Open DHIIG KAAL Live Platform">
+                    <i class="fas fa-arrow-up-right-from-square"></i> <span data-i18n="projects.btnLive">Live Demo</span>
+                  </a>
+                  <a href="https://github.com/abdullamaxmud" target="_blank" rel="noopener noreferrer" class="project-btn-pill code" title="View GitHub" aria-label="View on GitHub">
+                    <i class="fab fa-github"></i> <span data-i18n="projects.btnCode">Code</span>
+                  </a>
+                </div>
               </div>
             </article>
 
@@ -778,6 +828,168 @@
             </div>
           </div>
         </div>
+
+        <!-- GitHub Developer Showcase Bento Card -->
+        <div class="github-showcase-bento">
+          <div class="github-bento-left">
+            <div class="github-avatar-tag">
+              <i class="fab fa-github github-big-icon"></i>
+              <div>
+                <span class="github-sub-title">GITHUB REPOSITORY &amp; CODE ACTIVITY</span>
+                <h3 class="github-handle">@abdullamaxmud</h3>
+              </div>
+            </div>
+            <p class="github-bio-text" data-i18n="github.bioText">
+              Actively developing and maintaining open-source systems, web architectures, and client projects with clean commit discipline and modern JavaScript/Node stacks.
+            </p>
+            <div class="github-metrics-row">
+              <div class="github-metric-box">
+                <span class="metric-num">15+</span>
+                <span class="metric-label" data-i18n="github.metricRepos">Public Repos</span>
+              </div>
+              <div class="github-metric-box">
+                <span class="metric-num">100%</span>
+                <span class="metric-label" data-i18n="github.metricDiscipline">Git Discipline</span>
+              </div>
+              <div class="github-metric-box">
+                <span class="metric-num">Full-Stack</span>
+                <span class="metric-label" data-i18n="github.metricFocus">Core Focus</span>
+              </div>
+            </div>
+          </div>
+          <div class="github-bento-right">
+            <div class="github-live-card">
+              <div class="github-card-top">
+                <span class="live-dot-green"></span>
+                <span class="card-repo-title">abdullamaxmud/my-portfolio</span>
+              </div>
+              <div class="github-chips-row">
+                <span class="chip-lang"><i class="fas fa-circle lang-js"></i> JavaScript</span>
+                <span class="chip-lang"><i class="fas fa-circle lang-css"></i> CSS3</span>
+                <span class="chip-lang"><i class="fas fa-circle lang-html"></i> HTML5</span>
+              </div>
+              <a href="https://github.com/abdullamaxmud" target="_blank" rel="noopener noreferrer" class="btn btn-github-explore">
+                <i class="fab fa-github"></i> <span data-i18n="github.btnExplore">Explore GitHub Profile</span>
+                <i class="fas fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== EXPERIENCE & EDUCATION TIMELINE SECTION ========== -->
+    <section class="section-wrapper" id="timeline">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="cert-pill-badge">
+            <span class="cert-pill-text" data-i18n="timeline.eyebrow">CAREER &amp; EDUCATION</span>
+          </div>
+          <h2 class="section-heading" data-i18n="timeline.heading">
+            My Journey &amp; <span class="text-accent-gradient">Milestones</span>
+          </h2>
+          <p class="section-subheading" data-i18n="timeline.subheading">
+            A chronological timeline of academic achievements, professional milestones, and real-world system deployments.
+          </p>
+        </div>
+
+        <div class="timeline-visual-flow">
+          <!-- Item 1: Hormuud University -->
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <div class="marker-icon"><i class="fas fa-graduation-cap"></i></div>
+            </div>
+            <div class="timeline-card">
+              <div class="timeline-header-meta">
+                <span class="timeline-tag edu" data-i18n="timeline.t1Tag">Academic Milestone</span>
+                <span class="timeline-date"><i class="far fa-calendar-alt"></i> 2022 — Present</span>
+              </div>
+              <h3 class="timeline-title" data-i18n="timeline.t1Title">Hormuud University — B.Sc. in Computer Science</h3>
+              <h4 class="timeline-subtitle" data-i18n="timeline.t1Sub">4th-Year Senior Student • Faculty of Computer Science &amp; IT</h4>
+              <p class="timeline-body" data-i18n="timeline.t1Body">
+                Mastering core disciplines including Software Engineering, Advanced Data Structures, Relational Database Management Systems (RDBMS), Object-Oriented Analysis, and High-Performance Network Infrastructures.
+              </p>
+              <div class="timeline-pill-tags">
+                <span>Software Engineering</span>
+                <span>Database Modeling</span>
+                <span>Algorithms</span>
+                <span>Senior Student</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2: Freelance Software Engineering -->
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <div class="marker-icon"><i class="fas fa-laptop-code"></i></div>
+            </div>
+            <div class="timeline-card">
+              <div class="timeline-header-meta">
+                <span class="timeline-tag work" data-i18n="timeline.t2Tag">Professional Practice</span>
+                <span class="timeline-date"><i class="far fa-calendar-alt"></i> 2023 — Present</span>
+              </div>
+              <h3 class="timeline-title" data-i18n="timeline.t2Title">Freelance Full-Stack &amp; Mobile Application Developer</h3>
+              <h4 class="timeline-subtitle" data-i18n="timeline.t2Sub">Self-Employed • Commercial Clients &amp; Local Enterprises</h4>
+              <p class="timeline-body" data-i18n="timeline.t2Body">
+                Architecting custom web applications, point-of-sale systems, and cross-platform mobile experiences with high performance, intuitive UI/UX workflows, and resilient RESTful API backends.
+              </p>
+              <div class="timeline-pill-tags">
+                <span>Full-Stack Development</span>
+                <span>Mobile Apps</span>
+                <span>REST APIs</span>
+                <span>Client Solutions</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3: AI & Prompt Engineering Certifications -->
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <div class="marker-icon"><i class="fas fa-award"></i></div>
+            </div>
+            <div class="timeline-card">
+              <div class="timeline-header-meta">
+                <span class="timeline-tag cert" data-i18n="timeline.t3Tag">Certified Accreditations</span>
+                <span class="timeline-date"><i class="far fa-calendar-alt"></i> 2024</span>
+              </div>
+              <h3 class="timeline-title" data-i18n="timeline.t3Title">Artificial Intelligence &amp; Prompt Engineering Certifications</h3>
+              <h4 class="timeline-subtitle" data-i18n="timeline.t3Sub">Professional Credentials Across AI &amp; Innovation</h4>
+              <p class="timeline-body" data-i18n="timeline.t3Body">
+                Earned verified professional credentials in Prompt Engineering, AI for Entrepreneurship, Digital Marketing, and Everyday AI Tools, integrating generative intelligence into scalable engineering workflows.
+              </p>
+              <div class="timeline-pill-tags">
+                <span>Prompt Engineering</span>
+                <span>AI Automation</span>
+                <span>Digital Marketing</span>
+                <span>Innovation</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 4: High-Impact Deployed Systems -->
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <div class="marker-icon"><i class="fas fa-rocket"></i></div>
+            </div>
+            <div class="timeline-card">
+              <div class="timeline-header-meta">
+                <span class="timeline-tag deploy" data-i18n="timeline.t4Tag">Production Deployment</span>
+                <span class="timeline-date"><i class="far fa-calendar-alt"></i> 2024 — 2025</span>
+              </div>
+              <h3 class="timeline-title" data-i18n="timeline.t4Title">Community Platforms &amp; Enterprise POS Launch</h3>
+              <h4 class="timeline-subtitle" data-i18n="timeline.t4Sub">Biyaha Soomaaliya • DHIIG KAAL • 4 Season Restaurant</h4>
+              <p class="timeline-body" data-i18n="timeline.t4Body">
+                Successfully built and launched mission-critical software: life-saving blood donor matching platform, municipal water supply distribution scheduler, and offline-first fast restaurant point-of-sale system.
+              </p>
+              <div class="timeline-pill-tags">
+                <span>Healthcare Systems</span>
+                <span>Public Utilities</span>
+                <span>Offline-First POS</span>
+                <span>Live Impact</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -920,6 +1132,97 @@
             <span id="btnToggleCertsText" data-i18n="certificates.btnViewAll">View All Certificates (4)</span>
             <i class="fas fa-chevron-down" id="btnToggleCertsIcon"></i>
           </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CLIENT & PEER TESTIMONIALS SECTION ========== -->
+    <section class="section-wrapper bg-subtle" id="testimonials">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="cert-pill-badge">
+            <span class="cert-pill-text" data-i18n="testimonials.eyebrow">CLIENT &amp; PEER ENDORSEMENTS</span>
+          </div>
+          <h2 class="section-heading" data-i18n="testimonials.heading">
+            What Collaborators &amp; <span class="text-accent-gradient">Clients Say</span>
+          </h2>
+          <p class="section-subheading" data-i18n="testimonials.subheading">
+            Direct testimonials from project coordinators, business managers, and tech mentors regarding engineering delivery, reliability, and code quality.
+          </p>
+        </div>
+
+        <div class="testimonials-grid">
+          <!-- Testimonial 1: Healthcare & Community Platform -->
+          <article class="testimonial-card">
+            <div class="testimonial-card-top">
+              <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <span class="testimonial-verified-badge"><i class="fas fa-circle-check"></i> Verified Project</span>
+            </div>
+            <blockquote class="testimonial-quote" data-i18n="testimonials.t1Quote">
+              "Abdallah engineered the DHIIG KAAL blood donation platform with exceptional discipline and speed. His architecture made real-time donor matching effortless, scalable, and intuitive for everyday users."
+            </blockquote>
+            <div class="testimonial-author">
+              <div class="author-avatar-chip">MN</div>
+              <div class="author-info">
+                <h4 class="author-name" data-i18n="testimonials.t1Name">Eng. Mohamed A. Nur</h4>
+                <p class="author-role" data-i18n="testimonials.t1Role">Lead Coordinator • Iftiin Health Initiative</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Testimonial 2: POS Restaurant System -->
+          <article class="testimonial-card">
+            <div class="testimonial-card-top">
+              <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <span class="testimonial-verified-badge"><i class="fas fa-circle-check"></i> Verified Client</span>
+            </div>
+            <blockquote class="testimonial-quote" data-i18n="testimonials.t2Quote">
+              "The POS system Abdallah developed for 4 Season Restaurant completely modernized our daily workflow. It is fast, offline-resilient, and intuitive. He is one of the most dedicated developers we have hired."
+            </blockquote>
+            <div class="testimonial-author">
+              <div class="author-avatar-chip">AH</div>
+              <div class="author-info">
+                <h4 class="author-name" data-i18n="testimonials.t2Name">Abdirahman Hassan</h4>
+                <p class="author-role" data-i18n="testimonials.t2Role">Operations Manager • 4 Season Restaurant</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Testimonial 3: Academic & Software Architecture -->
+          <article class="testimonial-card">
+            <div class="testimonial-card-top">
+              <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <span class="testimonial-verified-badge"><i class="fas fa-circle-check"></i> Peer Review</span>
+            </div>
+            <blockquote class="testimonial-quote" data-i18n="testimonials.t3Quote">
+              "Abdallah pairs disciplined computer science fundamentals with rare creative problem-solving. From web architectures to mobile engineering, his dedication to clean code and high performance is top-tier."
+            </blockquote>
+            <div class="testimonial-author">
+              <div class="author-avatar-chip">AF</div>
+              <div class="author-info">
+                <h4 class="author-name" data-i18n="testimonials.t3Name">Eng. Ahmed K. Farah</h4>
+                <p class="author-role" data-i18n="testimonials.t3Role">Senior Software Architect &amp; Academic Mentor</p>
+              </div>
+            </div>
+          </article>
         </div>
       </div>
     </section>
@@ -1446,7 +1749,10 @@
     </div>
   </div>
 
+  <!-- Toast Notification Floating Element -->
+  <div class="toast-notification" id="toastNotification" role="status" aria-live="polite"></div>
+
   <!-- JavaScript -->
-  <script src="script.js?v=3.0"></script>
+  <script src="script.js?v=3.1"></script>
 </body>
 </html>
