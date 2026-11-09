@@ -53,6 +53,8 @@ document.addEventListener('DOMContentLoaded', () => {
       "timeline.t4Title": "Community Platforms & Enterprise POS Launch",
       "timeline.t4Sub": "Biyaha Soomaaliya • DHIIG KAAL • 4 Season Restaurant",
       "timeline.t4Body": "Successfully built and launched mission-critical software: life-saving blood donor matching platform, municipal water supply distribution scheduler, and offline-first fast restaurant point-of-sale system.",
+      "collab.eyebrow": "OFFICIAL COLLABORATIONS",
+      "collab.heading": "REAL PROJECTS & ORGANIZATIONS",
       "testimonials.eyebrow": "CLIENT & PEER ENDORSEMENTS",
       "testimonials.heading": "What Collaborators & Clients Say",
       "testimonials.subheading": "Direct testimonials from project coordinators, business managers, and tech mentors regarding engineering delivery, reliability, and code quality.",
@@ -120,20 +122,32 @@ document.addEventListener('DOMContentLoaded', () => {
       "projects.p2Sub": "Water Schedule • Public Utility",
       "projects.p3Title": "DHIIG KAAL Platform",
       "projects.p3Sub": "Healthcare • Live Donation Portal",
+      "projects.p4Title": "Abdull School MS",
+      "projects.p4Sub": "School ERP • Full Stack",
+      "projects.p5Title": "ABDULL Store",
+      "projects.p5Sub": "E-Commerce • MERN Stack",
+      "projects.p6Title": "Smart Lab System",
+      "projects.p6Sub": "Hormuud University • Lab Management",
 
-      "projects.poster1Title": "Somali Tech Summit",
-      "projects.poster1Sub": "Keynote Design • Event Poster",
-      "projects.poster2Title": "Nexus Enterprise Suite",
-      "projects.poster2Sub": "Brand Identity • Billboard Series",
-      "projects.poster3Title": "KaafiPay FinTech Series",
-      "projects.poster3Sub": "Product Launch • FinTech Promo",
-      "projects.poster4Title": "Horns of Africa Art",
-      "projects.poster4Sub": "Cultural Heritage • Typographic Art",
+      "projects.poster1Title": "Let's Build It",
+      "projects.poster1Sub": "Personal Brand • Hire Me Poster",
+      "projects.poster2Title": "DHIIG KAAL Campaign",
+      "projects.poster2Sub": "Blood Donation • Awareness Poster",
+      "projects.poster3Title": "Know Your Water Day",
+      "projects.poster3Sub": "Biyaha Soomaaliya • Public Utility",
+      "projects.poster4Title": "Hungry? Order in Seconds",
+      "projects.poster4Sub": "4 SEASON • Restaurant Promo",
+      "projects.poster5Title": "Abdull School MS Launch",
+      "projects.poster5Sub": "School ERP • Product Launch",
+      "projects.poster6Title": "Report It — Smart Lab",
+      "projects.poster6Sub": "Hormuud University • Campaign",
 
       "projects.media1Title": "Abdalla Show Production",
       "projects.media1Sub": "Video Production • Official Reel",
-      "projects.media2Title": "Corporate Storytelling",
-      "projects.media2Sub": "Cinematic Promo • Digital Media",
+      "projects.media2Title": "Meet the Developer",
+      "projects.media2Sub": "Profile Reel • Abdallah Mohamud Abdi",
+      "projects.media3Title": "4 SEASON POS — Live Demo",
+      "projects.media3Sub": "Project Walkthrough • Full Stack",
 
       "projects.btnLive": "Live Platform",
       "projects.btnSource": "Source Code",
@@ -314,6 +328,8 @@ document.addEventListener('DOMContentLoaded', () => {
       "timeline.t4Title": "Barnaamijyo Bulsho & Nidaamyo POS Ganacsi",
       "timeline.t4Sub": "Biyaha Soomaaliya • DHIIG KAAL • 4 Season Restaurant",
       "timeline.t4Body": "Dhisidda iyo daah-furka nidaamyo muhiim ah: madal badbaadisa nolosha oo dhiig-bixiyeyaasha isku xirta, nidaamka jadwalka biyaha degmada, iyo POS degdeg ah oo maqaayadaha loogu talagalay.",
+      "collab.eyebrow": "WADA-SHAQEYNTA RASMIGA AH",
+      "collab.heading": "MASHAARIIC & HAY'ADAHA DHABTA AH",
       "testimonials.eyebrow": "MARAG-KACYADA MACAAMIISHA",
       "testimonials.heading": "Waxa ay Macaamiishu Ka Yiraahdeen",
       "testimonials.subheading": "Faallooyin toos ah oo ka yimid madaxda mashaariicda, maamulayaasha ganacsiga, iyo hagayaasha farsamada oo ku saabsan tayada shaqadayda.",
@@ -381,20 +397,32 @@ document.addEventListener('DOMContentLoaded', () => {
       "projects.p2Sub": "Nidaamka Biyaha • Adeegga Dadweynaha",
       "projects.p3Title": "DHIIG KAAL Platform",
       "projects.p3Sub": "Daryeelka Caafimaadka • Tabaruca Dhiigga",
+      "projects.p4Title": "Abdull School MS",
+      "projects.p4Sub": "Maamulka Dugsiga • Full Stack",
+      "projects.p5Title": "ABDULL Store",
+      "projects.p5Sub": "Ganacsi Online • MERN Stack",
+      "projects.p6Title": "Smart Lab System",
+      "projects.p6Sub": "Jaamacadda Hormuud • Maamulka Shaybaarka",
 
-      "projects.poster1Title": "Somali Tech Summit",
-      "projects.poster1Sub": "Naqshadda Shirka • Boorarka Xayeysiinta",
-      "projects.poster2Title": "Nexus Enterprise Suite",
-      "projects.poster2Sub": "Sumadda Ganacsiga • Boorarka Waaweyn",
-      "projects.poster3Title": "KaafiPay FinTech Series",
-      "projects.poster3Sub": "Bilaabidda App-ka • FinTech UI",
-      "projects.poster4Title": "Bandhigga Geeska Afrika",
-      "projects.poster4Sub": "Hidaha & Dhaqanka • Farshaxanka Qoraalka",
+      "projects.poster1Title": "Aan Dhisno",
+      "projects.poster1Sub": "Sumad Shakhsi • Boodhka Shaqo-raadinta",
+      "projects.poster2Title": "Ololaha DHIIG KAAL",
+      "projects.poster2Sub": "Deeqda Dhiigga • Boodhka Wacyigelinta",
+      "projects.poster3Title": "Ogow Maalinta Biyahaaga",
+      "projects.poster3Sub": "Biyaha Soomaaliya • Adeeg Dadweyne",
+      "projects.poster4Title": "Gaajo? Dalbo Ilbiriqsiyo",
+      "projects.poster4Sub": "4 SEASON • Xayeysiis Makhaayad",
+      "projects.poster5Title": "Bilowga Abdull School MS",
+      "projects.poster5Sub": "Maamulka Dugsiga • Soo Saarid Alaab",
+      "projects.poster6Title": "Soo Sheeg — Smart Lab",
+      "projects.poster6Sub": "Jaamacadda Hormuud • Olole",
 
       "projects.media1Title": "Abdalla Show Production",
       "projects.media1Sub": "Soo Saarista Muuqaallada • Reel Rasmi ah",
-      "projects.media2Title": "Sheeko Ganacsi & Muuqaal",
-      "projects.media2Sub": "Xayeysiis Cinematik • Warbaahinta Dhijitaalka",
+      "projects.media2Title": "Bar-baro Horumariyaha",
+      "projects.media2Sub": "Muuqaal Shakhsi ah • Abdallah Mohamud Abdi",
+      "projects.media3Title": "4 SEASON POS — Bandhig Toos ah",
+      "projects.media3Sub": "Socdaal Mashruuc • Full Stack",
 
       "projects.btnLive": "Madasha Tooska ah",
       "projects.btnSource": "Koodhka Xogta",
@@ -575,6 +603,8 @@ document.addEventListener('DOMContentLoaded', () => {
       "timeline.t4Title": "منصات مجتمعية وأنظمة نقاط بيع",
       "timeline.t4Sub": "مياه الصومال • ضيق كال للتبرع بالدم • مطعم فور سيزون",
       "timeline.t4Body": "تطوير وإطلاق منصات هامة: منصة للتبرع بالدم، نظام جدولة توزيع المياه، ونظام نقاط بيع سريع ومقاوم لانقطاع الإنترنت.",
+      "collab.eyebrow": "الشراكات الرسمية",
+      "collab.heading": "مشاريع ومؤسسات حقيقية",
       "testimonials.eyebrow": "آراء العملاء والزملاء",
       "testimonials.heading": "ماذا يقول شركاء النجاح والعملاء",
       "testimonials.subheading": "آراء مباشرة من منسقي المشاريع ومديري الأعمال والموجهين حول جودة التنفيذ والالتزام البرمجي.",
@@ -642,20 +672,32 @@ document.addEventListener('DOMContentLoaded', () => {
       "projects.p2Sub": "مرافق عامة • منصة جدول المياه",
       "projects.p3Title": "منصة ضيق كال للدم",
       "projects.p3Sub": "رعاية صحية • بوابة التبرع بالدم",
+      "projects.p4Title": "Abdull School MS",
+      "projects.p4Sub": "نظام إدارة مدرسية • Full Stack",
+      "projects.p5Title": "ABDULL Store",
+      "projects.p5Sub": "تجارة إلكترونية • MERN Stack",
+      "projects.p6Title": "Smart Lab System",
+      "projects.p6Sub": "جامعة هرمود • إدارة المختبرات",
 
-      "projects.poster1Title": "قمة الصومال التقنية",
-      "projects.poster1Sub": "تصميم المؤتمر • بوستر إعلاني",
-      "projects.poster2Title": "مجموعة نيكسوس للشركات",
-      "projects.poster2Sub": "هوية بصرية • بوسترات طرقية",
-      "projects.poster3Title": "سلسلة كافي باي",
-      "projects.poster3Sub": "إطلاق منتج • واجهات مالية",
-      "projects.poster4Title": "معرض قرن أفريقيا",
-      "projects.poster4Sub": "تراث وثقافة • تيبوغرافي فني",
+      "projects.poster1Title": "لنبنِه معًا",
+      "projects.poster1Sub": "علامة شخصية • ملصق توظيف",
+      "projects.poster2Title": "حملة DHIIG KAAL",
+      "projects.poster2Sub": "التبرع بالدم • ملصق توعوي",
+      "projects.poster3Title": "اعرف يوم المياه",
+      "projects.poster3Sub": "Biyaha Soomaaliya • خدمة عامة",
+      "projects.poster4Title": "جائع؟ اطلب في ثوانٍ",
+      "projects.poster4Sub": "4 SEASON • إعلان مطعم",
+      "projects.poster5Title": "إطلاق Abdull School MS",
+      "projects.poster5Sub": "نظام مدرسي • إطلاق منتج",
+      "projects.poster6Title": "أبلغ عنه — Smart Lab",
+      "projects.poster6Sub": "جامعة هرمود • حملة",
 
       "projects.media1Title": "إنتاج عبد الله شو",
       "projects.media1Sub": "إنتاج فيديو • ريل رسمي",
-      "projects.media2Title": "سرد قصصي للشركات",
-      "projects.media2Sub": "إعلان سينمائي • إنتاج رقمي",
+      "projects.media2Title": "تعرّف على المطوّر",
+      "projects.media2Sub": "فيديو تعريفي • عبد الله محمود عبدي",
+      "projects.media3Title": "نظام 4 SEASON — عرض مباشر",
+      "projects.media3Sub": "جولة في المشروع • Full Stack",
 
       "projects.btnLive": "المنصة الحية",
       "projects.btnSource": "الكود المصدري",
@@ -883,8 +925,44 @@ document.addEventListener('DOMContentLoaded', () => {
       const key = el.getAttribute('data-i18n');
       if (TRANSLATIONS[lang] && TRANSLATIONS[lang][key]) {
         // If element contains child elements (like icons or count badges), only update its first text node
-        if (el.children.length === 0) {
+        const gradientSpan = el.querySelector(':scope > .text-accent-gradient');
+        const hasEmphasis = el.dataset.emphasis ||
+          (el.children.length > 0 && [...el.children].every(c => ['STRONG', 'B', 'EM'].includes(c.tagName)));
+        if (el.children.length === 0 && !hasEmphasis) {
           el.textContent = TRANSLATIONS[lang][key];
+        } else if (gradientSpan && el.children.length === 1) {
+          // Heading with a gradient accent: rebuild it so the last word keeps the gradient
+          // Remember how many trailing words were highlighted in the original markup
+          if (!gradientSpan.dataset.words) {
+            gradientSpan.dataset.words = String(gradientSpan.textContent.trim().split(/\s+/).length);
+          }
+          const words = TRANSLATIONS[lang][key].trim().split(/\s+/);
+          const count = Math.min(Number(gradientSpan.dataset.words), Math.max(words.length - 1, 1));
+          gradientSpan.textContent = words.splice(words.length - count, count).join(' ');
+          el.textContent = words.length ? words.join(' ') + ' ' : '';
+          el.appendChild(gradientSpan);
+        } else if (hasEmphasis) {
+          // Paragraph with bold/italic words: the translation is the whole sentence,
+          // so replace all text and re-apply the original emphasis where the phrase still appears
+          if (!el.dataset.emphasis) {
+            el.dataset.emphasis = JSON.stringify([...el.children].map(c => [c.tagName, c.textContent.trim()]));
+          }
+          const text = TRANSLATIONS[lang][key];
+          const emphasis = JSON.parse(el.dataset.emphasis)
+            .map(([tag, phrase]) => ({ tag, phrase, at: text.indexOf(phrase) }))
+            .filter(e => e.phrase && e.at !== -1)
+            .sort((a, b) => a.at - b.at);
+          el.textContent = '';
+          let pos = 0;
+          emphasis.forEach(({ tag, phrase, at }) => {
+            if (at < pos) return;
+            el.appendChild(document.createTextNode(text.slice(pos, at)));
+            const strong = document.createElement(tag.toLowerCase());
+            strong.textContent = phrase;
+            el.appendChild(strong);
+            pos = at + phrase.length;
+          });
+          el.appendChild(document.createTextNode(text.slice(pos)));
         } else {
           // Find text node inside or preserve structure
           let textNodeFound = false;
@@ -1139,6 +1217,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Reset carousel scroll to start on tab switch
     const track = document.getElementById('projectsTrack');
+    // Videos tab uses a featured grid (1 large + 2 stacked) instead of the carousel
+    const carouselShell = track ? track.closest('.projects-carousel-shell') : null;
+    if (carouselShell) {
+      carouselShell.classList.toggle('is-media-layout', filterValue === 'media');
+    }
     if (track) {
       track.scrollTo({ left: 0, behavior: 'smooth' });
     }
