@@ -1,1889 +1,713 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark" dir="ltr">
+<html lang="en" dir="ltr" data-theme="dark">
 <head>
-  <meta name="google-site-verification" content="fZ0JAVs-lJcvMbrXifpL4Zzic79uizzHb5Y-gSvOYSo" />
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png?v=8" />
-  <link rel="shortcut icon" href="favicon.ico?v=8" />
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="google-site-verification" content="fZ0JAVs-lJcvMbrXifpL4Zzic79uizzHb5Y-gSvOYSo" />
 
-  <title>Abdallah Mohamud Abdi — Full-Stack Developer &amp; Software Engineer</title>
-  <meta name="description" content="Personal portfolio of Abdallah Mohamud Abdi — 4th-year Computer Science student at Hormuud University, Software Developer, Mobile Application Developer, and Creative Multimedia Specialist." />
-  <meta name="keywords" content="Abdallah Mohamud Abdi, Full-Stack Developer, Mobile App Developer, Software Engineer, React, Node.js, Web Development, Mogadishu, Hormuud University, UI/UX" />
+  <title>Abdallah Mohamud Abdi — Full-Stack Developer &amp; Designer</title>
+  <meta name="description" content="Full-stack developer, UI/UX and graphic designer and content creator in Mogadishu, Somalia. Web apps, mobile apps, brands and launch videos in English, Somali and Arabic." />
   <meta name="author" content="Abdallah Mohamud Abdi" />
+  <meta name="theme-color" content="#050816" />
+  <link rel="canonical" href="https://abdallahmohamudabdi.netlify.app/" />
 
-  <!-- Open Graph / Meta -->
+  <!-- Share preview -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Abdallah Mohamud Abdi — Portfolio" />
-  <meta property="og:description" content="Explore full-stack web applications, mobile architectures, and creative digital solutions engineered by Abdallah Mohamud Abdi." />
-  <meta property="og:image" content="assets/images/abdallah-hero.jpg" />
+  <meta property="og:site_name" content="Abdallah Mohamud Abdi" />
+  <meta property="og:title" content="Abdallah Mohamud Abdi — Full-Stack Developer &amp; Designer" />
+  <meta property="og:description" content="Web apps, mobile apps, brands and launch videos — built in Mogadishu, Somalia." />
+  <meta property="og:url" content="https://abdallahmohamudabdi.netlify.app/" />
+  <meta property="og:image" content="https://abdallahmohamudabdi.netlify.app/assets/v2/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@AbdullaMaxmud" />
 
-  <!-- Google Fonts: Playfair Display, Plus Jakarta Sans & Space Grotesk -->
+  <!-- Icons -->
+  <link rel="icon" href="favicon.ico?v=9" sizes="any" />
+  <link rel="icon" type="image/png" href="favicon.png?v=9" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png?v=9" />
+
+  <!-- Fonts: Bricolage Grotesque (display), Inter (text), IBM Plex Sans Arabic (Arabic) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,600;1,700;1,800;1,900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-  <!-- Font Awesome Icons 6.5.1 -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <!-- Apply the saved theme before first paint (no flash) -->
+  <script>
+    (function () {
+      try {
+        var m = localStorage.getItem('am-theme') || 'dark';
+        var dark = m === 'dark' || (m === 'system' && matchMedia('(prefers-color-scheme: dark)').matches);
+        document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-mode', m);
+      } catch (e) {}
+    })();
+  </script>
 
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="style.css?v=3.1" />
+  <link rel="stylesheet" href="style.css?v=5.0" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Abdallah Mohamud Abdi",
+    "jobTitle": "Full-Stack Developer & Designer",
+    "url": "https://abdallahmohamudabdi.netlify.app/",
+    "image": "https://abdallahmohamudabdi.netlify.app/assets/v2/og-image.jpg",
+    "address": { "@type": "PostalAddress", "addressCountry": "SO" },
+    "knowsLanguage": ["so", "en", "ar"],
+    "knowsAbout": ["Web development", "React", "PHP", "MySQL", "Mobile apps", "Graphic design", "Video editing"],
+    "sameAs": ["https://github.com/abdullamaxmud"]
+  }
+  </script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- Top Scroll Reading Progress Bar -->
-  <div class="scroll-progress-bar" id="scrollProgressBar" aria-hidden="true"></div>
+  <!-- Background: slow aurora light + fine grain -->
+  <div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="grain" aria-hidden="true"></div>
 
-  <!-- ========== STICKY NAVBAR ========== -->
-  <header class="navbar-wrapper" id="navbar">
-    <div class="nav-container">
-      <a href="#home" class="nav-logo" aria-label="Abdallah Mohamud Abdi Home">
-        <span class="logo-mark">A<span class="logo-accent">M</span></span>
-        <span class="logo-text">ABDALLAH<span class="accent-dot">.</span></span>
+  <!-- ===================== HEADER ===================== -->
+  <div class="header-bar">
+   <div class="shell">
+    <header class="site-header" id="siteHeader">
+      <a href="#top" class="brand" aria-label="Abdallah Mohamud Abdi — home">
+        <svg class="brand-mark" width="38" height="38" viewBox="0 0 40 40" aria-hidden="true">
+          <defs><linearGradient id="amg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0B2A6F" /><stop offset="1" stop-color="#0EA5E9" /></linearGradient></defs>
+          <rect width="40" height="40" rx="11" fill="url(#amg)" />
+          <path d="M8.5 28L14.5 12h2.6l6 16h-3.2l-1.3-3.7h-6l-1.3 3.7zM14 21.8h4.1l-2-5.9z" fill="#FFFFFF" />
+          <path d="M24.5 28V12h2.8l2.6 7.2 2.6-7.2h2.8v16h-2.9v-9.6l-2.5 6.8-2.5-6.8V28z" fill="#BAE6FD" />
+          <circle cx="33.5" cy="7.5" r="2" fill="#7DD3FC" />
+        </svg>
+        <span class="brand-text">
+          <b>Abdallah Mohamud Abdi</b>
+          <small data-i18n="brand.role">Full-Stack Developer &amp; Designer</small>
+        </span>
       </a>
 
-      <nav class="nav-menu" id="navMenu" aria-label="Main Navigation">
-        <ul class="nav-list">
-          <li><a href="#home" class="nav-link active" data-i18n="nav.home">Home</a></li>
-          <li><a href="#about" class="nav-link" data-i18n="nav.about">About</a></li>
-          <li><a href="#projects" class="nav-link" data-i18n="nav.projects">Projects</a></li>
-          <li><a href="#services" class="nav-link" data-i18n="nav.services">Services</a></li>
-          <li><a href="#skills" class="nav-link" data-i18n="nav.skills">Skills</a></li>
-          <li class="nav-item-extra"><a href="#timeline" class="nav-link" data-i18n="nav.timeline">Timeline</a></li>
-          <li><a href="#certificates" class="nav-link" data-i18n="nav.certificates">Certificates</a></li>
-          <li class="nav-item-extra"><a href="#testimonials" class="nav-link" data-i18n="nav.testimonials">Reviews</a></li>
-          <li><a href="#cv" class="nav-link" data-i18n="nav.cv">CV</a></li>
-          <li><a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a></li>
-        </ul>
+      <nav class="nav" aria-label="Main">
+        <a href="#top" class="nav-link is-active" data-spy="top" data-i18n="nav.home">Home</a>
+        <a href="#about" class="nav-link" data-spy="about" data-i18n="nav.about">About</a>
+        <a href="#services" class="nav-link" data-spy="services" data-i18n="nav.services">Services</a>
+        <a href="#work" class="nav-link" data-spy="work" data-i18n="nav.work">Work</a>
+        <a href="#certificates" class="nav-link" data-spy="certificates" data-i18n="nav.certificates">Certificates</a>
+        <a href="#contact" class="nav-link" data-spy="contact" data-i18n="nav.contact">Contact</a>
       </nav>
 
-      <div class="nav-actions">
-        <!-- Language Switcher Dropdown (Near Display Theme Toggle) -->
-        <div class="lang-dropdown-wrapper" id="langSwitcher">
-          <button class="lang-toggle-btn" id="langToggleBtn" type="button" aria-haspopup="listbox" aria-expanded="false" aria-label="Select Language">
-            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 20'><rect width='30' height='20' fill='%23012169'/><path d='M0,0 L30,20 M30,0 L0,20' stroke='%23fff' stroke-width='4'/><path d='M0,0 L30,20 M30,0 L0,20' stroke='%23C8102E' stroke-width='2'/><path d='M15,0 v20 M0,10 h30' stroke='%23fff' stroke-width='6'/><path d='M15,0 v20 M0,10 h30' stroke='%23C8102E' stroke-width='3.5'/></svg>" alt="Language Flag" class="flag-icon" id="currentFlag" />
-            <span class="lang-code" id="currentLangLabel">EN</span>
-            <i class="fas fa-chevron-down lang-chevron"></i>
+      <div class="header-tools">
+        <button type="button" class="chip-btn search-btn" data-open-search aria-label="Search the site (Ctrl + K)" title="Search · Ctrl K">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M20 20l-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><kbd>Ctrl K</kbd></button>
+        <!-- Theme -->
+        <div class="dropdown" data-dropdown>
+          <button type="button" class="chip-btn" aria-haspopup="menu" aria-expanded="false" aria-label="Theme">
+            <svg class="ic-mode ic-dark" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 14.5A8 8 0 019.5 4a8 8 0 1010.5 10.5z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+            <svg class="ic-mode ic-light" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            <svg class="ic-mode ic-system" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M8 20h8M12 16v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            <svg class="chev" width="11" height="11" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 4.5l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
-          <ul class="lang-dropdown-menu" id="langMenu" role="listbox">
-            <li class="lang-menu-item active" data-lang="en">
-              <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 20'><rect width='30' height='20' fill='%23012169'/><path d='M0,0 L30,20 M30,0 L0,20' stroke='%23fff' stroke-width='4'/><path d='M0,0 L30,20 M30,0 L0,20' stroke='%23C8102E' stroke-width='2'/><path d='M15,0 v20 M0,10 h30' stroke='%23fff' stroke-width='6'/><path d='M15,0 v20 M0,10 h30' stroke='%23C8102E' stroke-width='3.5'/></svg>" alt="English Flag" class="flag-icon" />
-              <span>English</span>
-            </li>
-            <li class="lang-menu-item" data-lang="so">
-              <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 20'><rect width='30' height='20' fill='%234189DD'/><polygon points='15,4 16.5,8.5 21,8.5 17.5,11.5 19,16 15,13 11,16 12.5,11.5 9,8.5 13.5,8.5' fill='%23FFFFFF'/></svg>" alt="Somalia Flag" class="flag-icon" />
-              <span>Soomaali</span>
-            </li>
-            <li class="lang-menu-item" data-lang="ar">
-              <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 20'><rect width='30' height='20' fill='%23006C35'/><path d='M8,12 h14 M10,10 l-2,2 l2,2' stroke='%23FFFFFF' stroke-width='1.2' stroke-linecap='round'/><circle cx='15' cy='7' r='2' fill='%23FFFFFF'/></svg>" alt="Arabic Flag" class="flag-icon" />
-              <span>العربية</span>
-            </li>
+          <div class="menu" role="menu" aria-label="Theme">
+            <button type="button" role="menuitemradio" data-theme-pick="dark"><span data-i18n="theme.dark">Dark</span><small data-i18n="theme.darkHint">Always dark</small></button>
+            <button type="button" role="menuitemradio" data-theme-pick="light"><span data-i18n="theme.light">Light</span><small data-i18n="theme.lightHint">Always light</small></button>
+            <button type="button" role="menuitemradio" data-theme-pick="system"><span data-i18n="theme.system">System</span><small data-i18n="theme.systemHint">Match my device</small></button>
+          </div>
+        </div>
+        <!-- Language -->
+        <div class="dropdown" data-dropdown>
+          <button type="button" class="chip-btn lang-btn" aria-haspopup="menu" aria-expanded="false" aria-label="Language">
+            <img src="assets/v2/flags/gb.svg" alt="" width="18" height="13" class="lang-flag" />
+            <span class="lang-code">EN</span>
+            <svg class="chev" width="11" height="11" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 4.5l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="menu" role="menu" aria-label="Language">
+            <button type="button" role="menuitemradio" data-lang-pick="en" lang="en"><img src="assets/v2/flags/gb.svg" alt="" width="22" height="16" /><span>English</span><small>EN</small></button>
+            <button type="button" role="menuitemradio" data-lang-pick="so" lang="so"><img src="assets/v2/flags/so.svg" alt="" width="22" height="16" /><span>Soomaali</span><small>SO</small></button>
+            <button type="button" role="menuitemradio" data-lang-pick="ar" lang="ar"><img src="assets/v2/flags/sa.svg" alt="" width="22" height="16" /><span>العربية</span><small>AR</small></button>
+          </div>
+        </div>
+        <a href="#contact" class="talk-btn"><span class="talk-dot" aria-hidden="true"></span><span class="talk-label" data-i18n="cta.talk">Let's talk</span><span class="talk-arrow" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M4 10L10 4M5 4h5v5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+        <!-- Menu for small screens -->
+        <div class="dropdown nav-menu" data-dropdown>
+          <button type="button" class="chip-btn icon-only" aria-haspopup="menu" aria-expanded="false" aria-label="Menu">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg>
+          </button>
+          <div class="menu" role="menu" aria-label="Sections">
+            <a href="#top" role="menuitem" data-i18n="nav.home">Home</a>
+            <a href="#about" role="menuitem" data-i18n="nav.about">About</a>
+            <a href="#services" role="menuitem" data-i18n="nav.services">Services</a>
+            <a href="#work" role="menuitem" data-i18n="nav.work">Work</a>
+            <a href="#certificates" role="menuitem" data-i18n="nav.certificates">Certificates</a>
+            <a href="#contact" role="menuitem" data-i18n="nav.contact">Contact</a>
+          </div>
+        </div>
+      </div>
+    </header>
+   </div>
+  </div>
+
+  <main id="main">
+    <div class="shell">
+      <!-- ===================== HERO ===================== -->
+      <section id="top" class="hero" aria-labelledby="heroName">
+        <div class="hero-grid-lines" aria-hidden="true"></div>
+
+        <div class="hero-copy">
+          <span class="avail"><span class="avail-dot" aria-hidden="true"></span><span data-i18n="hero.now">Final year at Hormuud University · open to freelance projects</span></span>
+          <h1 class="hero-name" id="heroName">
+            <span class="hero-name-1">Abdallah</span>
+            <span class="hero-name-2">Mohamud Abdi</span>
+          </h1>
+          <p class="hero-role" aria-label="Full-Stack Developer, UI/UX Designer, Graphic Designer and Content Creator">
+            <span class="hero-role-slash" aria-hidden="true">/</span>
+            <span class="typed" aria-hidden="true">Full-Stack Developer</span><span class="caret" aria-hidden="true"></span>
+          </p>
+          <p class="hero-lead" data-i18n="hero.lead">I build web and mobile apps, design their brands and film their launch videos, in English, Somali and Arabic.</p>
+          <div class="btn-row">
+            <a href="#work" class="btn btn-primary"><span data-i18n="hero.viewWork">View my work</span>
+              <svg width="15" height="15" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M4 10L10 4M5 4h5v5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            <a href="assets/cv/Abdallah-Mohamud-Abdi-CV.pdf" target="_blank" rel="noopener" class="btn btn-ghost"><span data-i18n="hero.cv">Download CV</span>
+              <svg width="15" height="15" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v7M4 6.5L7 9.5l3-3M3 12h8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <figure class="portrait-frame spot">
+            <div class="frame-glow" aria-hidden="true"></div>
+            <div class="frame-rings" aria-hidden="true"><i></i><i></i><i></i></div>
+            <img src="assets/v2/portrait-hero.webp" width="800" height="792" class="portrait" alt="Abdallah Mohamud Abdi in a navy suit, light-blue shirt and glasses" fetchpriority="high" />
+            <figcaption class="frame-tag"><span class="frame-tag-dot" aria-hidden="true"></span><span><b>Full-Stack Developer</b><small>&amp; Designer · Mogadishu</small></span></figcaption>
+          </figure>
+        </div>
+
+        <!-- Bento row -->
+        <div class="hero-tiles">
+          <button type="button" class="tile tile-reel spot" data-open-reel aria-haspopup="dialog">
+            <span class="reel-thumb" aria-hidden="true"><img src="assets/images/video-poster-developer-profile.jpg" alt="" loading="lazy" /><span class="reel-play"><svg width="14" height="14" viewBox="0 0 12 12"><path d="M3 1.5v9l7.5-4.5z" fill="currentColor"/></svg></span></span>
+            <span class="tile-text"><b data-i18n="hero.reel">Watch my reel</b><small>0:18 · <span data-i18n="hero.reelSub">meet the developer</span></small></span>
+          </button>
+          <div class="tile spot"><span class="tile-num">4<em>+</em></span><span class="tile-text"><b data-i18n="hero.years">Years building</b><small data-i18n="hero.yearsSub">web, apps &amp; media</small></span></div>
+          <div class="tile spot"><span class="tile-num">3</span><span class="tile-text"><b data-i18n="hero.langs">Languages</b><small>English · Somali · Arabic</small></span></div>
+          <div class="tile tile-social spot">
+            <a href="https://wa.me/252613496697" target="_blank" rel="noopener" class="soc soc-whatsapp" aria-label="WhatsApp"><svg width="17" height="17" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></a>
+            <a href="https://www.facebook.com/share/1HokAN7KZz/" target="_blank" rel="noopener" class="soc soc-facebook" aria-label="Facebook"><svg width="17" height="17" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg></a>
+            <a href="https://www.linkedin.com/in/abdulla-maxmud-3b3781393" target="_blank" rel="noopener" class="soc soc-linkedin" aria-label="LinkedIn"><svg width="17" height="17" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+            <a href="https://github.com/abdullamaxmud" target="_blank" rel="noopener" class="soc soc-github" aria-label="GitHub"><svg width="17" height="17" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+            <a href="https://www.instagram.com/zulthanabdalla" target="_blank" rel="noopener" class="soc soc-instagram" aria-label="Instagram"><svg width="17" height="17" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></svg></a>
+            <a href="https://x.com/AbdullaMaxmud" target="_blank" rel="noopener" class="soc soc-x" aria-label="X"><svg width="17" height="17" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg></a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+  <!-- ===================== TRUSTED BY ===================== -->
+  <section class="trusted" aria-label="Trusted by">
+    <span class="trusted-label"><span class="trusted-dot" aria-hidden="true"></span><span data-i18n="trusted.label">Trusted by</span></span>
+    <div class="trusted-viewport">
+      <div class="trusted-track">
+        <!-- the list is written once here; script.js duplicates it so the loop is seamless -->
+        <ul class="trusted-list">
+          <li><a href="https://ntw.hu.edu.so/" target="_blank" rel="noopener" class="trusted-item"><span class="trusted-logo pad"><img src="assets/images/collab-ntweek-light.png" alt="" loading="lazy" /></span><span class="trusted-txt"><b>NTWeek</b><small>National Training Week · Hormuud University</small></span></a></li>
+          <li><a href="https://sobda.org/" target="_blank" rel="noopener" class="trusted-item"><span class="trusted-logo"><img src="assets/images/collab-sobda.png" alt="" loading="lazy" /></span><span class="trusted-txt"><b>SOBDA</b><small>Blood donation organisation · sobda.org</small></span></a></li>
+          <li><a href="https://www.hornai.org/projects" target="_blank" rel="noopener" class="trusted-item"><span class="trusted-logo cover"><img src="assets/images/collab-hornai.png" alt="" loading="lazy" /></span><span class="trusted-txt"><b>HORN AI</b><small>AI organisation · hornai.org</small></span></a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+    <div class="shell">
+      <!-- ===================== ABOUT ===================== -->
+      <section id="about" class="section" aria-labelledby="aboutTitle">
+        <header class="section-head">
+          <span class="eyebrow" data-i18n="about.eyebrow">About me</span>
+          <h2 id="aboutTitle" class="section-title" data-i18n="about.title">Architecting Modern Web &amp; Connected Systems</h2>
+          <p class="section-sub" data-i18n="about.sub">A multidisciplinary blend of software development, mobile application engineering and creative digital design.</p>
+        </header>
+
+        <div class="bento">
+          <figure class="card bento-photo spot">
+            <div class="bento-photo-bg" aria-hidden="true"></div>
+            <img src="assets/v2/portrait-about.webp" width="700" height="922" loading="lazy" alt="Abdallah Mohamud Abdi in a navy suit with arms crossed" />
+            <figcaption class="bento-photo-bar"><span class="big-num">4+</span><span data-i18n="about.years">Years of dev experience</span></figcaption>
+          </figure>
+
+          <article class="card bento-bio spot">
+            <span class="kicker" data-i18n="about.kicker">— Tech Innovator &amp; Developer</span>
+            <h3>Abdallah Mohamud Abdi</h3>
+            <p data-i18n-html="about.bio">I am <strong>Abdallah Mohamud Abdi</strong>, born on 8 August 2005 in Jeddah, Saudi Arabia. I am a passionate 4th-year Computer Science student at Hormuud University, Software Developer and Technology Enthusiast specialised in Full-Stack Web Development, Mobile Applications and Creative Multimedia solutions.</p>
+            <div class="btn-row">
+              <a href="#contact" class="btn btn-primary"><span data-i18n="about.start">Start a Project</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5" stroke="currentColor" stroke-width="1.8"/><path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+              <a href="https://wa.me/252613496697" target="_blank" rel="noopener" class="btn btn-wa">
+                <svg width="17" height="17" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                <span data-i18n="about.wa">Direct WhatsApp</span></a>
+            </div>
+          </article>
+
+          <div class="card bento-stats spot">
+            <div class="stat"><span class="stat-num" data-count="99" data-suffix="+">1</span><span class="stat-label" data-i18n="stats.projects">Projects built</span><a href="#work" class="proof-link" data-work-tab="web"><span data-i18n="stats.see">See them</span> <span aria-hidden="true">→</span></a></div>
+            <div class="stat"><span class="stat-num" data-count="56">1</span><span class="stat-label" data-i18n="stats.posters">Posters designed</span><a href="#work" class="proof-link" data-work-tab="graphic"><span data-i18n="stats.see">See them</span> <span aria-hidden="true">→</span></a></div>
+            <div class="stat"><span class="stat-num" data-count="43">1</span><span class="stat-label" data-i18n="stats.live">Live platforms</span><a href="#work" class="proof-link" data-work-tab="web"><span data-i18n="stats.see">See them</span> <span aria-hidden="true">→</span></a></div>
+          </div>
+
+          <div class="card info-tile spot"><span class="info-ic"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 9.5L12 4l9 5.5M5 10v8M9.5 10v8M14.5 10v8M19 10v8M3.5 20h17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><b>Hormuud University</b><span data-i18n="info.uni">4th-year Computer Science student</span></div>
+          <div class="card info-tile spot"><span class="info-ic"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M13.5 4l-3 16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><b data-i18n="info.fsTitle">Full-Stack Development</b><span>React, Node.js, Express, REST APIs, SQL/NoSQL</span></div>
+          <div class="card info-tile spot"><span class="info-ic"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2.5" stroke="currentColor" stroke-width="1.8"/><path d="M11 18.5h2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span><b data-i18n="info.mobTitle">Mobile Applications</b><span data-i18n="info.mob">Cross-platform iOS &amp; Android apps</span></div>
+          <div class="card info-tile spot"><span class="info-ic"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0113 0c0 5.4-6.5 11-6.5 11z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.3" stroke="currentColor" stroke-width="1.8"/></svg></span><b data-i18n="info.locTitle">Location &amp; Origins</b><span data-i18n="info.loc">Born in Jeddah, KSA · Based in Mogadishu, Somalia</span></div>
+        </div>
+      </section>
+
+      <!-- ===================== EXPERIENCE ===================== -->
+      <section id="experience" class="section" aria-labelledby="expTitle">
+        <header class="section-head">
+          <span class="eyebrow" data-i18n="exp.eyebrow">Experience</span>
+          <h2 id="expTitle" class="section-title" data-i18n="exp.title">The road so far</h2>
+        </header>
+
+        <div class="exp-filters" role="group" aria-label="Filter experience">
+          <button type="button" class="filter-chip" aria-pressed="true" data-filter="all"><span data-i18n="exp.all">All</span><span class="count">6</span></button>
+          <button type="button" class="filter-chip" aria-pressed="false" data-filter="work"><span data-i18n="exp.work">Work</span><span class="count">3</span></button>
+          <button type="button" class="filter-chip" aria-pressed="false" data-filter="edu"><span data-i18n="exp.edu">Education</span><span class="count">1</span></button>
+          <button type="button" class="filter-chip" aria-pressed="false" data-filter="award"><span data-i18n="exp.award">Achievements</span><span class="count">2</span></button>
+        </div>
+
+        <ol class="timeline">
+          <li class="tl-item" data-kind="award">
+            <span class="tl-node award" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="9" r="6" stroke="currentColor" stroke-width="2"/><path d="M8.5 14l-1.5 7 5-3 5 3-1.5-7" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></span>
+            <article class="card tl-card"><div class="tl-top"><span class="tl-period">Aug – Sep 2026</span><span class="tl-kind" data-i18n="exp.kindAward">Achievement</span></div>
+              <h3>Four AI certifications</h3><span class="tl-org">National Training Week · Hormuud University</span>
+              <p>Prompt Engineering, AI Tools for Everyday Life, AI for Entrepreneurship and Freelancing, and AI-Driven Digital Marketing.</p>
+              <ul class="tags"><li>Prompt engineering</li><li>AI automation</li><li>Digital marketing</li></ul></article>
+          </li>
+          <li class="tl-item" data-kind="award">
+            <span class="tl-node award" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="9" r="6" stroke="currentColor" stroke-width="2"/><path d="M8.5 14l-1.5 7 5-3 5 3-1.5-7" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></span>
+            <article class="card tl-card"><div class="tl-top"><span class="tl-period">2024 – 2025</span><span class="tl-kind" data-i18n="exp.kindAward">Achievement</span></div>
+              <h3>Three platforms launched</h3><span class="tl-org">Biyaha Soomaaliya · DHIIG KAAL · 4 SEASON Restaurant</span>
+              <p>Took a public water-schedule site, a blood donation platform and a restaurant POS from idea to real users.</p>
+              <ul class="tags"><li>Production</li><li>Healthcare</li><li>POS</li></ul></article>
+          </li>
+          <li class="tl-item" data-kind="work">
+            <span class="tl-node" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><rect x="3" y="7" width="18" height="13" rx="2.5" stroke="currentColor" stroke-width="2"/><path d="M9 7V5a2 2 0 012-2h2a2 2 0 012 2v2" stroke="currentColor" stroke-width="2"/></svg></span>
+            <article class="card tl-card"><div class="tl-top"><span class="tl-period">2024</span><span class="tl-kind" data-i18n="exp.kindWork">Work</span></div>
+              <h3>National Training Week program</h3><span class="tl-org">Hormuud University</span>
+              <p>Helped build the main program for the National Training Week organised by Hormuud University.</p>
+              <ul class="tags"><li>Program design</li><li>Teamwork</li></ul></article>
+          </li>
+          <li class="tl-item is-live" data-kind="work">
+            <span class="tl-node" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><rect x="3" y="7" width="18" height="13" rx="2.5" stroke="currentColor" stroke-width="2"/><path d="M9 7V5a2 2 0 012-2h2a2 2 0 012 2v2" stroke="currentColor" stroke-width="2"/></svg></span>
+            <article class="card tl-card"><div class="tl-top"><span class="tl-period">2023 – Present</span><span class="tl-kind" data-i18n="exp.kindWork">Work</span></div>
+              <h3>Freelance Full-Stack &amp; Mobile Developer</h3><span class="tl-org">Self-employed · local businesses and organisations</span>
+              <p>Custom web apps, point-of-sale systems and cross-platform mobile apps with clean UI and reliable REST API back ends.</p>
+              <ul class="tags"><li>React</li><li>Node.js</li><li>PHP / MySQL</li><li>Flutter</li></ul></article>
+          </li>
+          <li class="tl-item is-live" data-kind="work">
+            <span class="tl-node" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><rect x="3" y="7" width="18" height="13" rx="2.5" stroke="currentColor" stroke-width="2"/><path d="M9 7V5a2 2 0 012-2h2a2 2 0 012 2v2" stroke="currentColor" stroke-width="2"/></svg></span>
+            <article class="card tl-card"><div class="tl-top"><span class="tl-period">2023 – Present</span><span class="tl-kind" data-i18n="exp.kindWork">Work</span></div>
+              <h3>Content Creator &amp; Editor</h3><span class="tl-org">Freelance</span>
+              <p>Video editing, graphic design and social media content for clients, including documentaries with Dareen Production.</p>
+              <ul class="tags"><li>Premiere Pro</li><li>Photoshop</li><li>Storytelling</li></ul></article>
+          </li>
+          <li class="tl-item" data-kind="edu">
+            <span class="tl-node edu" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M2 9l10-5 10 5-10 5z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M6 11v5c0 1.5 3 3 6 3s6-1.5 6-3v-5" stroke="currentColor" stroke-width="2"/></svg></span>
+            <article class="card tl-card"><div class="tl-top"><span class="tl-period">2018 – 2023</span><span class="tl-kind" data-i18n="exp.kindEdu">Education</span></div>
+              <h3>B.Sc. in Computer Science</h3><span class="tl-org">Hormuud University</span>
+              <p>Software engineering, data structures and algorithms, database systems, object-oriented analysis and networking.</p>
+              <ul class="tags"><li>Software engineering</li><li>Databases</li><li>Algorithms</li></ul></article>
+          </li>
+        </ol>
+      </section>
+
+      <!-- ===================== SERVICES ===================== -->
+      <section id="services" class="section" aria-labelledby="svcTitle">
+        <header class="section-head">
+          <span class="eyebrow" data-i18n="svc.eyebrow">What I do</span>
+          <h2 id="svcTitle" class="section-title" data-i18n="svc.title">Services I offer</h2>
+        </header>
+
+        <div class="svc-grid">
+          <a href="#work" class="card svc spot" data-work-tab="web">
+            <span class="svc-n">01</span>
+            <span class="svc-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span class="svc-t" data-i18n="svc.webT">Web Development</span>
+            <span class="svc-d" data-i18n="svc.webD">Web apps and dashboards with logins, roles and real data.</span>
+            <span class="svc-go" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M4 10L10 4M5 4h5v5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </a>
+          <a href="#work" class="card svc spot" data-work-tab="mobile">
+            <span class="svc-n">02</span>
+            <span class="svc-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2.5" stroke="currentColor" stroke-width="1.8"/><path d="M11 18.5h2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+            <span class="svc-t" data-i18n="svc.mobT">Mobile Apps</span>
+            <span class="svc-d" data-i18n="svc.mobD">Android and iOS apps with Flutter, connected to your API.</span>
+            <span class="svc-go" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M4 10L10 4M5 4h5v5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </a>
+          <a href="#work" class="card svc spot" data-work-tab="graphic">
+            <span class="svc-n">03</span>
+            <span class="svc-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 20l4-1L19 8l-3-3L5 16l-1 4z M14 7l3 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span class="svc-t" data-i18n="svc.uiT">UI/UX &amp; Branding</span>
+            <span class="svc-d" data-i18n="svc.uiD">Interfaces, logos and campaign posters that match the product.</span>
+            <span class="svc-go" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M4 10L10 4M5 4h5v5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </a>
+          <a href="#work" class="card svc spot" data-work-tab="media">
+            <span class="svc-n">04</span>
+            <span class="svc-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="6" width="13" height="12" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M16 10l5-3v10l-5-3" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span>
+            <span class="svc-t" data-i18n="svc.vidT">Video &amp; Content</span>
+            <span class="svc-d" data-i18n="svc.vidD">Launch videos, product demos and social content.</span>
+            <span class="svc-go" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M4 10L10 4M5 4h5v5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </a>
+        </div>
+
+        <div class="stack">
+          <span class="stack-label" data-i18n="svc.stack">My stack</span>
+          <ul class="stack-list">
+            <li class="spot"><span class="stack-ic t-react"><img src="assets/v2/tools/react.svg" alt="" width="18" height="18" /></span>React</li>
+            <li class="spot"><span class="stack-ic t-node"><img src="assets/v2/tools/nodedotjs.svg" alt="" width="18" height="18" /></span>Node.js</li>
+            <li class="spot"><span class="stack-ic t-php"><img src="assets/v2/tools/php.svg" alt="" width="18" height="18" /></span>PHP</li>
+            <li class="spot"><span class="stack-ic t-mongo"><img src="assets/v2/tools/mongodb.svg" alt="" width="18" height="18" /></span>MongoDB</li>
+            <li class="spot"><span class="stack-ic t-flutter"><img src="assets/v2/tools/flutter.svg" alt="" width="18" height="18" /></span>Flutter</li>
+            <li class="spot"><span class="stack-ic t-figma"><img src="assets/v2/tools/figma.svg" alt="" width="18" height="18" /></span>Figma</li>
+            <li class="spot"><span class="stack-ic t-ps"><img src="assets/v2/tools/adobephotoshop.svg" alt="" width="18" height="18" /></span>Photoshop</li>
+            <li class="spot"><span class="stack-ic t-pr"><img src="assets/v2/tools/adobepremierepro.svg" alt="" width="18" height="18" /></span>Premiere Pro</li>
           </ul>
         </div>
+      </section>
 
-        <!-- Theme Switcher (Display Light / Dark) -->
-        <button class="theme-toggle-btn" id="themeToggle" type="button" aria-label="Toggle Dark and Light Mode" title="Toggle theme">
-          <i class="fas fa-moon moon-icon" aria-hidden="true"></i>
-          <i class="fas fa-sun sun-icon" aria-hidden="true"></i>
-        </button>
+      <!-- ===================== WORK ===================== -->
+      <section id="work" class="section" aria-labelledby="workTitle">
+        <header class="section-head">
+          <span class="eyebrow" data-i18n="work.eyebrow">My work</span>
+          <h2 id="workTitle" class="section-title" data-i18n="work.title">Recent projects</h2>
+        </header>
 
-        <!-- WhatsApp Header CTA -->
-        <a href="https://wa.me/252613496697" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp-nav" title="Chat on WhatsApp" aria-label="Chat with Abdallah on WhatsApp">
-          <i class="fab fa-whatsapp"></i>
-          <span class="whatsapp-btn-text">WhatsApp</span>
-        </a>
-
-        <!-- Let's Talk CTA Button -->
-        <a href="#contact" class="btn btn-primary nav-cta" data-i18n="nav.letsTalk">Let's Talk</a>
-
-        <!-- Mobile Hamburger Button -->
-        <button class="hamburger-btn" id="hamburgerBtn" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navMenu">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </button>
-      </div>
-    </div>
-  </header>
-
-  <main>
-    <!-- ========== HERO SECTION ========== -->
-    <section class="hero-section" id="home">
-      <div class="container hero-grid">
-        <div class="hero-content">
-          <!-- Status Pill Row with Emerald Glowing Dot & Live Mogadishu Clock -->
-          <div class="hero-status-row">
-            <div class="status-pill-modern">
-              <span class="pulse-emerald"></span>
-              <span class="status-text" data-i18n="hero.status">FULL STACK DEVELOPER &amp; INNOVATOR</span>
-            </div>
-            <div class="live-availability-pill" title="Live status & timezone">
-              <span class="live-dot-pulse"></span>
-              <span class="live-status-label" data-i18n="hero.availableStatus">Available for Projects</span>
-              <span class="live-divider">•</span>
-              <span class="live-loc-chip"><i class="fas fa-location-dot"></i> Mogadishu</span>
-              <span class="live-divider">•</span>
-              <span class="live-time-chip" id="liveMogadishuClock" aria-label="Current Mogadishu time">--:--:--</span>
-            </div>
-          </div>
-
-          <!-- Serif Italic Title matching user's reference screenshot -->
-          <h1 class="hero-title-serif">
-            <span class="hero-greeting" data-i18n="hero.greeting">Hay! I'm</span>
-            <span class="hero-name-bold">Abdallah</span>
-            <span class="hero-surname-bold">Mohamud Abdi.</span>
-          </h1>
-
-          <!-- Dynamic Role Typing Subtitle (Vibrant Cyan) -->
-          <div class="hero-typing-role">
-            <span class="typing-text" id="typingText"></span>
-            <span class="typing-cursor">|</span>
-          </div>
-
-          <p class="hero-description" data-i18n="hero.description">
-            I am a passionate Full Stack Developer and UI/UX Designer dedicated to building high-performance web applications, scalable digital architectures, and visually compelling interfaces.
-          </p>
-
-          <!-- Action Row: GET IN TOUCH + COPY EMAIL + Social Circle Icons -->
-          <div class="hero-action-row">
-            <a href="#contact" class="btn btn-hero-glow">
-              <span data-i18n="hero.btnTouch">GET IN TOUCH</span>
-              <i class="fas fa-arrow-right"></i>
-            </a>
-
-            <button type="button" class="btn btn-hero-secondary btn-copy-email" id="btnCopyHeroEmail" title="Copy Email to Clipboard" aria-label="Copy Email">
-              <i class="far fa-copy"></i>
-              <span data-i18n="hero.btnCopyEmail">Copy Email</span>
-            </button>
-
-            <div class="hero-social-circles">
-              <a href="https://wa.me/252613496697" target="_blank" rel="noopener noreferrer" class="social-circle-btn whatsapp" title="WhatsApp" aria-label="WhatsApp">
-                <i class="fab fa-whatsapp"></i>
-              </a>
-              <a href="https://www.facebook.com/share/1HokAN7KZz/" target="_blank" rel="noopener noreferrer" class="social-circle-btn facebook" title="Facebook" aria-label="Facebook">
-                <i class="fab fa-facebook-f"></i>
-              </a>
-              <a href="https://www.linkedin.com/in/abdulla-maxmud-3b3781393?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android" target="_blank" rel="noopener noreferrer" class="social-circle-btn linkedin" title="LinkedIn" aria-label="LinkedIn">
-                <i class="fab fa-linkedin-in"></i>
-              </a>
-              <a href="https://github.com/abdullamaxmud" target="_blank" rel="noopener noreferrer" class="social-circle-btn github" title="GitHub" aria-label="GitHub">
-                <i class="fab fa-github"></i>
-              </a>
-              <a href="https://www.instagram.com/zulthanabdalla?stkn=MXNpN211dWZ2OWV6MQ==" target="_blank" rel="noopener noreferrer" class="social-circle-btn instagram" title="Instagram" aria-label="Instagram">
-                <i class="fab fa-instagram"></i>
-              </a>
-              <a href="https://x.com/AbdullaMaxmud" target="_blank" rel="noopener noreferrer" class="social-circle-btn twitter" title="X (Twitter)" aria-label="X (Twitter)">
-                <i class="fab fa-x-twitter"></i>
-              </a>
-            </div>
-          </div>
+        <div class="work-tabs" role="tablist" aria-label="Work categories">
+          <button type="button" role="tab" class="work-tab" data-tab="web" aria-selected="true" aria-controls="workPanel">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M2 20h20M10 8l-2 2 2 2M14 8l2 2-2 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span data-i18n="work.tabWeb">Web &amp; Systems</span><span class="count">8</span></button>
+          <button type="button" role="tab" class="work-tab" data-tab="mobile" aria-selected="false" aria-controls="workPanel">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2.5" stroke="currentColor" stroke-width="1.8"/><path d="M11 18.5h2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            <span data-i18n="work.tabMobile">Mobile Apps</span><span class="count" data-i18n="work.new">New</span></button>
+          <button type="button" role="tab" class="work-tab" data-tab="graphic" aria-selected="false" aria-controls="workPanel">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3a9 9 0 100 18c1.1 0 1.6-.8 1.6-1.6 0-.5-.2-.9-.5-1.2-.3-.3-.5-.7-.5-1.2 0-.9.7-1.6 1.6-1.6H16a5 5 0 005-5c0-4-4-7.4-9-7.4z" stroke="currentColor" stroke-width="1.8"/><circle cx="7.5" cy="11" r="1.3" fill="currentColor"/><circle cx="10.5" cy="7" r="1.3" fill="currentColor"/><circle cx="15.5" cy="7.5" r="1.3" fill="currentColor"/></svg>
+            <span data-i18n="work.tabGraphic">Graphic Design</span><span class="count">6</span></button>
+          <button type="button" role="tab" class="work-tab" data-tab="media" aria-selected="false" aria-controls="workPanel">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="6" width="13" height="12" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M16 10l5-3v10l-5-3" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+            <span data-i18n="work.tabMedia">Multimedia</span><span class="count">3</span></button>
         </div>
 
-        <!-- Hero Right Column: Concentric Orbit Rings, Floating 3D Spheres & Studio Portrait -->
-        <div class="hero-visual-orbit">
-          <div class="orbit-backdrop" aria-hidden="true">
-            <!-- Concentric Orbital / Soundwave Rings -->
-            <div class="orbit-rings">
-              <div class="orbit-ring ring-1"></div>
-              <div class="orbit-ring ring-2"></div>
-              <div class="orbit-ring ring-3"></div>
-              <div class="orbit-ring ring-4"></div>
-              <div class="orbit-ring ring-5"></div>
-            </div>
+        <div class="tech-bar" role="group" aria-label="Filter projects by technology"></div>
 
-            <!-- Floating 3D Metallic Dark Spheres with Highlights -->
-            <div class="floating-orb orb-1"></div>
-            <div class="floating-orb orb-2"></div>
-            <div class="floating-orb orb-3"></div>
-            <div class="floating-orb orb-4"></div>
-          </div>
-
-          <!-- Studio Portrait with transparent background -->
-          <div class="hero-portrait-stage">
-            <img src="assets/images/abdallah-hero.png?v=4" alt="Abdallah Mohamud Abdi" class="hero-portrait-img" />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========== TECH MARQUEE (MATCHING SCREENSHOT) ========== -->
-    <div class="marquee-strip" aria-hidden="true">
-      <div class="marquee-content">
-        <span class="marquee-item"><i class="fas fa-layer-group"></i> MULTIMEDIA</span>
-        <span class="marquee-item"><i class="fab fa-html5"></i> HTML &amp; CSS</span>
-        <span class="marquee-item"><i class="fab fa-js"></i> JAVASCRIPT</span>
-        <span class="marquee-item"><i class="fab fa-php"></i> PHP &amp; MYSQL</span>
-        <span class="marquee-item"><i class="fab fa-react"></i> REACT.JS</span>
-        <span class="marquee-item"><i class="fab fa-python"></i> PYTHON</span>
-        <span class="marquee-item"><i class="fas fa-mobile-screen"></i> FLUTTER</span>
-        <span class="marquee-item"><i class="fas fa-code"></i> C / C++ / C#</span>
-        <span class="marquee-item"><i class="fas fa-microchip"></i> IOT &amp; ARDUINO</span>
-        <span class="marquee-item"><i class="fas fa-photo-film"></i> FULL MULTIMEDIA</span>
-        <!-- Duplicate for continuous infinite scroll -->
-        <span class="marquee-item"><i class="fas fa-layer-group"></i> MULTIMEDIA</span>
-        <span class="marquee-item"><i class="fab fa-html5"></i> HTML &amp; CSS</span>
-        <span class="marquee-item"><i class="fab fa-js"></i> JAVASCRIPT</span>
-        <span class="marquee-item"><i class="fab fa-php"></i> PHP &amp; MYSQL</span>
-        <span class="marquee-item"><i class="fab fa-react"></i> REACT.JS</span>
-        <span class="marquee-item"><i class="fab fa-python"></i> PYTHON</span>
-        <span class="marquee-item"><i class="fas fa-mobile-screen"></i> FLUTTER</span>
-        <span class="marquee-item"><i class="fas fa-code"></i> C / C++ / C#</span>
-        <span class="marquee-item"><i class="fas fa-microchip"></i> IOT &amp; ARDUINO</span>
-        <span class="marquee-item"><i class="fas fa-photo-film"></i> FULL MULTIMEDIA</span>
-      </div>
-    </div>
-
-    <!-- ========== ABOUT SECTION ========== -->
-    <section class="section-wrapper" id="about">
-      <div class="container">
-        <div class="section-header text-center">
-          <span class="section-eyebrow" data-i18n="about.eyebrow">ABOUT ME</span>
-          <h2 class="section-heading" data-i18n="about.heading">Architecting Modern Web &amp; Connected Systems</h2>
-          <p class="section-subheading" data-i18n="about.subheading">A multidisciplinary blend of software development, mobile application engineering, and creative digital design.</p>
+        <!-- cards and project pages are drawn by script.js from the WORK data -->
+        <div id="workPanel" class="work-panel" role="tabpanel" aria-live="polite">
+          <noscript><p class="section-sub">Turn on JavaScript to browse my projects, or visit <a href="https://github.com/abdullamaxmud">github.com/abdullamaxmud</a>.</p></noscript>
         </div>
 
-        <div class="about-layout-grid">
-          <div class="about-media-column">
-            <div class="about-image-card">
-              <img src="assets/images/abdallah-chair-navy.jpg" alt="Abdallah Mohamud Abdi seated in an executive chair" class="about-img" />
-              <div class="about-image-glow"></div>
-              <div class="experience-ribbon">
-                <span class="ribbon-number">4+</span>
-                <span class="ribbon-label" data-i18n="about.yearsExp">Years of Dev Experience</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="about-text-column">
-            <h3 class="about-name-headline">
-              Abdallah Mohamud Abdi
-              <span class="accent-title" data-i18n="about.role">— Tech Innovator &amp; Developer</span>
-            </h3>
-
-            <p class="about-lead" data-i18n="about.bio">
-              I am <strong>Abdallah Mohamud Abdi</strong>, born on 8 August 2005 in Jeddah, Saudi Arabia. I am a passionate 4th-year Computer Science student at Hormuud University, Software Developer, and Technology Enthusiast specialized in Full-Stack Web Development, Mobile Applications, and Creative Multimedia solutions.
-            </p>
-
-            <p class="about-body" data-i18n="about.body">
-              My engineering philosophy pairs solid architectural foundations with elegant user experiences. Whether developing high-concurrency web platforms, building cross-platform mobile apps with modern responsive styling, or designing sleek multimedia brand systems, I focus on delivering scalable, reliable, and high-impact digital solutions.
-            </p>
-
-            <div class="about-key-highlights">
-              <div class="highlight-item">
-                <div class="highlight-icon"><i class="fas fa-university"></i></div>
-                <div class="highlight-info">
-                  <span class="highlight-title" data-i18n="about.highlightUniTitle">Hormuud University</span>
-                  <span class="highlight-desc" data-i18n="about.highlightUniDesc">4th-Year Computer Science Student</span>
-                </div>
-              </div>
-
-              <div class="highlight-item">
-                <div class="highlight-icon"><i class="fas fa-code"></i></div>
-                <div class="highlight-info">
-                  <span class="highlight-title" data-i18n="about.highlightWebTitle">Full-Stack Development</span>
-                  <span class="highlight-desc">React, Node.js, Express, REST APIs, SQL/NoSQL</span>
-                </div>
-              </div>
-
-              <div class="highlight-item">
-                <div class="highlight-icon"><i class="fas fa-mobile-screen"></i></div>
-                <div class="highlight-info">
-                  <span class="highlight-title" data-i18n="about.highlightMobileTitle">Mobile Applications</span>
-                  <span class="highlight-desc">Cross-Platform iOS &amp; Android Apps</span>
-                </div>
-              </div>
-
-              <div class="highlight-item">
-                <div class="highlight-icon"><i class="fas fa-map-pin"></i></div>
-                <div class="highlight-info">
-                  <span class="highlight-title" data-i18n="about.highlightLocTitle">Location &amp; Origins</span>
-                  <span class="highlight-desc">Born in Jeddah, KSA &bull; Based in Mogadishu, Somalia</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="about-cta-row">
-              <a href="#contact" class="btn btn-primary">
-                <span data-i18n="about.btnStart">Start a Project</span>
-                <i class="fas fa-envelope"></i>
-              </a>
-              <a href="https://wa.me/252613496697" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp-inline">
-                <i class="fab fa-whatsapp"></i>
-                <span data-i18n="about.btnWhatsapp">Direct WhatsApp</span>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Metric Counters -->
-        <div class="stats-counter-strip">
-          <div class="stat-counter-item">
-            <span class="stat-digit">35+</span>
-            <span class="stat-name" data-i18n="about.statProjects">Projects Delivered</span>
-            <span class="stat-detail" data-i18n="about.statWebMobile">Web, Mobile &amp; Cloud</span>
-          </div>
-
-          <div class="stat-counter-divider"></div>
-
-          <div class="stat-counter-item">
-            <span class="stat-digit">4+</span>
-            <span class="stat-name" data-i18n="about.statExperience">Years Experience</span>
-            <span class="stat-detail">Hands-on Engineering</span>
-          </div>
-
-          <div class="stat-counter-divider"></div>
-
-          <div class="stat-counter-item">
-            <span class="stat-digit">15+</span>
-            <span class="stat-name" data-i18n="about.statTechnologies">Technologies Mastered</span>
-            <span class="stat-detail">Modern Stacks &amp; Frameworks</span>
-          </div>
-
-          <div class="stat-counter-divider"></div>
-
-          <div class="stat-counter-item">
-            <span class="stat-digit">100%</span>
-            <span class="stat-name" data-i18n="about.statDedication">Client Dedication</span>
-            <span class="stat-detail">Timely &amp; Clean Delivery</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========== PROJECTS SECTION ========== -->
-    <section class="section-wrapper bg-subtle" id="projects">
-      <div class="container">
-        <div class="section-header text-center">
-          <span class="projects-pill-eyebrow" data-i18n="projects.eyebrow">MY WORK</span>
-          <h2 class="section-heading projects-heading-custom" data-i18n="projects.heading">RECENT PROJECTS</h2>
-          <p class="section-subheading" data-i18n="projects.subheading">Explore a curated selection of web applications, UI/UX systems, and branding designs crafted with precision.</p>
-        </div>
-
-        <!-- Touch-Friendly Filter Tabs (3 Tabs matching user screenshot) -->
-        <div class="project-filter-tabs" role="tablist">
-          <button class="filter-tab-btn active" data-filter="web" type="button" role="tab" aria-selected="true">
-            <i class="fas fa-laptop-code"></i>
-            <span data-i18n="projects.tabWeb">Systems &amp; Web Apps</span>
-            <span class="filter-count">6</span>
-          </button>
-          <button class="filter-tab-btn" data-filter="posters" type="button" role="tab" aria-selected="false">
-            <i class="fas fa-palette"></i>
-            <span data-i18n="projects.tabPosters">Graphic Posters</span>
-            <span class="filter-count">6</span>
-          </button>
-          <button class="filter-tab-btn" data-filter="media" type="button" role="tab" aria-selected="false">
-            <i class="fas fa-video"></i>
-            <span data-i18n="projects.tabMedia">Videos &amp; Media</span>
-            <span class="filter-count">3</span>
-          </button>
-        </div>
-
-        <!-- Projects Carousel Shell with Navigation Arrows (Pixel-perfect to user reference) -->
-        <div class="projects-carousel-shell">
-          <button type="button" class="projects-nav-arrow prev" id="projectsPrevBtn" aria-label="Previous Projects">
-            <i class="fas fa-chevron-left"></i>
-          </button>
-
-          <div class="projects-carousel-track" id="projectsTrack">
-
-            <!-- ===== TAB 1: SYSTEMS & WEB APPS (3 Authentic Projects) ===== -->
-
-            <!-- Web 1: 4 SEASON Restaurant -->
-            <article class="project-card project-card-minimal" data-category="web">
-              <div class="project-visual-box has-img">
-                <span class="project-corner-badge"><i class="fas fa-utensils"></i> POS System</span>
-                <img src="assets/images/project-foms-restaurant.png" alt="4 SEASON Restaurant" class="project-thumb-img" />
-              </div>
-              <div class="project-card-footer">
-                <div class="project-card-text">
-                  <h3 class="project-card-title" data-i18n="projects.p1Title">4 SEASON Restaurant</h3>
-                  <span class="project-card-subtitle" data-i18n="projects.p1Sub">Local POS • Full Stack</span>
-                  <div class="project-tech-tags">
-                    <span class="tech-tag">React</span>
-                    <span class="tech-tag">Node.js</span>
-                    <span class="tech-tag">MongoDB</span>
-                    <span class="tech-tag">POS</span>
-                  </div>
-                </div>
-                <div class="project-card-actions">
-                  <a href="https://github.com/abdullamaxmud/Resturent" target="_blank" rel="noopener noreferrer" class="project-btn-pill code" title="View Source on GitHub" aria-label="View 4 SEASON Restaurant on GitHub">
-                    <i class="fab fa-github"></i> <span data-i18n="projects.btnCode">Code</span>
-                  </a>
-                </div>
-              </div>
-            </article>
-
-            <!-- Web 2: Biyaha Soomaaliya (Water Supply Schedule System) -->
-            <article class="project-card project-card-minimal" data-category="web">
-              <div class="project-visual-box has-img">
-                <span class="project-corner-badge"><i class="fas fa-droplet"></i> Public Utility</span>
-                <img src="assets/images/project-biyaha-water.png" alt="Biyaha Soomaaliya Water System" class="project-thumb-img" />
-              </div>
-              <div class="project-card-footer">
-                <div class="project-card-text">
-                  <h3 class="project-card-title" data-i18n="projects.p2Title">Biyaha Soomaaliya</h3>
-                  <span class="project-card-subtitle" data-i18n="projects.p2Sub">Water Schedule • Public Utility</span>
-                  <div class="project-tech-tags">
-                    <span class="tech-tag">JavaScript</span>
-                    <span class="tech-tag">REST API</span>
-                    <span class="tech-tag">CSS3</span>
-                    <span class="tech-tag">Schedule</span>
-                  </div>
-                </div>
-                <div class="project-card-actions">
-                  <a href="https://github.com/abdullamaxmud/water-somalia" target="_blank" rel="noopener noreferrer" class="project-btn-pill code" title="View Source on GitHub" aria-label="View Biyaha Soomaaliya on GitHub">
-                    <i class="fab fa-github"></i> <span data-i18n="projects.btnCode">Code</span>
-                  </a>
-                </div>
-              </div>
-            </article>
-
-            <!-- Web 3: DHIIG KAAL Platform -->
-            <article class="project-card project-card-minimal" data-category="web">
-              <div class="project-visual-box has-img">
-                <span class="project-corner-badge live-pulse"><i class="fas fa-heart-pulse"></i> Live Platform</span>
-                <img src="assets/images/project-dhiig-kaal.png" alt="DHIIG KAAL Blood Donation System" class="project-thumb-img" />
-              </div>
-              <div class="project-card-footer">
-                <div class="project-card-text">
-                  <h3 class="project-card-title" data-i18n="projects.p3Title">DHIIG KAAL Platform</h3>
-                  <span class="project-card-subtitle" data-i18n="projects.p3Sub">Healthcare • Live Donation Portal</span>
-                  <div class="project-tech-tags">
-                    <span class="tech-tag">PHP</span>
-                    <span class="tech-tag">MySQL</span>
-                    <span class="tech-tag">Healthcare</span>
-                    <span class="tech-tag">Realtime</span>
-                  </div>
-                </div>
-                <div class="project-card-actions">
-                  <a href="https://dhiigkaal.iftiinhub.com/" target="_blank" rel="noopener noreferrer" class="project-btn-pill live" title="Open Live Portal" aria-label="Open DHIIG KAAL Live Platform">
-                    <i class="fas fa-arrow-up-right-from-square"></i> <span data-i18n="projects.btnLive">Live Demo</span>
-                  </a>
-                  <a href="https://github.com/abdullamaxmud" target="_blank" rel="noopener noreferrer" class="project-btn-pill code" title="View GitHub" aria-label="View on GitHub">
-                    <i class="fab fa-github"></i> <span data-i18n="projects.btnCode">Code</span>
-                  </a>
-                </div>
-              </div>
-            </article>
-
-
-            <!-- Web 4: Abdull School MS -->
-            <article class="project-card project-card-minimal" data-category="web">
-              <div class="project-visual-box has-img">
-                <span class="project-corner-badge"><i class="fas fa-school"></i> School ERP</span>
-                <img src="assets/images/project-abdull-school.jpg" alt="Abdull School MS" class="project-thumb-img" loading="lazy" />
-              </div>
-              <div class="project-card-footer">
-                <div class="project-card-text">
-                  <h3 class="project-card-title" data-i18n="projects.p4Title">Abdull School MS</h3>
-                  <span class="project-card-subtitle" data-i18n="projects.p4Sub">School ERP • Full Stack</span>
-                  <div class="project-tech-tags">
-                    <span class="tech-tag">React</span>
-                    <span class="tech-tag">TypeScript</span>
-                    <span class="tech-tag">Node.js</span>
-                    <span class="tech-tag">Prisma</span>
-                  </div>
-                </div>
-                <div class="project-card-actions">
-                  <a href="https://github.com/abdullamaxmud/Abdull-school-MS" target="_blank" rel="noopener noreferrer" class="project-btn-pill code" title="View Source on GitHub" aria-label="View Abdull School MS on GitHub">
-                    <i class="fab fa-github"></i> <span data-i18n="projects.btnCode">Code</span>
-                  </a>
-                </div>
-              </div>
-            </article>
-
-            <!-- Web 5: ABDULL Store -->
-            <article class="project-card project-card-minimal" data-category="web">
-              <div class="project-visual-box has-img">
-                <span class="project-corner-badge"><i class="fas fa-bag-shopping"></i> E-Commerce</span>
-                <img src="assets/images/project-abdull-store.jpg" alt="ABDULL Store" class="project-thumb-img" loading="lazy" />
-              </div>
-              <div class="project-card-footer">
-                <div class="project-card-text">
-                  <h3 class="project-card-title" data-i18n="projects.p5Title">ABDULL Store</h3>
-                  <span class="project-card-subtitle" data-i18n="projects.p5Sub">E-Commerce • MERN Stack</span>
-                  <div class="project-tech-tags">
-                    <span class="tech-tag">React</span>
-                    <span class="tech-tag">Node.js</span>
-                    <span class="tech-tag">MongoDB</span>
-                    <span class="tech-tag">Express</span>
-                  </div>
-                </div>
-                <div class="project-card-actions">
-                  <a href="https://github.com/abdullamaxmud/ABDULL-store" target="_blank" rel="noopener noreferrer" class="project-btn-pill code" title="View Source on GitHub" aria-label="View ABDULL Store on GitHub">
-                    <i class="fab fa-github"></i> <span data-i18n="projects.btnCode">Code</span>
-                  </a>
-                </div>
-              </div>
-            </article>
-
-            <!-- Web 6: Smart Lab System -->
-            <article class="project-card project-card-minimal" data-category="web">
-              <div class="project-visual-box has-img">
-                <span class="project-corner-badge"><i class="fas fa-desktop"></i> University System</span>
-                <img src="assets/images/project-smart-lab.jpg" alt="Smart Lab System" class="project-thumb-img" loading="lazy" />
-              </div>
-              <div class="project-card-footer">
-                <div class="project-card-text">
-                  <h3 class="project-card-title" data-i18n="projects.p6Title">Smart Lab System</h3>
-                  <span class="project-card-subtitle" data-i18n="projects.p6Sub">Hormuud University • Lab Management</span>
-                  <div class="project-tech-tags">
-                    <span class="tech-tag">React</span>
-                    <span class="tech-tag">Node.js</span>
-                    <span class="tech-tag">MongoDB</span>
-                    <span class="tech-tag">Tailwind</span>
-                  </div>
-                </div>
-                <div class="project-card-actions">
-                  <a href="https://github.com/abdullamaxmud/Smart-lap" target="_blank" rel="noopener noreferrer" class="project-btn-pill code" title="View Source on GitHub" aria-label="View Smart Lab System on GitHub">
-                    <i class="fab fa-github"></i> <span data-i18n="projects.btnCode">Code</span>
-                  </a>
-                </div>
-              </div>
-            </article>
-
-            <!-- ===== TAB 2: GRAPHIC POSTERS (6 original designs) ===== -->
-
-            <!-- Poster 1: Let's Build It -->
-            <article class="project-card project-card-minimal poster-art-card" data-category="posters">
-              <a href="assets/images/posters/poster-hire-me.jpg" target="_blank" rel="noopener" class="project-visual-box poster-art-box" aria-label="Open full poster: Let's Build It">
-                <img src="assets/images/posters/poster-hire-me.jpg" alt="Let's Build It poster designed by Abdallah Mohamud Abdi" class="poster-art-img" loading="lazy" />
-                <span class="poster-art-zoom" aria-hidden="true"><i class="fas fa-magnifying-glass-plus"></i></span>
-              </a>
-              <div class="project-card-footer">
-                <div class="project-card-text">
-                  <h3 class="project-card-title" data-i18n="projects.poster1Title">Let's Build It</h3>
-                  <span class="project-card-subtitle" data-i18n="projects.poster1Sub">Personal Brand • Hire Me Poster</span>
-                </div>
-                <a href="assets/images/posters/poster-hire-me.jpg" target="_blank" rel="noopener" class="project-circle-btn" aria-label="Open full poster: Let's Build It">
-                  <i class="fas fa-arrow-up-right-from-square"></i>
-                </a>
-              </div>
-            </article>
-
-            <!-- Poster 2: DHIIG KAAL Campaign -->
-            <article class="project-card project-card-minimal poster-art-card" data-category="posters">
-              <a href="assets/images/posters/poster-dhiig-kaal.jpg" target="_blank" rel="noopener" class="project-visual-box poster-art-box" aria-label="Open full poster: DHIIG KAAL Campaign">
-                <img src="assets/images/posters/poster-dhiig-kaal.jpg" alt="DHIIG KAAL Campaign poster designed by Abdallah Mohamud Abdi" class="poster-art-img" loading="lazy" />
-                <span class="poster-art-zoom" aria-hidden="true"><i class="fas fa-magnifying-glass-plus"></i></span>
-              </a>
-              <div class="project-card-footer">
-                <div class="project-card-text">
-                  <h3 class="project-card-title" data-i18n="projects.poster2Title">DHIIG KAAL Campaign</h3>
-                  <span class="project-card-subtitle" data-i18n="projects.poster2Sub">Blood Donation • Awareness Poster</span>
-                </div>
-                <a href="assets/images/posters/poster-dhiig-kaal.jpg" target="_blank" rel="noopener" class="project-circle-btn" aria-label="Open full poster: DHIIG KAAL Campaign">
-                  <i class="fas fa-arrow-up-right-from-square"></i>
-                </a>
-              </div>
-            </article>
-
-            <!-- Poster 3: Know Your Water Day -->
-            <article class="project-card project-card-minimal poster-art-card" data-category="posters">
-              <a href="assets/images/posters/poster-biyaha-soomaaliya.jpg" target="_blank" rel="noopener" class="project-visual-box poster-art-box" aria-label="Open full poster: Know Your Water Day">
-                <img src="assets/images/posters/poster-biyaha-soomaaliya.jpg" alt="Know Your Water Day poster designed by Abdallah Mohamud Abdi" class="poster-art-img" loading="lazy" />
-                <span class="poster-art-zoom" aria-hidden="true"><i class="fas fa-magnifying-glass-plus"></i></span>
-              </a>
-              <div class="project-card-footer">
-                <div class="project-card-text">
-                  <h3 class="project-card-title" data-i18n="projects.poster3Title">Know Your Water Day</h3>
-                  <span class="project-card-subtitle" data-i18n="projects.poster3Sub">Biyaha Soomaaliya • Public Utility</span>
-                </div>
-                <a href="assets/images/posters/poster-biyaha-soomaaliya.jpg" target="_blank" rel="noopener" class="project-circle-btn" aria-label="Open full poster: Know Your Water Day">
-                  <i class="fas fa-arrow-up-right-from-square"></i>
-                </a>
-              </div>
-            </article>
-
-            <!-- Poster 4: Hungry? Order in Seconds -->
-            <article class="project-card project-card-minimal poster-art-card" data-category="posters">
-              <a href="assets/images/posters/poster-4-season.jpg" target="_blank" rel="noopener" class="project-visual-box poster-art-box" aria-label="Open full poster: Hungry? Order in Seconds">
-                <img src="assets/images/posters/poster-4-season.jpg" alt="Hungry? Order in Seconds poster designed by Abdallah Mohamud Abdi" class="poster-art-img" loading="lazy" />
-                <span class="poster-art-zoom" aria-hidden="true"><i class="fas fa-magnifying-glass-plus"></i></span>
-              </a>
-              <div class="project-card-footer">
-                <div class="project-card-text">
-                  <h3 class="project-card-title" data-i18n="projects.poster4Title">Hungry? Order in Seconds</h3>
-                  <span class="project-card-subtitle" data-i18n="projects.poster4Sub">4 SEASON • Restaurant Promo</span>
-                </div>
-                <a href="assets/images/posters/poster-4-season.jpg" target="_blank" rel="noopener" class="project-circle-btn" aria-label="Open full poster: Hungry? Order in Seconds">
-                  <i class="fas fa-arrow-up-right-from-square"></i>
-                </a>
-              </div>
-            </article>
-
-            <!-- Poster 5: Abdull School MS Launch -->
-            <article class="project-card project-card-minimal poster-art-card" data-category="posters">
-              <a href="assets/images/posters/poster-abdull-school.jpg" target="_blank" rel="noopener" class="project-visual-box poster-art-box" aria-label="Open full poster: Abdull School MS Launch">
-                <img src="assets/images/posters/poster-abdull-school.jpg" alt="Abdull School MS Launch poster designed by Abdallah Mohamud Abdi" class="poster-art-img" loading="lazy" />
-                <span class="poster-art-zoom" aria-hidden="true"><i class="fas fa-magnifying-glass-plus"></i></span>
-              </a>
-              <div class="project-card-footer">
-                <div class="project-card-text">
-                  <h3 class="project-card-title" data-i18n="projects.poster5Title">Abdull School MS Launch</h3>
-                  <span class="project-card-subtitle" data-i18n="projects.poster5Sub">School ERP • Product Launch</span>
-                </div>
-                <a href="assets/images/posters/poster-abdull-school.jpg" target="_blank" rel="noopener" class="project-circle-btn" aria-label="Open full poster: Abdull School MS Launch">
-                  <i class="fas fa-arrow-up-right-from-square"></i>
-                </a>
-              </div>
-            </article>
-
-            <!-- Poster 6: Report It — Smart Lab -->
-            <article class="project-card project-card-minimal poster-art-card" data-category="posters">
-              <a href="assets/images/posters/poster-smart-lab.jpg" target="_blank" rel="noopener" class="project-visual-box poster-art-box" aria-label="Open full poster: Report It — Smart Lab">
-                <img src="assets/images/posters/poster-smart-lab.jpg" alt="Report It — Smart Lab poster designed by Abdallah Mohamud Abdi" class="poster-art-img" loading="lazy" />
-                <span class="poster-art-zoom" aria-hidden="true"><i class="fas fa-magnifying-glass-plus"></i></span>
-              </a>
-              <div class="project-card-footer">
-                <div class="project-card-text">
-                  <h3 class="project-card-title" data-i18n="projects.poster6Title">Report It — Smart Lab</h3>
-                  <span class="project-card-subtitle" data-i18n="projects.poster6Sub">Hormuud University • Campaign</span>
-                </div>
-                <a href="assets/images/posters/poster-smart-lab.jpg" target="_blank" rel="noopener" class="project-circle-btn" aria-label="Open full poster: Report It — Smart Lab">
-                  <i class="fas fa-arrow-up-right-from-square"></i>
-                </a>
-              </div>
-            </article>
-
-            <!-- ===== TAB 3: VIDEOS & MEDIA (3 Videos: 1 featured + 2 stacked) ===== -->
-
-            <!-- Video 1: Abdalla Show Production -->
-            <article class="project-card project-card-minimal video-project-card is-featured" data-category="media">
-              <button type="button" class="project-visual-box video-visual-box video-cover btn-trigger-video" data-video-src="assets/videos/abdalla-show.mp4" data-video-title="Abdalla Show Production" aria-label="Play Abdalla Show video">
-                <img src="assets/images/video-poster-abdalla-show.jpg" alt="Abdalla Show Production" class="video-cover-img" loading="lazy" />
-                <span class="video-cover-shade" aria-hidden="true"></span>
-                <span class="project-corner-badge"><i class="fas fa-star"></i> Featured</span>
-                <span class="video-cover-play" aria-hidden="true"><i class="fas fa-play"></i></span>
-                <span class="video-cover-duration" aria-hidden="true"><i class="far fa-clock"></i> 2:13</span>
-              </button>
-              <div class="project-card-footer">
-                <div class="project-card-text">
-                  <h3 class="project-card-title" data-i18n="projects.media1Title">Abdalla Show Production</h3>
-                  <span class="project-card-subtitle" data-i18n="projects.media1Sub">Video Production • Official Reel</span>
-                </div>
-                <button type="button" class="project-circle-btn btn-trigger-video" data-video-src="assets/videos/abdalla-show.mp4" data-video-title="Abdalla Show Production" aria-label="Watch Abdalla Show video">
-                  <i class="fas fa-play"></i>
-                </button>
-              </div>
-            </article>
-
-            <!-- Video 2: Meet the Developer -->
-            <article class="project-card project-card-minimal video-project-card" data-category="media">
-              <button type="button" class="project-visual-box video-visual-box video-cover btn-trigger-video" data-video-src="assets/videos/developer-profile.webm" data-video-title="Meet the Developer" aria-label="Play Meet the Developer video">
-                <img src="assets/images/video-poster-developer-profile.jpg" alt="Meet the Developer" class="video-cover-img" loading="lazy" />
-                <span class="video-cover-shade" aria-hidden="true"></span>
-                <span class="project-corner-badge"><i class="fas fa-user-tie"></i> Profile</span>
-                <span class="video-cover-play" aria-hidden="true"><i class="fas fa-play"></i></span>
-                <span class="video-cover-duration" aria-hidden="true"><i class="far fa-clock"></i> 0:18</span>
-              </button>
-              <div class="project-card-footer">
-                <div class="project-card-text">
-                  <h3 class="project-card-title" data-i18n="projects.media2Title">Meet the Developer</h3>
-                  <span class="project-card-subtitle" data-i18n="projects.media2Sub">Profile Reel • Abdallah Mohamud Abdi</span>
-                </div>
-                <button type="button" class="project-circle-btn btn-trigger-video" data-video-src="assets/videos/developer-profile.webm" data-video-title="Meet the Developer" aria-label="Watch Meet the Developer video">
-                  <i class="fas fa-play"></i>
-                </button>
-              </div>
-            </article>
-
-            <!-- Video 3: 4 SEASON POS — Live Demo -->
-            <article class="project-card project-card-minimal video-project-card" data-category="media">
-              <button type="button" class="project-visual-box video-visual-box video-cover btn-trigger-video" data-video-src="assets/videos/pos-project-demo.webm" data-video-title="4 SEASON POS — Live Demo" aria-label="Play 4 SEASON POS demo video">
-                <img src="assets/images/video-poster-pos-demo.jpg" alt="4 SEASON POS — Live Demo" class="video-cover-img" loading="lazy" />
-                <span class="video-cover-shade" aria-hidden="true"></span>
-                <span class="project-corner-badge"><i class="fas fa-laptop-code"></i> Project Demo</span>
-                <span class="video-cover-play" aria-hidden="true"><i class="fas fa-play"></i></span>
-                <span class="video-cover-duration" aria-hidden="true"><i class="far fa-clock"></i> 0:23</span>
-              </button>
-              <div class="project-card-footer">
-                <div class="project-card-text">
-                  <h3 class="project-card-title" data-i18n="projects.media3Title">4 SEASON POS — Live Demo</h3>
-                  <span class="project-card-subtitle" data-i18n="projects.media3Sub">Project Walkthrough • Full Stack</span>
-                </div>
-                <button type="button" class="project-circle-btn btn-trigger-video" data-video-src="assets/videos/pos-project-demo.webm" data-video-title="4 SEASON POS — Live Demo" aria-label="Watch 4 SEASON POS demo video">
-                  <i class="fas fa-play"></i>
-                </button>
-              </div>
-            </article>
-
-          </div>
-
-          <button type="button" class="projects-nav-arrow next" id="projectsNextBtn" aria-label="Next Projects">
-            <i class="fas fa-chevron-right"></i>
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========== SERVICES SECTION ========== -->
-    <section class="section-wrapper" id="services">
-      <div class="container">
-        <div class="section-header text-center">
-          <span class="section-eyebrow" data-i18n="services.eyebrow">WHAT I DO</span>
-          <h2 class="section-heading" data-i18n="services.heading">Professional Engineering &amp; Creative Services</h2>
-          <p class="section-subheading" data-i18n="services.subheading">High-caliber technical solutions tailored to accelerate businesses, startups, and academic institutions.</p>
-        </div>
-
-        <div class="services-grid">
-          <!-- Service 1 -->
-          <div class="service-card">
-            <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
-            <h3 class="service-title" data-i18n="services.s1Title">Full-Stack Web Development</h3>
-            <p class="service-text" data-i18n="services.s1Desc">
-              Custom responsive web applications engineered with React, Node.js, Express, and modern styling architectures. Fast load speeds, SEO optimization, and secure databases.
-            </p>
-            <ul class="service-list">
-              <li><i class="fas fa-check"></i> <span data-i18n="services.s1Li1">Single Page Applications (SPA)</span></li>
-              <li><i class="fas fa-check"></i> <span data-i18n="services.s1Li2">RESTful API Architecture</span></li>
-              <li><i class="fas fa-check"></i> <span data-i18n="services.s1Li3">Modern Database Integration</span></li>
+        <!-- Mobile Apps tab -->
+        <div class="mobile-panel" hidden>
+          <div class="mobile-copy">
+            <span class="soon-badge"><span class="soon-dot" aria-hidden="true"></span><span data-i18n="mob.badge">Case studies in progress</span></span>
+            <h3 data-i18n="mob.title">One codebase, iOS and Android</h3>
+            <p data-i18n="mob.text">I build cross-platform mobile apps with Flutter that talk to the same back end as your website. Detailed write-ups of my mobile work are being prepared and will appear here.</p>
+            <ul class="check-list">
+              <li data-i18n="mob.f1">One codebase for iOS and Android</li>
+              <li data-i18n="mob.f2">Connected to your existing API</li>
+              <li data-i18n="mob.f3">Clean, fast and easy to use</li>
+              <li data-i18n="mob.f4">Ready for the app stores</li>
             </ul>
-            <a href="#contact" class="service-action-link">
-              <span data-i18n="services.s1Action">Hire for Web Dev</span>
-              <i class="fas fa-arrow-right"></i>
-            </a>
+            <ul class="tech-tags"><li style="--dot:#02569B">Flutter</li><li style="--dot:#0175C2">Dart</li><li style="--dot:#0EA5E9">REST API</li><li style="--dot:#FFCA28">Firebase</li></ul>
+            <div class="btn-row">
+              <a href="#contact" class="btn btn-primary"><span data-i18n="mob.cta">Start a mobile project</span><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M4 10L10 4M5 4h5v5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+              <button type="button" class="btn btn-ghost" data-work-tab="web" data-i18n="mob.web">See my web projects</button>
+            </div>
           </div>
-
-          <!-- Service 2: Cloud & API Architecture -->
-          <div class="service-card">
-            <div class="service-icon"><i class="fas fa-cloud-arrow-up"></i></div>
-            <h3 class="service-title" data-i18n="services.s2Title">Cloud &amp; API Architecture</h3>
-            <p class="service-text" data-i18n="services.s2Desc">
-              Scalable backend systems, microservices, RESTful API design, database optimization, and high-concurrency cloud deployments for resilient web operations.
-            </p>
-            <ul class="service-list">
-              <li><i class="fas fa-check"></i> <span data-i18n="services.s2Li1">REST &amp; GraphQL APIs</span></li>
-              <li><i class="fas fa-check"></i> <span data-i18n="services.s2Li2">Cloud Databases (SQL &amp; NoSQL)</span></li>
-              <li><i class="fas fa-check"></i> <span data-i18n="services.s2Li3">Authentication &amp; Security</span></li>
-            </ul>
-            <a href="#contact" class="service-action-link">
-              <span data-i18n="services.s2Action">Build Backend System</span>
-              <i class="fas fa-arrow-right"></i>
-            </a>
+          <div class="phone-mock" aria-hidden="true">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <div class="sk-row"><span class="sk" style="width:46%;height:12px"></span><span class="sk" style="width:26px;height:26px;border-radius:50%"></span></div>
+              <div class="phone-hero"><b>Your app here</b><small>Flutter · iOS &amp; Android</small></div>
+              <div class="sk-grid"><span class="sk"></span><span class="sk"></span></div>
+              <span class="sk" style="width:70%;height:10px"></span><span class="sk" style="width:90%;height:10px"></span><span class="sk" style="width:55%;height:10px"></span>
+              <div class="phone-tabbar"><span></span><span class="on"></span><span></span><span></span></div>
+            </div>
           </div>
+        </div>
+      </section>
 
-          <!-- Service 3 -->
-          <div class="service-card">
-            <div class="service-icon"><i class="fas fa-mobile-screen-button"></i></div>
-            <h3 class="service-title" data-i18n="services.s3Title">Mobile App Development</h3>
-            <p class="service-text" data-i18n="services.s3Desc">
-              Clean cross-platform mobile interfaces built for iOS and Android with intuitive gestures, fast rendering, offline storage, and responsive layouts.
-            </p>
-            <ul class="service-list">
-              <li><i class="fas fa-check"></i> <span data-i18n="services.s3Li1">Responsive Mobile UI</span></li>
-              <li><i class="fas fa-check"></i> <span data-i18n="services.s3Li2">Cross-Platform Capabilities</span></li>
-              <li><i class="fas fa-check"></i> <span data-i18n="services.s3Li3">API &amp; Cloud Integration</span></li>
-            </ul>
-            <a href="#contact" class="service-action-link">
-              <span data-i18n="services.s3Action">Develop Mobile App</span>
-              <i class="fas fa-arrow-right"></i>
-            </a>
+      <!-- ===================== GITHUB ===================== -->
+      <section class="gh-strip card" aria-labelledby="ghTitle">
+        <div class="gh-id">
+          <span class="gh-mark" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></span>
+          <div>
+            <h2 id="ghTitle" class="gh-title" data-i18n="gh.title">Code you can check</h2>
+            <span class="gh-handle">github.com/abdullamaxmud · <span class="gh-status"><i class="gh-dot" aria-hidden="true"></i><span class="gh-status-text" data-i18n="gh.snapshot">snapshot · 12 Nov 2026</span></span></span>
           </div>
-
-          <!-- Service 4 -->
-          <div class="service-card">
-            <div class="service-icon"><i class="fas fa-bezier-curve"></i></div>
-            <h3 class="service-title" data-i18n="services.s4Title">UI/UX &amp; Product Design</h3>
-            <p class="service-text" data-i18n="services.s4Desc">
-              User-centered interfaces crafted with surgical attention to typography, spatial balance, micro-interactions, accessibility, and high-fidelity interactive wireframes.
-            </p>
-            <ul class="service-list">
-              <li><i class="fas fa-check"></i> <span data-i18n="services.s4Li1">Interactive Wireframing</span></li>
-              <li><i class="fas fa-check"></i> <span data-i18n="services.s4Li2">Design Systems &amp; Tokens</span></li>
-              <li><i class="fas fa-check"></i> <span data-i18n="services.s4Li3">User Flow Optimization</span></li>
-            </ul>
-            <a href="#contact" class="service-action-link">
-              <span data-i18n="services.s4Action">Design User Experience</span>
-              <i class="fas fa-arrow-right"></i>
-            </a>
+        </div>
+        <dl class="gh-stats">
+          <div><dt data-i18n="gh.repos">Public repositories</dt><dd class="gh-repos">9</dd></div>
+          <div><dt data-i18n="gh.last">Last update</dt><dd class="gh-last">9 Nov 2026</dd></div>
+          <div><dt data-i18n="gh.since">On GitHub since</dt><dd>Oct 2025</dd></div>
+        </dl>
+        <div class="gh-langs">
+          <div class="gh-bar" role="img" aria-label="Languages across my repositories: JavaScript 37%, TypeScript 30%, PHP 16%, HTML 11%, CSS 6%">
+            <span style="width:37%;background:#F1E05A"></span><span style="width:30%;background:#3178C6"></span><span style="width:16%;background:#777BB4"></span><span style="width:11%;background:#E34C26"></span><span style="width:6%;background:#663399"></span>
           </div>
+          <ul class="gh-legend">
+            <li><i style="background:#F1E05A"></i>JavaScript <b>37%</b></li><li><i style="background:#3178C6"></i>TypeScript <b>30%</b></li><li><i style="background:#777BB4"></i>PHP <b>16%</b></li><li><i style="background:#E34C26"></i>HTML <b>11%</b></li><li><i style="background:#663399"></i>CSS <b>6%</b></li>
+          </ul>
+        </div>
+        <a href="https://github.com/abdullamaxmud" target="_blank" rel="noopener" class="pill"><span data-i18n="gh.profile">View profile</span> ↗</a>
+      </section>
 
-          <!-- Service 5 -->
-          <div class="service-card">
-            <div class="service-icon"><i class="fas fa-photo-film"></i></div>
-            <h3 class="service-title" data-i18n="services.s5Title">Creative Multimedia &amp; Branding</h3>
-            <p class="service-text" data-i18n="services.s5Desc">
-              High-impact visual identity packages, corporate logos, promotional marketing graphics, video post-production, and digital content designed to elevate brands.
-            </p>
-            <ul class="service-list">
-              <li><i class="fas fa-check"></i> <span data-i18n="services.s5Li1">Corporate Brand Identity</span></li>
-              <li><i class="fas fa-check"></i> <span data-i18n="services.s5Li2">High-Resolution Posters</span></li>
-              <li><i class="fas fa-check"></i> <span data-i18n="services.s5Li3">Video Editing &amp; Graphics</span></li>
-            </ul>
-            <a href="#contact" class="service-action-link">
-              <span data-i18n="services.s5Action">Request Creative Media</span>
-              <i class="fas fa-arrow-right"></i>
-            </a>
+      <!-- ===================== WORKED WITH ===================== -->
+      <section class="section partners" aria-labelledby="partnersTitle">
+        <header class="section-head">
+          <h2 id="partnersTitle" class="section-title" data-i18n="partners.title">Worked with</h2>
+          <p class="section-sub" data-i18n="partners.sub">Organisations I've built for</p>
+        </header>
+        <div class="partners-wrap">
+          <div class="partners-glow" aria-hidden="true"></div>
+          <div class="card partners-card">
+            <a href="https://ntw.hu.edu.so/" target="_blank" rel="noopener" class="partner"><span class="partner-logo pad"><img src="assets/images/collab-ntweek-light.png" alt="" loading="lazy" /></span>NTWeek</a>
+            <a href="https://sobda.org/" target="_blank" rel="noopener" class="partner"><span class="partner-logo"><img src="assets/images/collab-sobda.png" alt="" loading="lazy" /></span>SOBDA</a>
+            <a href="https://www.hornai.org/projects" target="_blank" rel="noopener" class="partner"><span class="partner-logo cover"><img src="assets/images/collab-hornai.png" alt="" loading="lazy" /></span>HORN AI</a>
           </div>
+        </div>
+      </section>
 
-          <!-- Service 6 -->
-          <div class="service-card">
-            <div class="service-icon"><i class="fas fa-network-wired"></i></div>
-            <h3 class="service-title" data-i18n="services.s6Title">IT Consultation &amp; Support</h3>
-            <p class="service-text" data-i18n="services.s6Desc">
-              Technical guidance on systems architecture, server setup, database modeling, academic project mentoring, and software performance optimization.
-            </p>
-            <ul class="service-list">
-              <li><i class="fas fa-check"></i> <span data-i18n="services.s6Li1">Architecture Consultation</span></li>
-              <li><i class="fas fa-check"></i> <span data-i18n="services.s6Li2">Database Structuring</span></li>
-              <li><i class="fas fa-check"></i> <span data-i18n="services.s6Li3">Tech Project Advisory</span></li>
+      <!-- ===================== CERTIFICATES ===================== -->
+      <section id="certificates" class="section" aria-labelledby="certTitle">
+        <header class="section-head">
+          <span class="eyebrow" data-i18n="cert.eyebrow">Certificates</span>
+          <h2 id="certTitle" class="section-title" data-i18n="cert.title">Verified credentials</h2>
+        </header>
+        <!-- drawn by script.js from the CERTS data -->
+        <div id="certPanel" class="cert-panel" aria-live="polite"></div>
+      </section>
+
+      <!-- ===================== CV ===================== -->
+      <section id="cv" class="section" aria-labelledby="cvTitle">
+        <header class="section-head">
+          <span class="eyebrow" data-i18n="cv.eyebrow">Curriculum vitae</span>
+          <h2 id="cvTitle" class="section-title" data-i18n="cv.title">My resume, one click away</h2>
+        </header>
+        <div class="cv-grid">
+          <div class="cv-copy">
+            <ul class="check-list single">
+              <li data-i18n="cv.p1">Full-stack web architecture, front end and back end</li>
+              <li data-i18n="cv.p2">UI/UX prototyping, wireframes and brand guidelines</li>
+              <li data-i18n="cv.p3">Database design, API integration and security</li>
+              <li data-i18n="cv.p4">Video editing, graphic design and content creation</li>
             </ul>
-            <a href="#contact" class="service-action-link">
-              <span data-i18n="services.s6Action">Book Consultation</span>
-              <i class="fas fa-arrow-right"></i>
+            <div class="btn-row">
+              <a href="assets/cv/Abdallah-Mohamud-Abdi-CV.pdf" download="Abdallah-Mohamud-Abdi-CV.pdf" class="btn btn-primary">
+                <svg width="15" height="15" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v7M4 6.5L7 9.5l3-3M3 12h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="cv.download">Download CV (PDF)</span></a>
+              <a href="assets/cv/Abdallah-Mohamud-Abdi-CV.pdf" target="_blank" rel="noopener" class="btn btn-ghost"><span data-i18n="cv.open">Open in new tab</span>
+                <svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M4 10L10 4M5 4h5v5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            </div>
+            <span class="cv-meta" data-i18n="cv.meta">PDF · 1 page · updated 2026</span>
+          </div>
+          <div class="cv-preview">
+            <div class="cv-glow" aria-hidden="true"></div>
+            <a href="assets/cv/Abdallah-Mohamud-Abdi-CV.pdf" target="_blank" rel="noopener" class="cv-paper" aria-label="Open my CV as a PDF" style="position: relative; display: grid; grid-template-columns: 34% 66%; border-radius: 16px; overflow: hidden; background: #FFFFFF; border: 1px solid rgba(11,31,77,0.12); color: #0B1F4D; text-decoration: none; font-size: 10.5px; line-height: 1.45;">
+            <div style="display: flex; flex-direction: column; gap: 14px; padding: 20px 14px; background: #0B1F4D; color: #DCE8FA;">
+            <img src="assets/images/abdallah-cv-photo.jpg" alt="" style="width: 76px; height: 76px; border-radius: 50%; object-fit: cover; border: 3px solid #38BDF8; align-self: center;">
+            <div style="display: flex; flex-direction: column; gap: 5px;">
+            <b style="font-size: 9.5px; letter-spacing: 0.12em; color: #7DD3FC;">CONTACT</b>
+            <span>+252 613 496 697</span><span>abdullamaxmud39@gmail.com</span><span>Mogadishu, Somalia</span>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 6px;">
+            <b style="font-size: 9.5px; letter-spacing: 0.12em; color: #7DD3FC;">KEY SKILLS</b>
+            <span class="cv-bar">Full-stack dev<i style="width: 100%;"></i></span>
+            <span class="cv-bar">React.js<i style="width: 100%;"></i></span>
+            <span class="cv-bar">Node.js<i style="width: 80%;"></i></span>
+            <span class="cv-bar">Web design<i style="width: 100%;"></i></span>
+            <span class="cv-bar">Video editing<i style="width: 100%;"></i></span>
+            <span class="cv-bar">Graphic design<i style="width: 80%;"></i></span>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 6px;">
+            <b style="font-size: 9.5px; letter-spacing: 0.12em; color: #7DD3FC;">LANGUAGES</b>
+            <span class="cv-bar">Somali<i style="width: 100%;"></i></span>
+            <span class="cv-bar">English<i style="width: 70%;"></i></span>
+            </div>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 12px; padding: 20px 18px;">
+            <div style="padding-bottom: 10px; border-bottom: 2px solid #0EA5E9;">
+            <div style="font-family: 'Sora', Arial, sans-serif; font-size: 17px; font-weight: 700; letter-spacing: 0.02em;">ABDALLAH MOHAMUD ABDI</div>
+            <div style="font-size: 9.5px; font-weight: 700; letter-spacing: 0.12em; color: #0369A1;">FULL-STACK DEVELOPER &amp; MULTIMEDIA SPECIALIST</div>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 4px;">
+            <b style="font-size: 9.5px; letter-spacing: 0.12em; color: #0369A1;">PROFILE</b>
+            <span style="color: #1F3B73;">Full-stack developer and multimedia specialist building efficient, scalable and user-friendly web applications, with the creative skills to design and film what launches them.</span>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 6px;">
+            <b style="font-size: 9.5px; letter-spacing: 0.12em; color: #0369A1;">EXPERIENCE</b>
+            <span><b>Full-Stack Developer</b> · Freelance<br><span style="color: #46608F;">Restaurant systems, marketplaces and admin dashboards (MERN, PHP/MySQL).</span></span>
+            <span><b>Content Creator &amp; Editor</b> · Freelance<br><span style="color: #46608F;">Video editing, graphic design and social content for clients.</span></span>
+            <span><b>National Training Week</b> · Hormuud University<br><span style="color: #46608F;">Helped build the main program for the week.</span></span>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 6px;">
+            <b style="font-size: 9.5px; letter-spacing: 0.12em; color: #0369A1;">EDUCATION</b>
+            <span><b>Hormuud University</b> · B.Sc. Computer Science</span>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 4px;">
+            <span class="cv-chip">React</span><span class="cv-chip">Node.js</span><span class="cv-chip">MongoDB</span><span class="cv-chip">PHP</span><span class="cv-chip">MySQL</span><span class="cv-chip">Figma</span><span class="cv-chip">Premiere Pro</span>
+            </div>
+            </div>
+            <span class="cv-open" aria-hidden="true">Open full CV
+            <svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M4 10L10 4M5 4h5v5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
             </a>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+      <!-- ===================== CONTACT ===================== -->
+      <section id="contact" class="section" aria-labelledby="contactTitle">
+        <header class="section-head">
+          <span class="eyebrow" data-i18n="contact.eyebrow">Let's connect</span>
+          <h2 id="contactTitle" class="section-title" data-i18n="contact.title">Have a project in mind? Let's build it together.</h2>
+        </header>
 
-    <!-- ========== SKILLS SECTION ========== -->
-    <section class="section-wrapper bg-subtle" id="skills">
-      <div class="container">
-        <div class="section-header text-center">
-          <span class="section-eyebrow" data-i18n="skills.eyebrow">TECHNICAL CAPABILITIES</span>
-          <h2 class="section-heading" data-i18n="skills.heading">Skills, Frameworks &amp; Tooling</h2>
-          <p class="section-subheading" data-i18n="skills.subheading">A comprehensive overview of programming languages, frameworks, and creative tools I utilize on a daily basis.</p>
-        </div>
-
-        <div class="skills-categories-grid">
-          <!-- Category 1: Frontend -->
-          <div class="skill-category-card">
-            <div class="category-header">
-              <i class="fas fa-code category-icon"></i>
-              <h3 class="category-title" data-i18n="skills.catFrontend">Frontend Engineering</h3>
+        <div class="contact-grid">
+          <div class="contact-side">
+            <span class="avail"><span class="avail-dot" aria-hidden="true"></span><span data-i18n="contact.avail">Available for freelance projects</span></span>
+            <a href="mailto:abdullamaxmud39@gmail.com" class="card method spot">
+              <span class="method-ic"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5" stroke="currentColor" stroke-width="1.8"/><path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <span class="method-txt"><small data-i18n="contact.email">Email</small><b>abdullamaxmud39@gmail.com</b></span>
+            </a>
+            <a href="https://wa.me/252613496697" target="_blank" rel="noopener" class="card method spot">
+              <span class="method-ic wa"><svg width="17" height="17" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></span>
+              <span class="method-txt"><small>WhatsApp</small><b dir="ltr">+252 613 496 697</b></span>
+            </a>
+            <div class="card method">
+              <span class="method-ic"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0113 0c0 5.4-6.5 11-6.5 11z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.3" stroke="currentColor" stroke-width="1.8"/></svg></span>
+              <span class="method-txt"><small data-i18n="contact.based">Based in</small><b data-i18n="contact.place">Mogadishu, Somalia · works remotely</b></span>
             </div>
-            <div class="skills-tags-wrap">
-              <div class="skill-badge"><i class="fab fa-react"></i> React.js</div>
-              <div class="skill-badge"><i class="fab fa-js"></i> JavaScript (ES6+)</div>
-              <div class="skill-badge"><i class="fab fa-html5"></i> HTML5 Semantic</div>
-              <div class="skill-badge"><i class="fab fa-css3-alt"></i> CSS3 &amp; Flexbox/Grid</div>
-              <div class="skill-badge"><i class="fas fa-wind"></i> Tailwind CSS</div>
-              <div class="skill-badge"><i class="fab fa-bootstrap"></i> Bootstrap 5</div>
-              <div class="skill-badge"><i class="fas fa-mobile"></i> Responsive Design</div>
-              <div class="skill-badge"><i class="fas fa-universal-access"></i> Web Accessibility</div>
-            </div>
-          </div>
-
-          <!-- Category 2: Backend & Database -->
-          <div class="skill-category-card">
-            <div class="category-header">
-              <i class="fas fa-server category-icon"></i>
-              <h3 class="category-title" data-i18n="skills.catBackend">Backend &amp; Cloud</h3>
-            </div>
-            <div class="skills-tags-wrap">
-              <div class="skill-badge"><i class="fab fa-node-js"></i> Node.js</div>
-              <div class="skill-badge"><i class="fas fa-network-wired"></i> Express.js</div>
-              <div class="skill-badge"><i class="fab fa-python"></i> Python</div>
-              <div class="skill-badge"><i class="fab fa-php"></i> PHP &amp; Modern OOP</div>
-              <div class="skill-badge"><i class="fas fa-database"></i> MySQL / MariaDB</div>
-              <div class="skill-badge"><i class="fas fa-leaf"></i> MongoDB</div>
-              <div class="skill-badge"><i class="fas fa-key"></i> JWT Authentication</div>
-              <div class="skill-badge"><i class="fas fa-cloud"></i> RESTful Architecture</div>
-            </div>
-          </div>
-
-          <!-- Category 3: Mobile & Cross-Platform -->
-          <div class="skill-category-card">
-            <div class="category-header">
-              <i class="fas fa-mobile-screen category-icon"></i>
-              <h3 class="category-title" data-i18n="skills.catMobile">Mobile Development</h3>
-            </div>
-            <div class="skills-tags-wrap">
-              <div class="skill-badge"><i class="fab fa-react"></i> React Native</div>
-              <div class="skill-badge"><i class="fas fa-layer-group"></i> Flutter / Dart</div>
-              <div class="skill-badge"><i class="fab fa-apple"></i> iOS Development</div>
-              <div class="skill-badge"><i class="fab fa-android"></i> Android Apps</div>
-              <div class="skill-badge"><i class="fas fa-fire"></i> Firebase Services</div>
-              <div class="skill-badge"><i class="fas fa-bolt"></i> State Management</div>
-              <div class="skill-badge"><i class="fas fa-database"></i> SQLite &amp; Offline</div>
-              <div class="skill-badge"><i class="fas fa-bell"></i> Push Notifications</div>
-            </div>
-          </div>
-
-          <!-- Category 4: Multimedia & Design -->
-          <div class="skill-category-card">
-            <div class="category-header">
-              <i class="fas fa-palette category-icon"></i>
-              <h3 class="category-title" data-i18n="skills.catMedia">Multimedia &amp; Tools</h3>
-            </div>
-            <div class="skills-tags-wrap">
-              <div class="skill-badge"><i class="fab fa-figma"></i> Figma UI/UX</div>
-              <div class="skill-badge"><i class="fas fa-image"></i> Adobe Photoshop</div>
-              <div class="skill-badge"><i class="fas fa-pen-nib"></i> Adobe Illustrator</div>
-              <div class="skill-badge"><i class="fas fa-video"></i> Adobe Premiere Pro</div>
-              <div class="skill-badge"><i class="fab fa-git-alt"></i> Git &amp; GitHub</div>
-              <div class="skill-badge"><i class="fas fa-terminal"></i> Bash &amp; PowerShell</div>
-              <div class="skill-badge"><i class="fas fa-boxes-stacked"></i> Agile &amp; Scrum</div>
-              <div class="skill-badge"><i class="fas fa-font"></i> Typography &amp; Layouts</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- GitHub Developer Showcase Bento Card -->
-        <div class="github-showcase-bento">
-          <div class="github-bento-left">
-            <div class="github-avatar-tag">
-              <i class="fab fa-github github-big-icon"></i>
-              <div>
-                <span class="github-sub-title">GITHUB REPOSITORY &amp; CODE ACTIVITY</span>
-                <h3 class="github-handle">@abdullamaxmud</h3>
-              </div>
-            </div>
-            <p class="github-bio-text" data-i18n="github.bioText">
-              Actively developing and maintaining open-source systems, web architectures, and client projects with clean commit discipline and modern JavaScript/Node stacks.
-            </p>
-            <div class="github-metrics-row">
-              <div class="github-metric-box">
-                <span class="metric-num">15+</span>
-                <span class="metric-label" data-i18n="github.metricRepos">Public Repos</span>
-              </div>
-              <div class="github-metric-box">
-                <span class="metric-num">100%</span>
-                <span class="metric-label" data-i18n="github.metricDiscipline">Git Discipline</span>
-              </div>
-              <div class="github-metric-box">
-                <span class="metric-num">Full-Stack</span>
-                <span class="metric-label" data-i18n="github.metricFocus">Core Focus</span>
-              </div>
-            </div>
-          </div>
-          <div class="github-bento-right">
-            <div class="github-live-card">
-              <div class="github-card-top">
-                <span class="live-dot-green"></span>
-                <span class="card-repo-title">abdullamaxmud/my-portfolio</span>
-              </div>
-              <div class="github-chips-row">
-                <span class="chip-lang"><i class="fas fa-circle lang-js"></i> JavaScript</span>
-                <span class="chip-lang"><i class="fas fa-circle lang-css"></i> CSS3</span>
-                <span class="chip-lang"><i class="fas fa-circle lang-html"></i> HTML5</span>
-              </div>
-              <a href="https://github.com/abdullamaxmud" target="_blank" rel="noopener noreferrer" class="btn btn-github-explore">
-                <i class="fab fa-github"></i> <span data-i18n="github.btnExplore">Explore GitHub Profile</span>
-                <i class="fas fa-arrow-up-right-from-square"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========== EXPERIENCE & EDUCATION TIMELINE SECTION ========== -->
-    <section class="section-wrapper" id="timeline">
-      <div class="container">
-        <div class="section-header text-center">
-          <div class="cert-pill-badge">
-            <span class="cert-pill-text" data-i18n="timeline.eyebrow">CAREER &amp; EDUCATION</span>
-          </div>
-          <h2 class="section-heading" data-i18n="timeline.heading">
-            My Journey &amp; <span class="text-accent-gradient">Milestones</span>
-          </h2>
-          <p class="section-subheading" data-i18n="timeline.subheading">
-            A chronological timeline of academic achievements, professional milestones, and real-world system deployments.
-          </p>
-        </div>
-
-        <div class="timeline-visual-flow">
-          <!-- Item 1: Hormuud University -->
-          <div class="timeline-item">
-            <div class="timeline-marker">
-              <div class="marker-icon"><i class="fas fa-graduation-cap"></i></div>
-            </div>
-            <div class="timeline-card">
-              <div class="timeline-header-meta">
-                <span class="timeline-tag edu" data-i18n="timeline.t1Tag">Academic Milestone</span>
-                <span class="timeline-date"><i class="far fa-calendar-alt"></i> 2022 — Present</span>
-              </div>
-              <h3 class="timeline-title" data-i18n="timeline.t1Title">Hormuud University — B.Sc. in Computer Science</h3>
-              <h4 class="timeline-subtitle" data-i18n="timeline.t1Sub">4th-Year Senior Student • Faculty of Computer Science &amp; IT</h4>
-              <p class="timeline-body" data-i18n="timeline.t1Body">
-                Mastering core disciplines including Software Engineering, Advanced Data Structures, Relational Database Management Systems (RDBMS), Object-Oriented Analysis, and High-Performance Network Infrastructures.
-              </p>
-              <div class="timeline-pill-tags">
-                <span>Software Engineering</span>
-                <span>Database Modeling</span>
-                <span>Algorithms</span>
-                <span>Senior Student</span>
+            <div class="save-card">
+              <img src="assets/v2/qr-contact.png" width="104" height="104" alt="QR code that saves Abdallah's contact to your phone" loading="lazy" />
+              <div class="save-txt">
+                <b data-i18n="contact.saveTitle">Save my contact</b>
+                <span data-i18n="contact.saveText">Scan with your phone camera, or download my contact card.</span>
+                <a href="#" class="pill primary" id="vcardLink" download="Abdallah-Mohamud-Abdi.vcf">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v7M4 6.5L7 9.5l3-3M3 12h8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="contact.saveBtn">Save contact (.vcf)</span></a>
               </div>
             </div>
           </div>
 
-          <!-- Item 2: Freelance Software Engineering -->
-          <div class="timeline-item">
-            <div class="timeline-marker">
-              <div class="marker-icon"><i class="fas fa-laptop-code"></i></div>
+          <div class="card form-card">
+            <div class="mode-tabs" role="tablist" aria-label="How would you like to start?">
+              <button type="button" role="tab" aria-selected="true" data-mode="msg" data-i18n="contact.modeMsg">Quick message</button>
+              <button type="button" role="tab" aria-selected="false" data-mode="brief"><span data-i18n="contact.modeBrief">Project brief</span></button>
             </div>
-            <div class="timeline-card">
-              <div class="timeline-header-meta">
-                <span class="timeline-tag work" data-i18n="timeline.t2Tag">Professional Practice</span>
-                <span class="timeline-date"><i class="far fa-calendar-alt"></i> 2023 — Present</span>
-              </div>
-              <h3 class="timeline-title" data-i18n="timeline.t2Title">Freelance Full-Stack &amp; Mobile Application Developer</h3>
-              <h4 class="timeline-subtitle" data-i18n="timeline.t2Sub">Self-Employed • Commercial Clients &amp; Local Enterprises</h4>
-              <p class="timeline-body" data-i18n="timeline.t2Body">
-                Architecting custom web applications, point-of-sale systems, and cross-platform mobile experiences with high performance, intuitive UI/UX workflows, and resilient RESTful API backends.
-              </p>
-              <div class="timeline-pill-tags">
-                <span>Full-Stack Development</span>
-                <span>Mobile Apps</span>
-                <span>REST APIs</span>
-                <span>Client Solutions</span>
-              </div>
-            </div>
-          </div>
 
-          <!-- Item 3: AI & Prompt Engineering Certifications -->
-          <div class="timeline-item">
-            <div class="timeline-marker">
-              <div class="marker-icon"><i class="fas fa-award"></i></div>
-            </div>
-            <div class="timeline-card">
-              <div class="timeline-header-meta">
-                <span class="timeline-tag cert" data-i18n="timeline.t3Tag">Certified Accreditations</span>
-                <span class="timeline-date"><i class="far fa-calendar-alt"></i> 2024</span>
+            <!-- Quick message -->
+            <form class="contact-form" id="contactForm" novalidate>
+              <div class="field-row">
+                <label class="field"><span data-i18n="form.name">Your name</span>
+                  <input type="text" name="name" autocomplete="name" placeholder="Amina Hassan" required />
+                  <small class="field-err" data-i18n="form.nameErr">Please tell me your name.</small></label>
+                <label class="field"><span data-i18n="form.email">Your email</span>
+                  <input type="email" name="email" autocomplete="email" placeholder="you@company.com" required />
+                  <small class="field-err" data-i18n="form.emailErr">Please enter a valid email so I can reply.</small></label>
               </div>
-              <h3 class="timeline-title" data-i18n="timeline.t3Title">Artificial Intelligence &amp; Prompt Engineering Certifications</h3>
-              <h4 class="timeline-subtitle" data-i18n="timeline.t3Sub">Professional Credentials Across AI &amp; Innovation</h4>
-              <p class="timeline-body" data-i18n="timeline.t3Body">
-                Earned verified professional credentials in Prompt Engineering, AI for Entrepreneurship, Digital Marketing, and Everyday AI Tools, integrating generative intelligence into scalable engineering workflows.
-              </p>
-              <div class="timeline-pill-tags">
-                <span>Prompt Engineering</span>
-                <span>AI Automation</span>
-                <span>Digital Marketing</span>
-                <span>Innovation</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Item 4: High-Impact Deployed Systems -->
-          <div class="timeline-item">
-            <div class="timeline-marker">
-              <div class="marker-icon"><i class="fas fa-rocket"></i></div>
-            </div>
-            <div class="timeline-card">
-              <div class="timeline-header-meta">
-                <span class="timeline-tag deploy" data-i18n="timeline.t4Tag">Production Deployment</span>
-                <span class="timeline-date"><i class="far fa-calendar-alt"></i> 2024 — 2025</span>
-              </div>
-              <h3 class="timeline-title" data-i18n="timeline.t4Title">Community Platforms &amp; Enterprise POS Launch</h3>
-              <h4 class="timeline-subtitle" data-i18n="timeline.t4Sub">Biyaha Soomaaliya • DHIIG KAAL • 4 Season Restaurant</h4>
-              <p class="timeline-body" data-i18n="timeline.t4Body">
-                Successfully built and launched mission-critical software: life-saving blood donor matching platform, municipal water supply distribution scheduler, and offline-first fast restaurant point-of-sale system.
-              </p>
-              <div class="timeline-pill-tags">
-                <span>Healthcare Systems</span>
-                <span>Public Utilities</span>
-                <span>Offline-First POS</span>
-                <span>Live Impact</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========== CERTIFICATES SECTION ========== -->
-    <section class="section-wrapper cert-showcase-section" id="certificates">
-      <div class="container">
-        <div class="section-header text-center">
-          <div class="cert-pill-badge">
-            <span class="cert-pill-text" data-i18n="certificates.eyebrow">OFFICIAL CERTIFICATIONS &amp; HONORS</span>
-          </div>
-          <h2 class="cert-main-title">
-            Verified <span class="text-accent-gradient">Certificates</span> &amp; Credentials
-          </h2>
-          <p class="cert-main-desc" data-i18n="certificates.subheading">
-            Official academic and professional credentials earned by Abdallah Mohamud Abdi across Artificial Intelligence, Prompt Engineering, and Technology Innovation.
-          </p>
-        </div>
-
-        <div class="certs-two-col-grid" id="certsGrid">
-          <!-- Certificate 1: Mastering Prompt Engineering (Visible) -->
-          <article class="cert-item-card">
-            <div class="cert-card-preview" onclick="openCertModal('assets/certificates/cert-mastering-prompt-engineering.png', 'Mastering Prompt Engineering', 'assets/certificates/cert-mastering-prompt-engineering.pdf')">
-              <div class="cert-card-paper">
-                <img src="assets/certificates/cert-mastering-prompt-engineering.png" alt="Mastering Prompt Engineering Certificate" class="cert-card-img" loading="lazy" />
-                <div class="cert-hover-hint">
-                  <i class="fas fa-expand"></i> <span>Preview</span>
+              <fieldset class="field">
+                <legend data-i18n="form.need">What do you need?</legend>
+                <div class="type-chips">
+                  <button type="button" class="type-chip" aria-pressed="false" data-type="Web app" data-i18n="form.tWeb">Web app</button>
+                  <button type="button" class="type-chip" aria-pressed="false" data-type="Mobile app" data-i18n="form.tMob">Mobile app</button>
+                  <button type="button" class="type-chip" aria-pressed="false" data-type="UI/UX & branding" data-i18n="form.tUi">UI/UX &amp; branding</button>
+                  <button type="button" class="type-chip" aria-pressed="false" data-type="Video & content" data-i18n="form.tVid">Video &amp; content</button>
                 </div>
+              </fieldset>
+              <label class="field"><span class="field-head"><span data-i18n="form.msg">Your message</span><span class="msg-count">0 / 1000</span></span>
+                <textarea name="message" rows="5" maxlength="1000" placeholder="What are you building, and by when?" required></textarea>
+                <small class="field-err" data-i18n="form.msgErr">A short message helps: at least 10 characters.</small></label>
+              <div class="btn-row">
+                <button type="submit" class="btn btn-primary" data-send="email"><span data-i18n="form.sendEmail">Send by email</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 3L10 14M21 3l-7 18-4-7-7-4z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></button>
+                <button type="button" class="btn btn-wa" data-send="whatsapp"><svg width="17" height="17" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg><span data-i18n="form.sendWa">Send on WhatsApp</span></button>
               </div>
-            </div>
-            <div class="cert-card-info">
-              <div class="cert-top-meta">
-                <span class="cert-received-tag">
-                  <i class="far fa-calendar-check"></i> Year Received: 2026
-                </span>
-                <span class="cert-code-tag">NTW-2026-53EF05DC</span>
-              </div>
-              <h3 class="cert-name-title" data-i18n="certificates.c2Title">Mastering Prompt Engineering</h3>
-              <p class="cert-track-name" data-i18n="certificates.c2Program">Artificial Intelligence for Academic Transformation</p>
-              <div class="cert-issuer-row">
-                <i class="fas fa-landmark"></i>
-                <span>National Training Week &bull; August 29, 2026</span>
-              </div>
-              <button type="button" class="btn-cert-action" onclick="openCertModal('assets/certificates/cert-mastering-prompt-engineering.png', 'Mastering Prompt Engineering', 'assets/certificates/cert-mastering-prompt-engineering.pdf')">
-                <i class="far fa-eye"></i> <span data-i18n="certificates.btnViewCert">View Certificate</span>
-              </button>
-            </div>
-          </article>
-
-          <!-- Certificate 2: AI Tools for Everyday Life (Visible) -->
-          <article class="cert-item-card">
-            <div class="cert-card-preview" onclick="openCertModal('assets/certificates/cert-ai-tools-for-everyday-life.png', 'AI Tools for Everyday Life', 'assets/certificates/cert-ai-tools-for-everyday-life.pdf')">
-              <div class="cert-card-paper">
-                <img src="assets/certificates/cert-ai-tools-for-everyday-life.png" alt="AI Tools for Everyday Life Certificate" class="cert-card-img" loading="lazy" />
-                <div class="cert-hover-hint">
-                  <i class="fas fa-expand"></i> <span>Preview</span>
-                </div>
-              </div>
-            </div>
-            <div class="cert-card-info">
-              <div class="cert-top-meta">
-                <span class="cert-received-tag">
-                  <i class="far fa-calendar-check"></i> Year Received: 2026
-                </span>
-                <span class="cert-code-tag">NTW-2026-7ECBC0AC</span>
-              </div>
-              <h3 class="cert-name-title" data-i18n="certificates.c1Title">AI Tools for Everyday Life</h3>
-              <p class="cert-track-name" data-i18n="certificates.c1Program">Artificial Intelligence for Academic Transformation</p>
-              <div class="cert-issuer-row">
-                <i class="fas fa-landmark"></i>
-                <span>National Training Week &bull; August 29, 2026</span>
-              </div>
-              <button type="button" class="btn-cert-action" onclick="openCertModal('assets/certificates/cert-ai-tools-for-everyday-life.png', 'AI Tools for Everyday Life', 'assets/certificates/cert-ai-tools-for-everyday-life.pdf')">
-                <i class="far fa-eye"></i> <span data-i18n="certificates.btnViewCert">View Certificate</span>
-              </button>
-            </div>
-          </article>
-
-          <!-- Certificate 3: AI for Entrepreneurship and Freelancing (Hidden by default) -->
-          <article class="cert-item-card cert-extra-hidden">
-            <div class="cert-card-preview" onclick="openCertModal('assets/certificates/cert-ai-for-entrepreneurship-and-freelancing.png', 'AI for Entrepreneurship and Freelancing', 'assets/certificates/cert-ai-for-entrepreneurship-and-freelancing.pdf')">
-              <div class="cert-card-paper">
-                <img src="assets/certificates/cert-ai-for-entrepreneurship-and-freelancing.png" alt="AI for Entrepreneurship and Freelancing Certificate" class="cert-card-img" loading="lazy" />
-                <div class="cert-hover-hint">
-                  <i class="fas fa-expand"></i> <span>Preview</span>
-                </div>
-              </div>
-            </div>
-            <div class="cert-card-info">
-              <div class="cert-top-meta">
-                <span class="cert-received-tag">
-                  <i class="far fa-calendar-check"></i> Year Received: 2026
-                </span>
-                <span class="cert-code-tag">NTW-2026-F78C8E4D</span>
-              </div>
-              <h3 class="cert-name-title" data-i18n="certificates.c3Title">AI for Entrepreneurship and Freelancing</h3>
-              <p class="cert-track-name" data-i18n="certificates.c3Program">Artificial Intelligence for Academic Transformation</p>
-              <div class="cert-issuer-row">
-                <i class="fas fa-landmark"></i>
-                <span>National Training Week &bull; September 1, 2026</span>
-              </div>
-              <button type="button" class="btn-cert-action" onclick="openCertModal('assets/certificates/cert-ai-for-entrepreneurship-and-freelancing.png', 'AI for Entrepreneurship and Freelancing', 'assets/certificates/cert-ai-for-entrepreneurship-and-freelancing.pdf')">
-                <i class="far fa-eye"></i> <span data-i18n="certificates.btnViewCert">View Certificate</span>
-              </button>
-            </div>
-          </article>
-
-          <!-- Certificate 4: AI-Driven Digital Marketing (Hidden by default) -->
-          <article class="cert-item-card cert-extra-hidden">
-            <div class="cert-card-preview" onclick="openCertModal('assets/certificates/cert-ai-driven-digital-marketing.png', 'AI-Driven Digital Marketing', 'assets/certificates/cert-ai-driven-digital-marketing.pdf')">
-              <div class="cert-card-paper">
-                <img src="assets/certificates/cert-ai-driven-digital-marketing.png" alt="AI-Driven Digital Marketing Certificate" class="cert-card-img" loading="lazy" />
-                <div class="cert-hover-hint">
-                  <i class="fas fa-expand"></i> <span>Preview</span>
-                </div>
-              </div>
-            </div>
-            <div class="cert-card-info">
-              <div class="cert-top-meta">
-                <span class="cert-received-tag">
-                  <i class="far fa-calendar-check"></i> Year Received: 2026
-                </span>
-                <span class="cert-code-tag">NTW-2026-E59969E3</span>
-              </div>
-              <h3 class="cert-name-title" data-i18n="certificates.c4Title">AI-Driven Digital Marketing</h3>
-              <p class="cert-track-name" data-i18n="certificates.c4Program">Artificial Intelligence for Academic Transformation</p>
-              <div class="cert-issuer-row">
-                <i class="fas fa-landmark"></i>
-                <span>National Training Week &bull; September 1, 2026</span>
-              </div>
-              <button type="button" class="btn-cert-action" onclick="openCertModal('assets/certificates/cert-ai-driven-digital-marketing.png', 'AI-Driven Digital Marketing', 'assets/certificates/cert-ai-driven-digital-marketing.pdf')">
-                <i class="far fa-eye"></i> <span data-i18n="certificates.btnViewCert">View Certificate</span>
-              </button>
-            </div>
-          </article>
-        </div>
-
-        <!-- View All Certificates Toggle Button -->
-        <div class="cert-toggle-wrapper">
-          <button type="button" class="btn-toggle-certs" id="btnToggleCerts" aria-expanded="false">
-            <span id="btnToggleCertsText" data-i18n="certificates.btnViewAll">View All Certificates (4)</span>
-            <i class="fas fa-chevron-down" id="btnToggleCertsIcon"></i>
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========== OFFICIAL COLLABORATIONS SECTION ========== -->
-    <section class="section-wrapper collab-section" id="collaborations">
-      <div class="container">
-        <div class="section-header text-center">
-          <div class="cert-pill-badge">
-            <span class="cert-pill-text" data-i18n="collab.eyebrow">OFFICIAL COLLABORATIONS</span>
-          </div>
-          <h2 class="section-heading collab-heading" data-i18n="collab.heading">REAL PROJECTS &amp; ORGANIZATIONS</h2>
-        </div>
-
-        <div class="collab-panel">
-          <a href="https://ntw.hu.edu.so/" target="_blank" rel="noopener noreferrer" class="collab-card" title="Visit ntw.hu.edu.so" aria-label="Visit NTWeek (Hormuud University) website">
-            <span class="collab-logo">
-              <img src="assets/images/collab-ntweek-dark.png" alt="NTWeek logo" class="collab-img logo-on-dark" loading="lazy" />
-              <img src="assets/images/collab-ntweek-light.png" alt="NTWeek logo" class="collab-img logo-on-light" loading="lazy" />
-            </span>
-            <span class="collab-name">NTWeek (Hormuud Uni)</span>
-            <i class="fas fa-arrow-up-right-from-square collab-link-icon" aria-hidden="true"></i>
-          </a>
-          <a href="https://sobda.org/" target="_blank" rel="noopener noreferrer" class="collab-card" title="Visit sobda.org" aria-label="Visit SOBDA website">
-            <span class="collab-logo">
-              <img src="assets/images/collab-sobda.png" alt="SOBDA logo" class="collab-img" loading="lazy" />
-            </span>
-            <span class="collab-name">SOBDA</span>
-            <i class="fas fa-arrow-up-right-from-square collab-link-icon" aria-hidden="true"></i>
-          </a>
-          <a href="https://www.hornai.org/projects" target="_blank" rel="noopener noreferrer" class="collab-card" title="Visit hornai.org" aria-label="Visit HORN AI projects">
-            <span class="collab-logo">
-              <img src="assets/images/collab-hornai.png" alt="HORN AI logo" class="collab-img" loading="lazy" />
-            </span>
-            <span class="collab-name">HORN AI</span>
-            <i class="fas fa-arrow-up-right-from-square collab-link-icon" aria-hidden="true"></i>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========== CLIENT & PEER TESTIMONIALS SECTION ========== -->
-    <section class="section-wrapper bg-subtle" id="testimonials">
-      <div class="container">
-        <div class="section-header text-center">
-          <div class="cert-pill-badge">
-            <span class="cert-pill-text" data-i18n="testimonials.eyebrow">CLIENT &amp; PEER ENDORSEMENTS</span>
-          </div>
-          <h2 class="section-heading" data-i18n="testimonials.heading">
-            What Collaborators &amp; <span class="text-accent-gradient">Clients Say</span>
-          </h2>
-          <p class="section-subheading" data-i18n="testimonials.subheading">
-            Direct testimonials from project coordinators, business managers, and tech mentors regarding engineering delivery, reliability, and code quality.
-          </p>
-        </div>
-
-        <div class="testimonials-grid">
-          <!-- Testimonial 1: Healthcare & Community Platform -->
-          <article class="testimonial-card">
-            <div class="testimonial-card-top">
-              <div class="testimonial-stars" aria-label="5 out of 5 stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-              </div>
-              <span class="testimonial-verified-badge"><i class="fas fa-circle-check"></i> Verified Project</span>
-            </div>
-            <blockquote class="testimonial-quote" data-i18n="testimonials.t1Quote">
-              "Abdallah engineered the DHIIG KAAL blood donation platform with exceptional discipline and speed. His architecture made real-time donor matching effortless, scalable, and intuitive for everyday users."
-            </blockquote>
-            <div class="testimonial-author">
-              <div class="author-avatar-chip">MN</div>
-              <div class="author-info">
-                <h4 class="author-name" data-i18n="testimonials.t1Name">Eng. Mohamed A. Nur</h4>
-                <p class="author-role" data-i18n="testimonials.t1Role">Lead Coordinator • Iftiin Health Initiative</p>
-              </div>
-            </div>
-          </article>
-
-          <!-- Testimonial 2: POS Restaurant System -->
-          <article class="testimonial-card">
-            <div class="testimonial-card-top">
-              <div class="testimonial-stars" aria-label="5 out of 5 stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-              </div>
-              <span class="testimonial-verified-badge"><i class="fas fa-circle-check"></i> Verified Client</span>
-            </div>
-            <blockquote class="testimonial-quote" data-i18n="testimonials.t2Quote">
-              "The POS system Abdallah developed for 4 Season Restaurant completely modernized our daily workflow. It is fast, offline-resilient, and intuitive. He is one of the most dedicated developers we have hired."
-            </blockquote>
-            <div class="testimonial-author">
-              <div class="author-avatar-chip">AH</div>
-              <div class="author-info">
-                <h4 class="author-name" data-i18n="testimonials.t2Name">Abdirahman Hassan</h4>
-                <p class="author-role" data-i18n="testimonials.t2Role">Operations Manager • 4 Season Restaurant</p>
-              </div>
-            </div>
-          </article>
-
-          <!-- Testimonial 3: Academic & Software Architecture -->
-          <article class="testimonial-card">
-            <div class="testimonial-card-top">
-              <div class="testimonial-stars" aria-label="5 out of 5 stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-              </div>
-              <span class="testimonial-verified-badge"><i class="fas fa-circle-check"></i> Peer Review</span>
-            </div>
-            <blockquote class="testimonial-quote" data-i18n="testimonials.t3Quote">
-              "Abdallah pairs disciplined computer science fundamentals with rare creative problem-solving. From web architectures to mobile engineering, his dedication to clean code and high performance is top-tier."
-            </blockquote>
-            <div class="testimonial-author">
-              <div class="author-avatar-chip">AF</div>
-              <div class="author-info">
-                <h4 class="author-name" data-i18n="testimonials.t3Name">Eng. Ahmed K. Farah</h4>
-                <p class="author-role" data-i18n="testimonials.t3Role">Senior Software Architect &amp; Academic Mentor</p>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========== CV / RESUME SECTION ========== -->
-    <section class="section-wrapper cv-section" id="cv">
-      <div class="container cv-container">
-        <div class="cv-layout-grid">
-          <!-- Left Column: Information & Actions -->
-          <div class="cv-content-col">
-            <div class="cv-pill-tag">
-              <i class="fas fa-file-lines cv-pill-icon"></i>
-              <span class="cv-pill-text" data-i18n="cv.eyebrow">CURRICULUM VITAE</span>
-            </div>
-
-            <h2 class="cv-hero-title" data-i18n="cv.heading">My Official Resume</h2>
-
-            <p class="cv-hero-desc" data-i18n="cv.subheading">
-              Review my complete technical background, university coursework at Hormuud University, professional milestones, and certifications.
-            </p>
-
-            <ul class="cv-checklist">
-              <li class="cv-checklist-item">
-                <span class="cv-check-badge"><i class="fas fa-check"></i></span>
-                <span class="cv-check-label" data-i18n="cv.f1">Full Stack Web Architecture (Frontend &amp; Backend)</span>
-              </li>
-              <li class="cv-checklist-item">
-                <span class="cv-check-badge"><i class="fas fa-check"></i></span>
-                <span class="cv-check-label" data-i18n="cv.f2">UI/UX Prototyping, Wireframing &amp; Brand Guidelines</span>
-              </li>
-              <li class="cv-checklist-item">
-                <span class="cv-check-badge"><i class="fas fa-check"></i></span>
-                <span class="cv-check-label" data-i18n="cv.f3">Database Design, API Integration &amp; Security</span>
-              </li>
-              <li class="cv-checklist-item">
-                <span class="cv-check-badge"><i class="fas fa-check"></i></span>
-                <span class="cv-check-label" data-i18n="cv.f4">IT Support, Networking &amp; Embedded Systems</span>
-              </li>
-            </ul>
-
-            <div class="cv-action-buttons">
-              <a href="assets/cv/Abdallah-Mohamud-Abdi-CV.pdf" download="Abdallah-Mohamud-Abdi-CV.pdf" class="btn btn-cv-download">
-                <i class="fas fa-download"></i>
-                <span data-i18n="cv.btnDownload">Download CV (PDF)</span>
-              </a>
-              <a href="#contact" class="btn btn-cv-secondary">
-                <i class="fas fa-user-check"></i>
-                <span data-i18n="cv.btnBio">Request Full Bio</span>
-              </a>
-            </div>
-          </div>
-
-          <!-- Right Column: Document Mockup Preview -->
-          <div class="cv-preview-col">
-            <div class="cv-card-shell">
-              <div class="cv-paper-document" id="cvPaperDoc">
-                <!-- Document Left Sidebar (Dark) -->
-                <aside class="cv-doc-sidebar">
-                  <div class="cv-doc-avatar-wrap">
-                    <img src="assets/images/abdallah-cv-photo.jpg" alt="Abdallah Mohamud Abdi" class="cv-doc-avatar" />
-                  </div>
-
-                  <!-- Contact Details -->
-                  <div class="cv-doc-side-group">
-                    <div class="cv-doc-contact-row">
-                      <i class="fas fa-phone"></i>
-                      <span>+252 613 496 697</span>
-                    </div>
-                    <div class="cv-doc-contact-row">
-                      <i class="fas fa-envelope"></i>
-                      <span>abdallahmamud39@gmail.com</span>
-                    </div>
-                    <div class="cv-doc-contact-row">
-                      <i class="fas fa-location-dot"></i>
-                      <span>Mogadishu, Somalia</span>
-                    </div>
-                    <div class="cv-doc-contact-row">
-                      <i class="fas fa-globe"></i>
-                      <span>abdallah.dev</span>
-                    </div>
-                  </div>
-
-                  <!-- Key Skills -->
-                  <div class="cv-doc-side-group">
-                    <h5 class="cv-doc-side-title"><i class="fas fa-star cv-icon-gold"></i> KEY SKILLS</h5>
-                    <div class="cv-doc-skill-row">
-                      <span>Full Stack Dev</span>
-                      <span class="cv-stars-gold">★★★★★</span>
-                    </div>
-                    <div class="cv-doc-skill-row">
-                      <span>React.js</span>
-                      <span class="cv-stars-gold">★★★★★</span>
-                    </div>
-                    <div class="cv-doc-skill-row">
-                      <span>Node.js</span>
-                      <span class="cv-stars-gold">★★★★☆</span>
-                    </div>
-                    <div class="cv-doc-skill-row">
-                      <span>MongoDB</span>
-                      <span class="cv-stars-gold">★★★★☆</span>
-                    </div>
-                    <div class="cv-doc-skill-row">
-                      <span>Web Design</span>
-                      <span class="cv-stars-gold">★★★★★</span>
-                    </div>
-                    <div class="cv-doc-skill-row">
-                      <span>Video Editing</span>
-                      <span class="cv-stars-gold">★★★★★</span>
-                    </div>
-                    <div class="cv-doc-skill-row">
-                      <span>Graphic Design</span>
-                      <span class="cv-stars-gold">★★★★☆</span>
-                    </div>
-                  </div>
-
-                  <!-- Education -->
-                  <div class="cv-doc-side-group">
-                    <h5 class="cv-doc-side-title"><i class="fas fa-graduation-cap cv-icon-gold"></i> EDUCATION</h5>
-                    <div class="cv-doc-edu-item">
-                      <span class="cv-doc-edu-period">2018 - 2023</span>
-                      <strong class="cv-doc-edu-inst">Hormuud University</strong>
-                      <span class="cv-doc-edu-field">Bachelor of Computer Science</span>
-                    </div>
-                    <div class="cv-doc-edu-item">
-                      <span class="cv-doc-edu-period">2014 - 2018</span>
-                      <strong class="cv-doc-edu-inst">School Sahal</strong>
-                      <span class="cv-doc-edu-field">Primary &amp; Secondary Education</span>
-                    </div>
-                  </div>
-
-                  <!-- Languages -->
-                  <div class="cv-doc-side-group">
-                    <h5 class="cv-doc-side-title"><i class="fas fa-language cv-icon-gold"></i> LANGUAGES</h5>
-                    <div class="cv-doc-lang-item">
-                      <div class="cv-doc-lang-head">
-                        <span>Somali</span>
-                        <span>100%</span>
-                      </div>
-                      <div class="cv-doc-lang-track"><div class="cv-doc-lang-fill" style="width: 100%;"></div></div>
-                    </div>
-                    <div class="cv-doc-lang-item">
-                      <div class="cv-doc-lang-head">
-                        <span>English</span>
-                        <span>70%</span>
-                      </div>
-                      <div class="cv-doc-lang-track"><div class="cv-doc-lang-fill" style="width: 70%;"></div></div>
-                    </div>
-                  </div>
-                </aside>
-
-                <!-- Document Main Body (Light) -->
-                <div class="cv-doc-main">
-                  <!-- Yellow/Gold Top Banner -->
-                  <div class="cv-doc-banner">
-                    <h3 class="cv-doc-banner-name">ABDALLAH MOHAMUD ABDI</h3>
-                    <p class="cv-doc-banner-role">FULL STACK DEVELOPER &amp; MULTIMEDIA SPECIALIST</p>
-                  </div>
-
-                  <!-- Profile Summary -->
-                  <div class="cv-doc-section">
-                    <h5 class="cv-doc-sec-title"><i class="fas fa-user cv-sec-icon"></i> PROFILE SUMMARY</h5>
-                    <p class="cv-doc-sec-text">
-                      A passionate Full Stack Developer and Multimedia Specialist focused on building efficient, scalable, and user-friendly web applications. Combining technical skills with creativity to deliver innovative digital solutions in both frontend and backend development, content creation, and visual design.
-                    </p>
-                  </div>
-
-                  <!-- Work Experience -->
-                  <div class="cv-doc-section">
-                    <h5 class="cv-doc-sec-title"><i class="fas fa-briefcase cv-sec-icon"></i> WORK EXPERIENCE</h5>
-                    
-                    <div class="cv-doc-exp-item">
-                      <div class="cv-doc-exp-head">
-                        <span class="cv-doc-exp-dates">2024 - 2026</span>
-                        <span class="cv-doc-exp-tag">FREELANCE</span>
-                      </div>
-                      <strong class="cv-doc-exp-role">Full Stack Developer</strong>
-                      <p class="cv-doc-exp-desc">Built full stack web applications including restaurant management systems, online marketplaces, and admin dashboards using MERN stack and PHP/MySQL.</p>
-                    </div>
-
-                    <div class="cv-doc-exp-item">
-                      <div class="cv-doc-exp-head">
-                        <span class="cv-doc-exp-dates">2023 - 2026</span>
-                        <span class="cv-doc-exp-tag">FREELANCE</span>
-                      </div>
-                      <strong class="cv-doc-exp-role">Content Creator &amp; Editor</strong>
-                      <p class="cv-doc-exp-desc">Creating multimedia content including video editing, graphic design, and social media content for various clients.</p>
-                    </div>
-
-                    <div class="cv-doc-exp-item">
-                      <div class="cv-doc-exp-head">
-                        <span class="cv-doc-exp-dates">2024</span>
-                        <span class="cv-doc-exp-tag">PROGRAM</span>
-                      </div>
-                      <strong class="cv-doc-exp-role">National Trainer Week – Hormuud University</strong>
-                      <p class="cv-doc-exp-desc">Participated in building the major program for the National Trainer Week organized by Hormuud University.</p>
-                    </div>
-                  </div>
-
-                  <!-- Featured Projects -->
-                  <div class="cv-doc-section">
-                    <h5 class="cv-doc-sec-title"><i class="fas fa-layer-group cv-sec-icon"></i> FEATURED PROJECTS</h5>
-                    <div class="cv-doc-projects-grid">
-                      <div class="cv-doc-proj-card">
-                        <strong class="cv-doc-proj-title">4 SEASON</strong>
-                        <p class="cv-doc-proj-sub">Restaurant Management System with admin dashboard, cashier flow, and menu controls.</p>
-                      </div>
-                      <div class="cv-doc-proj-card">
-                        <strong class="cv-doc-proj-title">Suuq Furan</strong>
-                        <p class="cv-doc-proj-sub">Online Marketplace platform supporting distinct Admin, Shop vendor, and Customer roles.</p>
-                      </div>
-                      <div class="cv-doc-proj-card">
-                        <strong class="cv-doc-proj-title">Buug Tabiye</strong>
-                        <p class="cv-doc-proj-sub">A live books and reading platform designed for seamless library access and content distribution.</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Tools & Technologies -->
-                  <div class="cv-doc-section">
-                    <h5 class="cv-doc-sec-title"><i class="fas fa-code cv-sec-icon"></i> TOOLS &amp; TECHNOLOGIES</h5>
-                    <div class="cv-doc-tags-wrap">
-                      <span class="cv-doc-tech-badge">React</span>
-                      <span class="cv-doc-tech-badge">Node.js</span>
-                      <span class="cv-doc-tech-badge">MongoDB</span>
-                      <span class="cv-doc-tech-badge">Express.js</span>
-                      <span class="cv-doc-tech-badge">PHP</span>
-                      <span class="cv-doc-tech-badge">MySQL</span>
-                      <span class="cv-doc-tech-badge">HTML</span>
-                      <span class="cv-doc-tech-badge">CSS</span>
-                      <span class="cv-doc-tech-badge">JavaScript</span>
-                      <span class="cv-doc-tech-badge">Git</span>
-                      <span class="cv-doc-tech-badge">GitHub</span>
-                      <span class="cv-doc-tech-badge">VS Code</span>
-                      <span class="cv-doc-tech-badge">XAMPP</span>
-                      <span class="cv-doc-tech-badge">Figma</span>
-                      <span class="cv-doc-tech-badge">Illustrator</span>
-                      <span class="cv-doc-tech-badge">Premiere Pro</span>
-                    </div>
-                  </div>
-
-                  <!-- Footer / Social Media -->
-                  <div class="cv-doc-footer-row">
-                    <div class="cv-doc-social-group">
-                      <span class="cv-doc-meta-label">FIND ME ON</span>
-                      <div class="cv-doc-social-chips">
-                        <span><i class="fab fa-github"></i> github.com/abdullamaxmud</span>
-                        <span><i class="fab fa-linkedin"></i> abdallah-mohamud</span>
-                      </div>
-                    </div>
-                    <div class="cv-doc-wa-group">
-                      <span class="cv-doc-meta-label">WhatsApp</span>
-                      <span class="cv-doc-wa-phone">+252 613 496 697</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Bottom Verified Badge Button -->
-              <div class="cv-shell-footer">
-                <a href="assets/cv/Abdallah-Mohamud-Abdi-CV.pdf" target="_blank" rel="noopener noreferrer" class="btn-verified-cv-pill" title="View Official PDF">
-                  <i class="fas fa-file-shield"></i>
-                  <span data-i18n="cv.verifiedBadge">Verified CV Document</span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========== CONTACT SECTION ========== -->
-    <section class="section-wrapper" id="contact">
-      <div class="container">
-        <div class="section-header text-center">
-          <span class="section-eyebrow" data-i18n="contact.eyebrow">GET IN TOUCH</span>
-          <h2 class="section-heading" data-i18n="contact.heading">Let's Discuss Your Next Project</h2>
-          <p class="section-subheading" data-i18n="contact.subheading">Have an opportunity, contract inquiry, or project proposal? Reach out directly via the form or connect instantly on WhatsApp.</p>
-        </div>
-
-        <div class="contact-layout-grid">
-          <!-- Left: Contact Details -->
-          <div class="contact-info-panel">
-            <h3 class="contact-panel-title" data-i18n="contact.directTitle">Direct Contact Information</h3>
-            <p class="contact-panel-desc" data-i18n="contact.directDesc">
-              I am always excited to discuss new software engineering projects, mobile applications, or creative multimedia solutions.
-            </p>
-
-            <div class="contact-cards-stack">
-              <!-- Email -->
-              <a href="mailto:abdullamaxmud39@gmail.com" class="contact-method-card">
-                <div class="contact-method-icon"><i class="fas fa-envelope"></i></div>
-                <div class="contact-method-text">
-                  <span class="method-label" data-i18n="contact.emailLabel">Email Address</span>
-                  <span class="method-val">abdullamaxmud39@gmail.com</span>
-                </div>
-                <i class="fas fa-arrow-up-right-from-square external-indicator"></i>
-              </a>
-
-              <!-- Phone -->
-              <a href="tel:+252613496697" class="contact-method-card">
-                <div class="contact-method-icon"><i class="fas fa-phone"></i></div>
-                <div class="contact-method-text">
-                  <span class="method-label" data-i18n="contact.phoneLabel">Direct Phone Line</span>
-                  <span class="method-val">+252 61 349 6697</span>
-                </div>
-                <i class="fas fa-phone-volume external-indicator"></i>
-              </a>
-
-              <!-- WhatsApp -->
-              <a href="https://wa.me/qr/VCZIEC6CVJQTE1" target="_blank" rel="noopener noreferrer" class="contact-method-card highlight-wa">
-                <div class="contact-method-icon wa-bg"><i class="fab fa-whatsapp"></i></div>
-                <div class="contact-method-text">
-                  <span class="method-label" data-i18n="contact.whatsappLabel">WhatsApp Direct QR &amp; Chat</span>
-                  <span class="method-val">+252 61 349 6697 (<span data-i18n="contact.instantChat">Instant Chat</span>)</span>
-                </div>
-                <i class="fas fa-comment-dots external-indicator"></i>
-              </a>
-
-              <!-- Location -->
-              <a href="https://maps.app.goo.gl/HL5KbTgNkXVAYsGH6" target="_blank" rel="noopener noreferrer" class="contact-method-card">
-                <div class="contact-method-icon"><i class="fas fa-location-dot"></i></div>
-                <div class="contact-method-text">
-                  <span class="method-label" data-i18n="contact.locationLabel">Location &amp; University</span>
-                  <span class="method-val" data-i18n="contact.locationVal">Mogadishu, Somalia (Hormuud University)</span>
-                </div>
-                <i class="fas fa-map-location-dot external-indicator"></i>
-              </a>
-            </div>
-
-            <!-- Social Links in Contact -->
-            <div class="contact-socials-area">
-              <span class="socials-subhead" data-i18n="contact.socialsLabel">Official Social Channels:</span>
-              <div class="social-icons-row">
-                <a href="https://github.com/abdullamaxmud" target="_blank" rel="noopener noreferrer" class="contact-social-btn" title="GitHub"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/abdulla-maxmud-3b3781393?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android" target="_blank" rel="noopener noreferrer" class="contact-social-btn" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://x.com/AbdullaMaxmud" target="_blank" rel="noopener noreferrer" class="contact-social-btn" title="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
-                <a href="https://www.instagram.com/zulthanabdalla?stkn=MXNpN211dWZ2OWV6MQ==" target="_blank" rel="noopener noreferrer" class="contact-social-btn" title="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.facebook.com/share/1HokAN7KZz/" target="_blank" rel="noopener noreferrer" class="contact-social-btn" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Right: Interactive Form -->
-          <div class="contact-form-panel">
-            <form id="portfolioContactForm" class="contact-form" novalidate>
-              <h3 class="form-header-title" data-i18n="contact.formTitle">Send a Direct Message</h3>
-
-              <div class="form-grid-2">
-                <div class="form-group">
-                  <label for="contactName" class="form-label"><span data-i18n="contact.nameLabel">Your Name</span> <span class="req">*</span></label>
-                  <input type="text" id="contactName" name="name" class="form-input" placeholder="e.g. Abdallah Mohamud Abdi" data-i18n-placeholder="contact.namePlaceholder" required />
-                </div>
-
-                <div class="form-group">
-                  <label for="contactEmail" class="form-label"><span data-i18n="contact.emailFieldLabel">Your Email</span> <span class="req">*</span></label>
-                  <input type="email" id="contactEmail" name="email" class="form-input" placeholder="e.g. abdullamaxmud39@gmail.com" data-i18n-placeholder="contact.emailPlaceholder" required />
-                </div>
-              </div>
-
-              <div class="form-group">
-                <label for="contactSubject" class="form-label"><span data-i18n="contact.subjectLabel">Subject</span> <span class="req">*</span></label>
-                <input type="text" id="contactSubject" name="subject" class="form-input" placeholder="Full stack developer mobile app developer &amp; content creator" data-i18n-placeholder="contact.subjectPlaceholder" required />
-              </div>
-
-              <div class="form-group">
-                <label for="contactMessage" class="form-label"><span data-i18n="contact.messageLabel">Message Details</span> <span class="req">*</span></label>
-                <textarea id="contactMessage" name="message" class="form-textarea" rows="4" placeholder="I am a passionate Full Stack Developer and UI/UX Designer dedicated to building high-performance web applications, scalable digital architectures, and visually compelling interfaces." data-i18n-placeholder="contact.messagePlaceholder" required></textarea>
-              </div>
-
-              <div class="form-buttons-group">
-                <button type="submit" class="btn btn-primary btn-submit-email">
-                  <i class="fas fa-paper-plane"></i>
-                  <span data-i18n="contact.btnSend">Send Message</span>
-                </button>
-
-                <button type="button" class="btn btn-whatsapp-submit" id="btnWhatsappDirect">
-                  <i class="fab fa-whatsapp"></i>
-                  <span data-i18n="contact.btnWhatsapp">Chat on WhatsApp</span>
-                </button>
-              </div>
-
-              <p class="form-disclaimer">
-                <i class="fas fa-shield-halved"></i> <span data-i18n="contact.disclaimer">Your message goes directly to Abdallah Mohamud Abdi. You will receive a reply within 24 hours.</span>
-              </p>
+              <p class="form-note" data-i18n="form.note">Your message opens ready to send in your email app or WhatsApp. Nothing is stored on this site.</p>
             </form>
+
+            <!-- Project brief wizard -->
+            <div class="brief" id="brief" hidden>
+              <div class="brief-steps" aria-hidden="true"><span></span><span></span><span></span></div>
+              <span class="brief-k"></span>
+              <h3 class="brief-q"></h3>
+              <div class="brief-opts" role="group"></div>
+              <div class="brief-sum" hidden></div>
+              <div class="brief-nav">
+                <button type="button" class="pill" data-brief="back">← <span data-i18n="brief.back">Back</span></button>
+                <button type="button" class="btn btn-primary" data-brief="next"><span class="brief-next-label" data-i18n="brief.next">Next</span> →</button>
+              </div>
+            </div>
+
+            <!-- Sent -->
+            <div class="sent" id="sentPanel" role="status" hidden>
+              <span class="sent-ic"><svg width="28" height="28" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2.5 6.2l2.3 2.3 4.7-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <h3 class="sent-title"></h3>
+              <p class="sent-text"></p>
+              <button type="button" class="pill" data-reset-form data-i18n="form.again">Write another message</button>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   </main>
 
-  <!-- ========== FOOTER ========== -->
+  <!-- ===================== FOOTER ===================== -->
   <footer class="site-footer">
-    <div class="container">
-      <div class="footer-top-grid">
-        <div class="footer-brand-col">
-          <a href="#home" class="nav-logo">
-            <span class="logo-mark">A<span class="logo-accent">M</span></span>
-            <span class="logo-text">ABDALLAH<span class="accent-dot">.</span></span>
-          </a>
-          <p class="footer-brand-tagline" data-i18n="footer.tagline">
-            Building modern web applications, scalable cloud architectures, and visually compelling digital interfaces.
-          </p>
-          <div class="footer-status-tag">
-            <span class="status-pulse-sm"></span>
-            <span data-i18n="footer.status">4th Year Computer Science &bull; Hormuud University</span>
-          </div>
-        </div>
-
-        <div class="footer-links-col">
-          <h4 class="footer-heading" data-i18n="footer.navHeading">Navigation</h4>
-          <ul class="footer-list">
-            <li><a href="#home" data-i18n="nav.home">Home</a></li>
-            <li><a href="#about" data-i18n="nav.about">About Me</a></li>
-            <li><a href="#projects" data-i18n="nav.projects">Projects Showcase</a></li>
-            <li><a href="#services" data-i18n="nav.services">Services Offered</a></li>
-            <li><a href="#skills" data-i18n="nav.skills">Skills &amp; Stacks</a></li>
-            <li><a href="#certificates" data-i18n="nav.certificates">Certificates</a></li>
-            <li><a href="#cv" data-i18n="nav.cv">Curriculum Vitae (CV)</a></li>
-            <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-links-col">
-          <h4 class="footer-heading" data-i18n="footer.servicesHeading">Services</h4>
-          <ul class="footer-list">
-            <li><a href="#services" data-i18n="services.s1Title">Full-Stack Web Dev</a></li>
-            <li><a href="#services" data-i18n="services.s2Title">Cloud &amp; API Architecture</a></li>
-            <li><a href="#services" data-i18n="services.s3Title">Mobile Applications</a></li>
-            <li><a href="#services" data-i18n="services.s4Title">UI/UX Interface Design</a></li>
-            <li><a href="#services" data-i18n="services.s5Title">Creative Multimedia</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-contact-col">
-          <h4 class="footer-heading" data-i18n="footer.reachHeading">Direct Reach</h4>
-          <p class="footer-contact-item"><i class="fas fa-envelope"></i> abdullamaxmud39@gmail.com</p>
-          <p class="footer-contact-item"><i class="fas fa-phone"></i> +252 61 349 6697</p>
-          <p class="footer-contact-item"><i class="fas fa-map-pin"></i> <span data-i18n="footer.location">Mogadishu, Somalia</span></p>
-          <div class="footer-social-strip">
-            <a href="https://github.com/abdullamaxmud" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/abdulla-maxmud-3b3781393?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://wa.me/qr/VCZIEC6CVJQTE1" target="_blank" rel="noopener noreferrer" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-            <a href="https://x.com/AbdullaMaxmud" target="_blank" rel="noopener noreferrer" title="X"><i class="fab fa-x-twitter"></i></a>
-            <a href="https://www.instagram.com/zulthanabdalla?stkn=MXNpN211dWZ2OWV6MQ==" target="_blank" rel="noopener noreferrer" title="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.facebook.com/share/1HokAN7KZz/" target="_blank" rel="noopener noreferrer" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-          </div>
+    <div class="shell">
+      <div class="card cta-band spot">
+        <div class="cta-glow" aria-hidden="true"></div>
+        <span class="eyebrow" data-i18n="contact.eyebrow">Let's connect</span>
+        <h2 class="cta-title"><span data-i18n="cta.line1">Let's build something</span> <em data-i18n="cta.line2">remarkable</em>.</h2>
+        <div class="btn-row">
+          <a href="#contact" class="btn btn-primary"><span data-i18n="cta.talk">Let's talk</span><svg width="15" height="15" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M4 10L10 4M5 4h5v5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a href="mailto:abdullamaxmud39@gmail.com" class="btn btn-ghost">abdullamaxmud39@gmail.com</a>
         </div>
       </div>
-
-      <div class="footer-bottom-bar">
-        <p class="copyright-text">
-          &copy; <span id="currentYear">2026</span> <strong>Abdallah Mohamud Abdi</strong>. <span data-i18n="footer.rights">All rights reserved.</span>
-        </p>
-        <div class="footer-secondary-links">
-          <span data-i18n="footer.uniPortfolio">Hormuud University Portfolio</span>
-          <span class="bullet-sep">&bull;</span>
-          <a href="#home"><span data-i18n="footer.backTop">Back to top</span> <i class="fas fa-arrow-up"></i></a>
-        </div>
+      <div class="signature" aria-hidden="true">ABDALLAH</div>
+      <div class="foot-row">
+        <span>© <span id="year">2026</span> Abdallah Mohamud Abdi · <span data-i18n="foot.place">Mogadishu, Somalia</span></span>
+        <nav class="foot-links" aria-label="Elsewhere">
+          <a href="https://github.com/abdullamaxmud" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/abdulla-maxmud-3b3781393" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://www.instagram.com/zulthanabdalla" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://x.com/AbdullaMaxmud" target="_blank" rel="noopener">X</a>
+          <a href="#top">↑ <span data-i18n="foot.top">Top</span></a>
+        </nav>
       </div>
     </div>
   </footer>
 
-  <!-- ========== FLOATING QUICK ACTION BUTTONS ========== -->
-  <!-- Floating WhatsApp Button -->
-  <a href="https://wa.me/252613496697" target="_blank" rel="noopener noreferrer" class="floating-btn floating-whatsapp" id="floatingWhatsapp" title="Chat on WhatsApp" aria-label="Open WhatsApp Chat with Abdallah">
-    <i class="fab fa-whatsapp"></i>
-    <span class="floating-tooltip" data-i18n="floating.whatsappTooltip">Chat on WhatsApp</span>
+  <!-- Search (Ctrl + K) -->
+  <dialog class="search-dialog" id="searchDialog" aria-label="Search the site">
+    <div class="search-box">
+      <div class="search-in">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M20 20l-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <input id="searchInput" type="text" autocomplete="off" spellcheck="false" placeholder="Search sections, projects, actions…" aria-label="Search" aria-controls="searchList" role="combobox" aria-expanded="true" />
+        <kbd>Esc</kbd>
+      </div>
+      <ul id="searchList" class="search-list" role="listbox"></ul>
+      <p class="search-empty" hidden data-i18n="search.none">No results. Try “React”, “CV” or “WhatsApp”.</p>
+      <div class="search-foot"><span><kbd>↑</kbd><kbd>↓</kbd> <span data-i18n="search.move">move</span></span><span><kbd>↵</kbd> <span data-i18n="search.open">open</span></span><span><kbd>Esc</kbd> <span data-i18n="search.close">close</span></span></div>
+    </div>
+  </dialog>
+
+  <!-- Reading progress + back to top + WhatsApp -->
+  <div class="read-bar" aria-hidden="true"><span></span></div>
+  <a href="#top" class="to-top is-hidden" aria-label="Back to top">
+    <svg class="to-top-ring" width="48" height="48" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="21" fill="none" stroke="var(--line)" stroke-width="2.5"/><circle class="ring" cx="24" cy="24" r="21" fill="none" stroke="#0EA5E9" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="131.95" stroke-dashoffset="131.95" transform="rotate(-90 24 24)"/></svg>
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" style="position:absolute"><path d="M8 13V3M4 7l4-4 4 4" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </a>
+  <a href="https://wa.me/252613496697" target="_blank" rel="noopener" class="wa-float is-hidden" aria-label="Chat on WhatsApp">
+    <span class="wa-ic" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></span>
+    <span class="wa-label"><span data-i18n="wa.chat">Chat on WhatsApp</span><small dir="ltr">+252 613 496 697</small></span>
   </a>
 
-  <!-- Back To Top Button -->
-  <button type="button" class="floating-btn floating-back-top" id="backToTop" aria-label="Scroll back to top" title="Back to top">
-    <i class="fas fa-arrow-up"></i>
-  </button>
+  <!-- Showreel dialog -->
+  <dialog class="reel-dialog" id="reelDialog" aria-label="Showreel">
+    <button type="button" class="reel-close" data-close-reel aria-label="Close showreel"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+    <video src="assets/videos/developer-profile.webm" poster="assets/images/video-poster-developer-profile.jpg" controls playsinline preload="none"></video>
+  </dialog>
 
-  <!-- ========== CONFIRMATION MODAL ========== -->
-  <div class="modal-backdrop" id="confirmationModal" role="dialog" aria-modal="true" aria-hidden="true">
-    <div class="modal-card">
-      <div class="modal-icon-circle"><i class="fas fa-check"></i></div>
-      <h3 class="modal-title" id="modalTitle" data-i18n="modal.title">Message Prepared!</h3>
-      <p class="modal-description" id="modalDescription" data-i18n="modal.desc">
-        Thank you for reaching out, Abdallah Mohamud Abdi will respond to you within 24 hours.
-      </p>
-      <div class="modal-action-row">
-        <button type="button" class="btn btn-primary" id="modalCloseBtn" data-i18n="modal.close">Close</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- ========== CERTIFICATE LIGHTBOX MODAL ========== -->
-  <div class="cert-modal-backdrop" id="certLightboxModal" role="dialog" aria-modal="true" aria-hidden="true">
-    <div class="cert-modal-dialog">
-      <div class="cert-modal-header">
-        <h3 class="cert-modal-title" id="certModalTitle">Certificate Preview</h3>
-        <div class="cert-modal-controls">
-          <a href="#" class="btn btn-primary btn-sm" id="certModalDownload" download>
-            <i class="fas fa-file-pdf"></i> <span data-i18n="certificates.btnDownload">Download PDF</span>
-          </a>
-          <button type="button" class="cert-modal-close-btn" id="certModalClose" aria-label="Close certificate viewer">
-            <i class="fas fa-xmark"></i>
-          </button>
-        </div>
-      </div>
-      <div class="cert-modal-body">
-        <img src="" alt="Certificate Preview" class="cert-modal-img" id="certModalImg" />
-      </div>
-    </div>
-  </div>
-
-  <!-- ========== VIDEO LIGHTBOX MODAL ========== -->
-  <div class="cert-modal-backdrop" id="videoLightboxModal" role="dialog" aria-modal="true" aria-hidden="true">
-    <div class="cert-modal-dialog video-modal-dialog">
-      <div class="cert-modal-header">
-        <h3 class="cert-modal-title" id="videoModalTitle">Video Showcase</h3>
-        <div class="cert-modal-controls">
-          <button type="button" class="cert-modal-close-btn" id="videoModalClose" aria-label="Close video player">
-            <i class="fas fa-xmark"></i>
-          </button>
-        </div>
-      </div>
-      <div class="cert-modal-body video-modal-body">
-        <video id="lightboxVideoPlayer" controls playsinline></video>
-      </div>
-    </div>
-  </div>
-
-  <!-- Toast Notification Floating Element -->
-  <div class="toast-notification" id="toastNotification" role="status" aria-live="polite"></div>
-
-  <!-- JavaScript -->
-  <script src="script.js?v=3.1"></script>
+  <script src="script.js?v=5.0" defer></script>
 </body>
 </html>
